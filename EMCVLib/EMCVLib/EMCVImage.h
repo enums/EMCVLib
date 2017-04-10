@@ -41,6 +41,7 @@ using namespace cv;
 - (void)drawARectWithCenter:(NSPoint)center size:(NSSize)size rgbColor:(int *)rgb thickness:(int)thickness;
 - (void)drawARect:(NSRect)rect rgbColor:(int *)rgb thickness:(int)thickness;
 - (void)cvtColor:(int)code;
+- (void)gaussianBlurWithSize:(NSSize)size;
 - (NSImage *)toImage;
 
 - (void)calHistWithDims:(int)dims size:(int)size range:(float *)range;

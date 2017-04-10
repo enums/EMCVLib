@@ -765,11 +765,22 @@
                                             <action selector="showVideo:" target="gid-y5-LfR" id="Nn5-Ff-OBr"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tvt-Gp-SGf">
+                                        <rect key="frame" x="310" y="13" width="87" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Smooth" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LHQ-ui-xfM">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="smooth:" target="gid-y5-LfR" id="9Ni-i2-0uz"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cH9-Zc-IJk" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="1cr-ct-wzy"/>
                                     <constraint firstAttribute="height" constant="60" id="5zB-30-4uB"/>
                                     <constraint firstItem="jVE-RV-6Yk" firstAttribute="leading" secondItem="cH9-Zc-IJk" secondAttribute="trailing" constant="12" id="6np-he-TJo"/>
+                                    <constraint firstItem="tvt-Gp-SGf" firstAttribute="leading" secondItem="Pdn-LJ-NA6" secondAttribute="trailing" constant="12" id="Bye-j2-QGS"/>
                                     <constraint firstItem="tVZ-n3-UYA" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="Nao-jU-7hh"/>
                                     <constraint firstItem="Pdn-LJ-NA6" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="bEY-Cu-wWm"/>
                                     <constraint firstItem="cH9-Zc-IJk" firstAttribute="leading" secondItem="Ndv-nn-iBP" secondAttribute="leading" constant="20" id="bR4-fH-40j"/>
@@ -777,6 +788,7 @@
                                     <constraint firstItem="0cT-i3-IJa" firstAttribute="leading" secondItem="jVE-RV-6Yk" secondAttribute="trailing" constant="12" id="ig8-uf-I3r"/>
                                     <constraint firstItem="0cT-i3-IJa" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="kxk-xf-VwH"/>
                                     <constraint firstItem="Pdn-LJ-NA6" firstAttribute="leading" secondItem="0cT-i3-IJa" secondAttribute="trailing" constant="12" id="ptA-Ed-rrn"/>
+                                    <constraint firstItem="tvt-Gp-SGf" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="xHr-vy-yEG"/>
                                     <constraint firstAttribute="trailing" secondItem="tVZ-n3-UYA" secondAttribute="trailing" constant="22" id="zbX-UY-xtm"/>
                                 </constraints>
                             </customView>

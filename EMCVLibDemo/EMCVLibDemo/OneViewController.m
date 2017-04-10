@@ -109,4 +109,11 @@
     self.stopFlag = true;
 }
 
+- (IBAction)smooth:(id)sender {
+    if (self.curImage != nil) {
+        [self.curImage gaussianBlurWithSize:NSMakeSize(7, 7)];
+        [self setCurImage:self.curImage];
+    }
+}
+
 @end

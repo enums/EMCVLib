@@ -68,6 +68,10 @@
     return [[EMCVSplitedImage alloc] initWithCVImage:self];
 }
 
+- (void)gaussianBlurWithSize:(NSSize)size {
+    GaussianBlur(_mat, _mat, cv::Size(size.width, size.height), 0);
+}
+
 - (void)drawARectWithCenter:(NSPoint)center size:(NSSize)size rgbColor:(int *)rgb thickness:(int)thickness {
     NSRect rect = NSMakeRect(center.x - size.width / 2, center.y - size.height / 2, size.width, size.height);
     [self drawARect:rect rgbColor:rgb thickness:thickness];
