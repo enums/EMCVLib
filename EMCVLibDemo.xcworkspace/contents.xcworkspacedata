@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:EMCVLibDemo/EMCVLibDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:EMCVLib/EMCVLib.xcodeproj">
+   </FileRef>
+</Workspace>
