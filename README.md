@@ -38,7 +38,7 @@ Introduce each Class oo Founction in this library. Or you can see the demo code 
 
 ## EMCVImage
 
-A wrapped image class. The default color format when image opened from file should be BGR.
+A wrapped image class. The default color format should be BGR when image opened from file.
 
 ### Property
 
@@ -61,6 +61,7 @@ A wrapped image class. The default color format when image opened from file shou
 - **[ObjC]**: `calHistWithDims:size:range`: Calculate histogram with the same size and range.
 - **[ObjC]**: `calHistWithDims:sizeList:rangeList`: Calculate histogram with the sizes and ranges.
 - **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
+- **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified `NSRect` and specified thickness.	
 
 ### Class Metod
 
@@ -89,6 +90,8 @@ A wrapped multi channel image class.
 - **[ObjC]**: `calHistWithChannal:size:range`: Calculate specified channal's histogram wit size and range. 
 - **[ObjC]**: `normalizeHistWithValue`: Normalize all channals' histogram to some value.
 - **[ObjC]**: `normalizeHistWithChannal:value`: Normalize specified channal's histogram to some value.
+- **[ObjC]**: `findMaxValue:outPoint:inChannal`:Find the max value and location in specified channal.
+- **[ObjC]**: `findMinValue:outPoint:inChannal`:Find the min value and location in specified channal.
 
 
 ### Class Metod

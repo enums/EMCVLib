@@ -44,4 +44,8 @@ using namespace cv;
 
 - (void)normalizeHistWithValue:(double)value;
 - (void)normalizeHistWithChanal:(int)channal value:(double)value;
+
+- (void)findMaxValue:(double *)value outPoint:(NSPoint *)point inChannal:(int)channal;
+- (void)findMinValue:(double *)value outPoint:(NSPoint *)point inChannal:(int)channal;
+
 @end

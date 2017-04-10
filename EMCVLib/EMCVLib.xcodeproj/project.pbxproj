@@ -74,6 +74,7 @@
 		F3F9A6021E9B54A000CFEEF8 /* EMCVVideo.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */; };
 		F3F9A6051E9B5DF800CFEEF8 /* EMCVSplitedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A6031E9B5DF800CFEEF8 /* EMCVSplitedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3F9A6061E9B5DF800CFEEF8 /* EMCVSplitedImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A6041E9B5DF800CFEEF8 /* EMCVSplitedImage.mm */; };
+		F3F9A60C1E9B99F200CFEEF8 /* Static.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A60A1E9B99F200CFEEF8 /* Static.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,6 +147,7 @@
 		F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVVideo.mm; path = EMCVLib/EMCVVideo.mm; sourceTree = "<group>"; };
 		F3F9A6031E9B5DF800CFEEF8 /* EMCVSplitedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVSplitedImage.h; path = EMCVLib/EMCVSplitedImage.h; sourceTree = "<group>"; };
 		F3F9A6041E9B5DF800CFEEF8 /* EMCVSplitedImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVSplitedImage.mm; path = EMCVLib/EMCVSplitedImage.mm; sourceTree = "<group>"; };
+		F3F9A60A1E9B99F200CFEEF8 /* Static.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Static.h; path = EMCVLib/Static.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +323,7 @@
 		F3F9A5E31E9B239000CFEEF8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F3F9A60A1E9B99F200CFEEF8 /* Static.h */,
 				F3F9A5E41E9B23A800CFEEF8 /* EMCVImage.h */,
 				F3F9A5E51E9B23A800CFEEF8 /* EMCVImage.mm */,
 				F3F9A6031E9B5DF800CFEEF8 /* EMCVSplitedImage.h */,
@@ -347,6 +350,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F9A60C1E9B99F200CFEEF8 /* Static.h in Headers */,
 				F3F9A5681E9B1E5100CFEEF8 /* EMCVLib.h in Headers */,
 				F3F9A5E61E9B23A800CFEEF8 /* EMCVImage.h in Headers */,
 				F3F9A5F41E9B26F000CFEEF8 /* NSImageView+EMCVLib.h in Headers */,

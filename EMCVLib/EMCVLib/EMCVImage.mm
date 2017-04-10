@@ -68,6 +68,16 @@
     return [[EMCVSplitedImage alloc] initWithCVImage:self];
 }
 
+- (void)drawARect:(NSRect)rect rgbColor:(int *)rgb thickness:(int)thickness {
+    int x = (int)rect.origin.x;
+    int y = (int)rect.origin.y;
+    int w = (int)rect.size.width;
+    int h = (int)rect.size.height;
+    cv::Point pt1 = cv::Point(x, y);
+    cv::Point pt2 = cv::Point(x + w, y + h);
+    rectangle(_mat, pt1, pt2, Scalar(rgb[0], rgb[1], rgb[2]), thickness);
+}
+
 - (void)cvtColor:(int)code {
     cvtColor(_mat, _mat, code);
 }

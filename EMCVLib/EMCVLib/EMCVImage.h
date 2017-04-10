@@ -38,6 +38,7 @@ using namespace cv;
 - (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage;
 
 - (EMCVSplitedImage *)splitImage;
+- (void)drawARect:(NSRect)rect rgbColor:(int *)rgb thickness:(int)thickness;
 - (void)cvtColor:(int)code;
 - (NSImage *)toImage;
 

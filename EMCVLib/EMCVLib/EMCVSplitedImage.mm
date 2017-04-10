@@ -96,6 +96,17 @@
     normalize(_hists.at(channal), _hists.at(channal), 0, value, NORM_MINMAX, -1, Mat());
 }
 
+- (void)findMaxValue:(double *)value outPoint:(NSPoint *)point inChannal:(int)channal {
+    cv::Point maxPoint;
+    minMaxLoc(_mats.at(channal), nil, value, nil, &maxPoint);
+    *point = NSMakePoint(maxPoint.x, maxPoint.y);
+}
+
+- (void)findMinValue:(double *)value outPoint:(NSPoint *)point inChannal:(int)channal {
+    cv::Point minPoint;
+    minMaxLoc(_mats.at(channal), value, nil, &minPoint, nil);
+    *point = NSMakePoint(minPoint.x, minPoint.y);
+}
 
 
 @end

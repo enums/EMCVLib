@@ -7,6 +7,7 @@
 //
 
 #import "NSImageView+EMCVLib.h"
+#import "Static.h"
 
 @implementation NSImageView (EMCVLib)
 
@@ -52,10 +53,7 @@
 }
 
 - (void)drawRGBHistWithCVImage:(EMCVImage *)cvImg size:(int)size {
-    int red[] = {255, 0, 0};
-    int green[] = {0, 255, 0};
-    int blue[] = {0, 0, 255};
-    int * colors[] = {red, green, blue};
+    int * colors[] = {kEMCVLibColorRed, kEMCVLibColorGreen, kEMCVLibColorBlue};
     int sizes[] = {size, size, size};
     float range[] = {0, 255};
     float * ranges[] = {range, range, range};
