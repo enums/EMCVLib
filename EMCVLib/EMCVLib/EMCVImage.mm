@@ -32,12 +32,26 @@ using namespace cv;
     return [self initWithMat:img->_mat];
 }
 
+- (instancetype)initWithCVImage:(EMCVImage *)img cvtColor:(int)color {
+    return [self initWithMat:img->_mat cvtColor:color];
+}
+
+- (instancetype)initWithMat:(Mat)mat cvtColor:(int)color {
+    Mat newMat;
+    cvtColor(mat, newMat, color);
+    return [self initWithNoCopyMat:newMat];
+}
+
 - (instancetype)initWithMat:(Mat)mat {
+    Mat newMat;
+    mat.copyTo(newMat);
+    return [self initWithNoCopyMat:newMat];
+}
+
+- (instancetype)initWithNoCopyMat:(Mat)mat {
     self = [super init];
     if (self) {
-        Mat newMat;
-        mat.copyTo(newMat);
-        self->_mat = newMat;
+        self->_mat = mat;
     }
     return self;
 }

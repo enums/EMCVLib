@@ -211,7 +211,7 @@
 		F3F9A5591E9B1E5100CFEEF8 = {
 			isa = PBXGroup;
 			children = (
-				F3F9A5F11E9B26DC00CFEEF8 /* C */,
+				F3F9A5F11E9B26DC00CFEEF8 /* Catogery */,
 				F3F9A5E31E9B239000CFEEF8 /* Model */,
 				F3F9A5E01E9B210100CFEEF8 /* Headers */,
 				F3F9A5651E9B1E5100CFEEF8 /* Support Files */,
@@ -319,13 +319,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		F3F9A5F11E9B26DC00CFEEF8 /* C */ = {
+		F3F9A5F11E9B26DC00CFEEF8 /* Catogery */ = {
 			isa = PBXGroup;
 			children = (
 				F3F9A5F21E9B26F000CFEEF8 /* NSImageView+EMCVLib.h */,
 				F3F9A5F31E9B26F000CFEEF8 /* NSImageView+EMCVLib.m */,
 			);
-			name = C;
+			name = Catogery;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

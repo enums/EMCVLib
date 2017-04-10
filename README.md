@@ -36,20 +36,22 @@ Introduce each Class oo Founction in this library. Or you can see the demo code 
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++ which means it's must a `.mm` source file.
 
-##EMCVImage
+## EMCVImage
 
 A wrapped image class. Contains image data and some ancillary data.
 
-###Property
+### Property
 
 - **[ObjC++]**: `_mat`: A `cv::Mat` property. It's image data.
 
-###Instance Method
+### Instance Method
 
 - **[ObjC]**: `initWithPath`: Open a local image file with a `NSString` path.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy.
 - **[ObjC++]**: `initWithMat`: Init a instance with a `cv::Mat`.
-- **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` or something defined by OpenCV. The same as `cv::cvtColor`.
+- **[ObjC++]**: `initWithMat:cvtColor`: Init a instance with a `cv::Mat` and color formate like `CV_BGR2RGB` whitch is defined by OpenCV.
+- - **[ObjC++]**: `initWithNoCopyMat`: Init a instance with a `cv::Mat` and will not copy data.
+- **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` whitch is defined by OpenCV. The same as `cv::cvtColor`.
 - **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
 
 ### Class Metod
@@ -66,7 +68,7 @@ empty
 
 - **[ObjC]**: `drawCVImage`: Display a `EMCVImage`.
 - **[ObjC]**: `drawAndFitSizeWithCVImage`: Display and fit size with a `EMCVImage` instance.
-- **[ObjC]**: `setImageAndFitSizeWithImage`: Display and fit size with a `NSImage` instance.
+- **[ObjC]**: `setImageAndFitSizeWithImage`: Redraw and display a `NSImage` instance.
 
 ### Class Method
 

@@ -22,10 +22,13 @@ using namespace cv;
     Mat _mat;
 }
 - (instancetype)initWithMat:(Mat)mat;
+- (instancetype)initWithMat:(Mat)mat cvtColor:(int)color;
+- (instancetype)initWithNoCopyMat:(Mat)mat;
 #endif
 
 - (instancetype)initWithPath:(NSString *)path;
 - (instancetype)initWithCVImage:(EMCVImage *)img;
+- (instancetype)initWithCVImage:(EMCVImage *)img cvtColor:(int)color;
 
 - (void)cvtColor:(int)code;
 
