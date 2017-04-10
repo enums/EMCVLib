@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import "EMCVImage.h"
+#import "EMCVVideo.h"
 #import "NSImageView+EMCVLib.h"
 
 //! Project version number for EMCVLib.

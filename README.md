@@ -42,7 +42,7 @@ A wrapped image class. Contains image data and some ancillary data.
 
 ### Property
 
-- **[ObjC++]**: `_mat`: A `cv::Mat` property. It's image data.
+- **[ObjC++]**: `_mat`: A `cv::Mat` object. It's image data.
 
 ### Instance Method
 
@@ -50,13 +50,31 @@ A wrapped image class. Contains image data and some ancillary data.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy.
 - **[ObjC++]**: `initWithMat`: Init a instance with a `cv::Mat`.
 - **[ObjC++]**: `initWithMat:cvtColor`: Init a instance with a `cv::Mat` and color formate like `CV_BGR2RGB` whitch is defined by OpenCV.
-- - **[ObjC++]**: `initWithNoCopyMat`: Init a instance with a `cv::Mat` and will not copy data.
+- **[ObjC++]**: `initWithNoCopyMat`: Init a instance with a `cv::Mat` and will not copy data.
 - **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` whitch is defined by OpenCV. The same as `cv::cvtColor`.
 - **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
 
 ### Class Metod
 
 empty
+
+## EMCVVideo
+
+A wrapped video class.
+
+### Property
+
+- **[ObjC++]**: `_capture`: A `cv::VideoCapture` object.
+
+### Instance Method
+
+- **[ObjC]**: `initWithPath`: Open a local video file with a `NSString` path.
+- **[ObjC]**: `nextFrame`: Get next frame in the current video. Return a `EMCVImage` instance.
+
+### Class Method
+
+empty
+
 
 ## NSImageView + EMCVLib
 

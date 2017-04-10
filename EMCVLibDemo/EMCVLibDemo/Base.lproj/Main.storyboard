@@ -727,11 +727,57 @@
                                             <action selector="showImage:" target="gid-y5-LfR" id="93H-Cr-COA"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-LJ-NA6">
+                                        <rect key="frame" x="241" y="13" width="69" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IC5-Db-QG5">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="stopVideo:" target="gid-y5-LfR" id="iO1-U1-0pH"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-n3-UYA">
+                                        <rect key="frame" x="849" y="22" width="35" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 fps" id="kJn-Kd-sbs">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-RV-6Yk">
+                                        <rect key="frame" x="91" y="12" width="75" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Clean" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="C3B-dY-wUH">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="cleanImage:" target="gid-y5-LfR" id="FiG-uH-77W"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0cT-i3-IJa">
+                                        <rect key="frame" x="166" y="13" width="75" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Video" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="grg-Ul-jBN">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showVideo:" target="gid-y5-LfR" id="Nn5-Ff-OBr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cH9-Zc-IJk" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="1cr-ct-wzy"/>
                                     <constraint firstAttribute="height" constant="60" id="5zB-30-4uB"/>
+                                    <constraint firstItem="jVE-RV-6Yk" firstAttribute="leading" secondItem="cH9-Zc-IJk" secondAttribute="trailing" constant="12" id="6np-he-TJo"/>
+                                    <constraint firstItem="tVZ-n3-UYA" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="Nao-jU-7hh"/>
+                                    <constraint firstItem="Pdn-LJ-NA6" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="bEY-Cu-wWm"/>
                                     <constraint firstItem="cH9-Zc-IJk" firstAttribute="leading" secondItem="Ndv-nn-iBP" secondAttribute="leading" constant="20" id="bR4-fH-40j"/>
+                                    <constraint firstItem="jVE-RV-6Yk" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="cc0-v7-iuV"/>
+                                    <constraint firstItem="0cT-i3-IJa" firstAttribute="leading" secondItem="jVE-RV-6Yk" secondAttribute="trailing" constant="12" id="ig8-uf-I3r"/>
+                                    <constraint firstItem="0cT-i3-IJa" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="kxk-xf-VwH"/>
+                                    <constraint firstItem="Pdn-LJ-NA6" firstAttribute="leading" secondItem="0cT-i3-IJa" secondAttribute="trailing" constant="12" id="ptA-Ed-rrn"/>
+                                    <constraint firstAttribute="trailing" secondItem="tVZ-n3-UYA" secondAttribute="trailing" constant="22" id="zbX-UY-xtm"/>
                                 </constraints>
                             </customView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z04-sW-XjF">
@@ -760,6 +806,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fpsLabel" destination="tVZ-n3-UYA" id="IrG-U8-w0E"/>
                         <outlet property="imageView" destination="z04-sW-XjF" id="Gvf-RC-LUG"/>
                     </connections>
                 </viewController>
