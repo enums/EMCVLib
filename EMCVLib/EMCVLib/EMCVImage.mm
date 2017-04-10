@@ -94,5 +94,25 @@
 }
 
 
+- (void)calHistWithDims:(int)dims size:(int)size range:(float *)range {
+    int * sizes = new int[dims];
+    float ** ranges = new float * [dims];
+    for (int i = 0; i < dims; i++) {
+        sizes[i] = size;
+        ranges[i] = range;
+    }
+    [self calHistWithDims:dims sizeList:sizes rangeList:ranges];
+    delete[] sizes;
+    delete[] ranges;
+}
+
+- (void)calHistWithDims:(int)dims sizeList:(int *)sizes rangeList:(float **)ranges {
+    const int channels[] = {0, 1, 2, 3};
+    calcHist(&_mat, 1, channels, Mat(), _hist, dims, sizes, (const float **)ranges);
+}
+
+- (void)normalizeHistWithValue:(double)value  {
+    normalize(_hist, _hist, 0, value, NORM_MINMAX, -1, Mat());
+}
 
 @end

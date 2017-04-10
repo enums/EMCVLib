@@ -31,8 +31,10 @@
     _curImage = curImage;
     if (curImage != nil) {
         [self.imageView drawCVImage:curImage];
+        [self.subImageView drawRGBHistWithCVImage:curImage size:128];
     } else {
-        [self.imageView setImage: nil];
+        [self.imageView setImage:nil];
+        [self.subImageView setImage:nil];
     }
 }
 

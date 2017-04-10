@@ -24,6 +24,7 @@ using namespace cv;
 {
 @public
     vector<Mat> _mats;
+    vector<MatND> _hists;
 }
 - (instancetype)initWithMats:(vector<Mat>)mats;
 - (instancetype)initWithNoCopyMats:(vector<Mat>)mats;
@@ -37,4 +38,10 @@ using namespace cv;
 - (EMCVImage *)mergeImage;
 - (EMCVImage *)getImageWithChannal:(int)channal;
 
+- (void)calHistWithSize:(int)size range:(float *)range;
+- (void)calHistWithSizes:(int *)sizes range:(float **)ranges;
+- (void)calHistWithChannal:(int)channal size:(int)size range:(float *)range;
+
+- (void)normalizeHistWithValue:(double)value;
+- (void)normalizeHistWithChanal:(int)channal value:(double)value;
 @end

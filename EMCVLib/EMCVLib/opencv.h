@@ -10,6 +10,5 @@
 #define opencv_h
 
 #import <opencv2/opencv.hpp>
-#import "EMCVImage.h"
 
 #endif /* opencv_h */

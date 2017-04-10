@@ -23,6 +23,7 @@ using namespace cv;
 {
 @public
     Mat _mat;
+    MatND _hist;
 }
 - (instancetype)initWithMat:(Mat)mat;
 - (instancetype)initWithMat:(Mat)mat cvtColor:(int)color;
@@ -40,6 +41,9 @@ using namespace cv;
 - (void)cvtColor:(int)code;
 - (NSImage *)toImage;
 
+- (void)calHistWithDims:(int)dims size:(int)size range:(float *)range;
+- (void)calHistWithDims:(int)dims sizeList:(int *)sizes rangeList:(float **)ranges;
+- (void)normalizeHistWithValue:(double)value;
 
 @end
 

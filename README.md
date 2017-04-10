@@ -50,6 +50,7 @@ A wrapped image class. The default color format when image opened from file shou
 
 - **[ObjC]**: `initWithPath`: Open a local image file with a `NSString` path.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy.
+- **[ObjC]**: `initWithCVImage:cvtColor`: Init a instance with a `EMCVImage` instance and color format. like `CV_BGR2RGB` whitch is defined by OpenCV.
 - **[ObjC]**: `initWithSplitedImage `: Init a instance with a `EMCVSpritedImage` instance. Means to merge multi channel image.
 - **[ObjC++]**: `initWithMat`: Init a instance with a `cv::Mat`.
 - **[ObjC++]**: `initWithMat:cvtColor`: Init a instance with a `cv::Mat` and color format like `CV_BGR2RGB` whitch is defined by OpenCV.
@@ -59,6 +60,7 @@ A wrapped image class. The default color format when image opened from file shou
 - **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
 - **[ObjC]**: `calHistWithDims:size:range`: Calculate histogram with the same size and range.
 - **[ObjC]**: `calHistWithDims:sizeList:rangeList`: Calculate histogram with the sizes and ranges.
+- **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
 
 ### Class Metod
 
@@ -71,6 +73,7 @@ A wrapped multi channel image class.
 ### Property
 
 - **[ObjC++]**: `_mats`: A `std::vector<cv::Mat>` object. It's single channal image data list.
+- **[ObjC++]**: `_hists`: A `std::vector<cv::MatND>` object. It's single channal histogram data list.
 - **[ObjC]**: `channalCount`: How much channals in current image;
 
 ### Instance Method
@@ -81,6 +84,11 @@ A wrapped multi channel image class.
 - **[ObjC++]**: `initWithNoCopyMats`: Init a instance with a `std::vector<cv::Mat>` and will not copy data.
 - **[ObjC]**: `mergeImage`: Merge all channels to get a multi channel `EMCVImage` instance.
 - **[ObjC]**: `getImageWithChannal`: Get one of these channels to gen a `EMCVImage` instance.
+- **[ObjC]**: `calHistWithSize:range`: Calculate all channals' histogram with the same size and range.
+- **[ObjC]**: `calHistWithSizes:ranges`: Calculate all channals' histogram wit sizes and ranges.
+- **[ObjC]**: `calHistWithChannal:size:range`: Calculate specified channal's histogram wit size and range. 
+- **[ObjC]**: `normalizeHistWithValue`: Normalize all channals' histogram to some value.
+- **[ObjC]**: `normalizeHistWithChannal:value`: Normalize specified channal's histogram to some value.
 
 
 ### Class Metod
@@ -116,6 +124,11 @@ empty
 
 - **[ObjC]**: `drawCVImage`: Display a `EMCVImage`.
 - **[ObjC]**: `drawAndFitSizeWithCVImage`: Display and fit size with a `EMCVImage` instance.
+- **[ObjC++]**: `drawHistOnMat:withHist:size:color`: Draw the specified histogram on the specified mat with specified color.
+- **[ObjC]**: `drawHistWithCVImage:size:rgbColor`: Draw `EMCVImage` instance's histogram method with specified color.
+- **[ObjC]**: `drawRGBHistWithCVImage`: A wrraped method of drawing RGB `EMCVImage` instance's histogram.
+- **[ObjC]**: `drawHistWithCVSplitedImage:sizes:rgbs`: Draw a `EMCVSplitedImage` instance's histogram with specified sizes and colors.
+- **[ObjC]**: `drawHistWithCVSplitedImage:channal:sizes:rgbs`: Draw a `EMCVSplitedImage` instance's histogram with specified channal, sizes and color.
 - **[ObjC]**: `setImageAndFitSizeWithImage`: Redraw and display a `NSImage` instance.
 
 ### Class Method

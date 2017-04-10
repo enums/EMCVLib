@@ -51,4 +51,51 @@
     return [[EMCVImage alloc] initWithMat:_mats.at(channal)];
 }
 
+- (void)calHistWithSize:(int)size range:(float *)range {
+    int dims = (int)_mats.size();
+    int * sizes = new int[dims];
+    float ** ranges = new float * [dims];
+    for (int i = 0; i < dims; i++) {
+        sizes[i] = size;
+        ranges[i] = range;
+    }
+    [self calHistWithSizes:sizes range:ranges];
+}
+
+- (void)calHistWithSizes:(int *)sizes range:(float **)ranges {
+    int dims = (int)_mats.size();
+    _hists.clear();
+    for (int i = 0; i < dims; i++) {
+        [self calHistWithChannal:i size:sizes[i] range:ranges[i]];
+    }
+}
+
+- (void)calHistWithChannal:(int)channal size:(int)size range:(float *)range {
+    MatND hist;
+    calcHist(&_mats.at(channal), 1, 0, Mat(), hist, 1, &size, (const float **)&range);
+    if (_hists.size() > channal) {
+        _hists[channal] = hist;
+    } else if (_hists.size() == channal) {
+        _hists.push_back(hist);
+    } else {
+        while (_hists.size() < channal) {
+            _hists.push_back(MatND());
+        }
+        _hists.push_back(hist);
+    }
+}
+
+- (void)normalizeHistWithValue:(double)value {
+    int dims = (int)_mats.size();
+    for (int i = 0; i < dims; i++) {
+        [self normalizeHistWithChanal:i value:value];
+    }
+}
+
+- (void)normalizeHistWithChanal:(int)channal value:(double)value  {
+    normalize(_hists.at(channal), _hists.at(channal), 0, value, NORM_MINMAX, -1, Mat());
+}
+
+
+
 @end
