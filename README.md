@@ -29,9 +29,13 @@ brew install opencv
 
 Download the repo. Then drag the library project to your project.
 
+# Tips
+
+Use `@autoreleasePool` when doing loop can solve some memory problems.
+
 # Document
 
-Introduce each Class oo Founction in this library. Or you can see the demo code in this repo.
+Introduce each Class or Founction in this library. Or you can see the demo code in this repo.
 
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++ which means it's must a `.mm` source file.
@@ -62,7 +66,7 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `calHistWithDims:sizeList:rangeList`: Calculate histogram with the sizes and ranges.
 - **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
 - **[ObjC]**: `drawARectWithCenter:size:rgbColor:thickness`: Draw a rect with specified center, size and thickness.	
-- **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified reck and thickness.	
+- **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified rect and thickness.	
 
 ### Class Metod
 
