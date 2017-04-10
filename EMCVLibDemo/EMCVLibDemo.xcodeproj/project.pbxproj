@@ -12,6 +12,7 @@
 		F3F9A54D1E9B1E2100CFEEF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A54C1E9B1E2100CFEEF8 /* ViewController.m */; };
 		F3F9A54F1E9B1E2100CFEEF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F9A54E1E9B1E2100CFEEF8 /* Assets.xcassets */; };
 		F3F9A5521E9B1E2100CFEEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F9A5501E9B1E2100CFEEF8 /* Main.storyboard */; };
+		F3F9A5DF1E9B20D300CFEEF8 /* EMCVLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F3F9A54E1E9B1E2100CFEEF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F9A5511E9B1E2100CFEEF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3F9A5531E9B1E2100CFEEF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMCVLib.framework; path = "../../../../Library/Developer/Xcode/DerivedData/EMCVLib-gxzgilkoegzcqidrscghtwqnmndf/Build/Products/Debug/EMCVLib.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F9A5DF1E9B20D300CFEEF8 /* EMCVLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +48,7 @@
 				F3F9A5501E9B1E2100CFEEF8 /* Main.storyboard */,
 				F3F9A5441E9B1E2100CFEEF8 /* Support Files */,
 				F3F9A5431E9B1E2100CFEEF8 /* Products */,
+				F3F9A5DD1E9B20D300CFEEF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +79,14 @@
 				F3F9A5491E9B1E2100CFEEF8 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3F9A5DD1E9B20D300CFEEF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

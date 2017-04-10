@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <EMCVLib/EMCVLib.h>
 
 @interface ViewController : NSViewController
 
