@@ -68,6 +68,12 @@
     return [[EMCVSplitedImage alloc] initWithCVImage:self];
 }
 
+- (void)drawARectWithCenter:(NSPoint)center size:(NSSize)size rgbColor:(int *)rgb thickness:(int)thickness {
+    NSRect rect = NSMakeRect(center.x - size.width / 2, center.y - size.height / 2, size.width, size.height);
+    [self drawARect:rect rgbColor:rgb thickness:thickness];
+}
+
+
 - (void)drawARect:(NSRect)rect rgbColor:(int *)rgb thickness:(int)thickness {
     int x = (int)rect.origin.x;
     int y = (int)rect.origin.y;

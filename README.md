@@ -61,7 +61,8 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `calHistWithDims:size:range`: Calculate histogram with the same size and range.
 - **[ObjC]**: `calHistWithDims:sizeList:rangeList`: Calculate histogram with the sizes and ranges.
 - **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
-- **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified `NSRect` and specified thickness.	
+- **[ObjC]**: `drawARectWithCenter:size:rgbColor:thickness`: Draw a rect with specified center, size and thickness.	
+- **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified reck and thickness.	
 
 ### Class Metod
 
@@ -127,7 +128,7 @@ empty
 
 - **[ObjC]**: `drawCVImage`: Display a `EMCVImage`.
 - **[ObjC]**: `drawAndFitSizeWithCVImage`: Display and fit size with a `EMCVImage` instance.
-- **[ObjC++]**: `drawHistOnMat:withHist:size:color`: Draw the specified histogram on the specified mat with specified color.
+- **[ObjC++]**: `drawHistOnMat:withHist:size:color`: Draw the specified histogram on the mat with specified color.
 - **[ObjC]**: `drawHistWithCVImage:size:rgbColor`: Draw `EMCVImage` instance's histogram method with specified color.
 - **[ObjC]**: `drawRGBHistWithCVImage`: A wrraped method of drawing RGB `EMCVImage` instance's histogram.
 - **[ObjC]**: `drawHistWithCVSplitedImage:sizes:rgbs`: Draw a `EMCVSplitedImage` instance's histogram with specified sizes and colors.

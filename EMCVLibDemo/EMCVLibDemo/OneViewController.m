@@ -35,9 +35,9 @@
         [splitedImage findMaxValue:nil outPoint:&rPoint inChannal:0];
         [splitedImage findMaxValue:nil outPoint:&gPoint inChannal:1];
         [splitedImage findMaxValue:nil outPoint:&bPoint inChannal:2];
-        [curImage drawARect:NSMakeRect(rPoint.x - 10, rPoint.y - 10, 20, 20) rgbColor:kEMCVLibColorRed thickness:2];
-        [curImage drawARect:NSMakeRect(gPoint.x - 10, gPoint.y - 10, 20, 20) rgbColor:kEMCVLibColorGreen thickness:2];
-        [curImage drawARect:NSMakeRect(bPoint.x - 10, bPoint.y - 10, 20, 20) rgbColor:kEMCVLibColorBlue thickness:2];
+        [curImage drawARectWithCenter:rPoint size:NSMakeSize(50, 50) rgbColor:kEMCVLibColorRed thickness:2];
+        [curImage drawARectWithCenter:gPoint size:NSMakeSize(50, 50) rgbColor:kEMCVLibColorGreen thickness:2];
+        [curImage drawARectWithCenter:bPoint size:NSMakeSize(50, 50) rgbColor:kEMCVLibColorBlue thickness:2];
         [self.imageView drawCVImage:curImage];
         [self.subImageView drawRGBHistWithCVImage:curImage size:128];
     } else {
