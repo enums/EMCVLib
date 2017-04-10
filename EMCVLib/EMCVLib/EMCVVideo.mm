@@ -9,7 +9,6 @@
 #import "EMCVVideo.h"
 #include "opencv.h"
 
-using namespace cv;
 
 @implementation EMCVVideo
 
@@ -27,5 +26,12 @@ using namespace cv;
     _capture.read(img->_mat);
     return img;
 }
+
+- (EMCVImage *)nextFrameSplitedWithChannal:(int)channal {
+    EMCVImage * img = [self nextFrame];
+    EMCVSplitedImage * splitedImg = [img splitImage];
+    return [splitedImg getImageWithChannal:channal];
+}
+
 
 @end

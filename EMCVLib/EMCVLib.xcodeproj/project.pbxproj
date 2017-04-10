@@ -72,6 +72,8 @@
 		F3F9A5FA1E9B299200CFEEF8 /* opencv.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5E11E9B211500CFEEF8 /* opencv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3F9A6011E9B54A000CFEEF8 /* EMCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3F9A6021E9B54A000CFEEF8 /* EMCVVideo.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */; };
+		F3F9A6051E9B5DF800CFEEF8 /* EMCVSplitedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A6031E9B5DF800CFEEF8 /* EMCVSplitedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3F9A6061E9B5DF800CFEEF8 /* EMCVSplitedImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A6041E9B5DF800CFEEF8 /* EMCVSplitedImage.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +144,8 @@
 		F3F9A5F31E9B26F000CFEEF8 /* NSImageView+EMCVLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSImageView+EMCVLib.m"; path = "EMCVLib/NSImageView+EMCVLib.m"; sourceTree = "<group>"; };
 		F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVVideo.h; path = EMCVLib/EMCVVideo.h; sourceTree = "<group>"; };
 		F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVVideo.mm; path = EMCVLib/EMCVVideo.mm; sourceTree = "<group>"; };
+		F3F9A6031E9B5DF800CFEEF8 /* EMCVSplitedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVSplitedImage.h; path = EMCVLib/EMCVSplitedImage.h; sourceTree = "<group>"; };
+		F3F9A6041E9B5DF800CFEEF8 /* EMCVSplitedImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVSplitedImage.mm; path = EMCVLib/EMCVSplitedImage.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +323,8 @@
 			children = (
 				F3F9A5E41E9B23A800CFEEF8 /* EMCVImage.h */,
 				F3F9A5E51E9B23A800CFEEF8 /* EMCVImage.mm */,
+				F3F9A6031E9B5DF800CFEEF8 /* EMCVSplitedImage.h */,
+				F3F9A6041E9B5DF800CFEEF8 /* EMCVSplitedImage.mm */,
 				F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideo.h */,
 				F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */,
 			);
@@ -344,6 +350,7 @@
 				F3F9A5681E9B1E5100CFEEF8 /* EMCVLib.h in Headers */,
 				F3F9A5E61E9B23A800CFEEF8 /* EMCVImage.h in Headers */,
 				F3F9A5F41E9B26F000CFEEF8 /* NSImageView+EMCVLib.h in Headers */,
+				F3F9A6051E9B5DF800CFEEF8 /* EMCVSplitedImage.h in Headers */,
 				F3F9A6011E9B54A000CFEEF8 /* EMCVVideo.h in Headers */,
 				F3F9A5FA1E9B299200CFEEF8 /* opencv.h in Headers */,
 			);
@@ -418,6 +425,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F9A6061E9B5DF800CFEEF8 /* EMCVSplitedImage.mm in Sources */,
 				F3F9A5F51E9B26F000CFEEF8 /* NSImageView+EMCVLib.m in Sources */,
 				F3F9A6021E9B54A000CFEEF8 /* EMCVVideo.mm in Sources */,
 				F3F9A5E71E9B23A800CFEEF8 /* EMCVImage.mm in Sources */,

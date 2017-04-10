@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
+#import "EMCVSplitedImage.h"
+
+@class EMCVSplitedImage;
 
 #ifdef __cplusplus
 #include "opencv.h"
@@ -26,13 +29,17 @@ using namespace cv;
 - (instancetype)initWithNoCopyMat:(Mat)mat;
 #endif
 
+@property (nonatomic, readonly) NSUInteger channalCount;
+
 - (instancetype)initWithPath:(NSString *)path;
 - (instancetype)initWithCVImage:(EMCVImage *)img;
 - (instancetype)initWithCVImage:(EMCVImage *)img cvtColor:(int)color;
+- (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage;
 
+- (EMCVSplitedImage *)splitImage;
 - (void)cvtColor:(int)code;
-
 - (NSImage *)toImage;
+
 
 @end
 

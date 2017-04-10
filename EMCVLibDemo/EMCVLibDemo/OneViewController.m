@@ -13,6 +13,7 @@
 @interface OneViewController ()
 
 @property (weak) IBOutlet NSImageView *imageView;
+@property (weak) IBOutlet NSImageView *subImageView;
 @property (weak) IBOutlet NSTextField *fpsLabel;
 
 @property (nonatomic) EMCVImage * curImage;
@@ -79,12 +80,14 @@
             dispatch_async(_videoQueue, ^{
                 EMCVImage * frame;
                 while (!self.stopFlag) {
-                    frame = [self.curVideo nextFrame];
-                    [frame cvtColor:CV_BGR2RGB];
-                    dispatch_sync(dispatch_get_main_queue(), ^{
-                        self.curImage = frame;
-                    });
-                    self.fpsCounter++;
+                    @autoreleasepool {
+                        frame = [self.curVideo nextFrame];
+                        [frame cvtColor:CV_BGR2RGB];
+                        dispatch_sync(dispatch_get_main_queue(), ^{
+                            self.curImage = frame;
+                        });
+                        self.fpsCounter++;
+                    }
                 }
                 self.curVideo = nil;
             });

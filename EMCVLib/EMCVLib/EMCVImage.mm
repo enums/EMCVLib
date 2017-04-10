@@ -9,7 +9,6 @@
 #import "EMCVImage.h"
 #include "opencv.h"
 
-using namespace cv;
 
 @interface EMCVImage() {
     
@@ -21,6 +20,9 @@ using namespace cv;
     
 }
 
+- (NSUInteger)channalCount {
+    return (NSUInteger)self->_mat.elemSize();
+}
 
 - (instancetype)initWithPath:(NSString *)path {
     const char * imagePath = [path UTF8String];
@@ -48,12 +50,22 @@ using namespace cv;
     return [self initWithNoCopyMat:newMat];
 }
 
+- (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage {
+    Mat mat;
+    merge(splitedImage->_mats, mat);
+    return [self initWithNoCopyMat:mat];
+}
+
 - (instancetype)initWithNoCopyMat:(Mat)mat {
     self = [super init];
     if (self) {
         self->_mat = mat;
     }
     return self;
+}
+
+- (EMCVSplitedImage *)splitImage {
+    return [[EMCVSplitedImage alloc] initWithCVImage:self];
 }
 
 - (void)cvtColor:(int)code {
@@ -80,5 +92,7 @@ using namespace cv;
     }
     return image;
 }
+
+
 
 @end

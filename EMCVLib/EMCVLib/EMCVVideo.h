@@ -26,5 +26,6 @@ using namespace cv;
 
 - (instancetype)initWithPath:(NSString *)path;
 - (EMCVImage *)nextFrame;
+- (EMCVImage *)nextFrameSplitedWithChannal:(int)channal;
 
 @end
