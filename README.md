@@ -1,11 +1,10 @@
 # EMCVLib
 
-An OpenCV library for macOS.
-
+An OpenCV library for macOS. ONLY MACOS NOW!
 
 # Usage
 
-Need macOS 10.10+ and OpenCV 2.4.x.
+Needed macOS 10.10+ and OpenCV 2.4.x.
 
 ## Install OpenCV 2.4.13.2 for macOS
 
@@ -30,6 +29,53 @@ brew install opencv
 
 Download the repo. Then drag the library project to your project.
 
-# Founctions
+# Document
+
+Introduce each Class oo Founction in this library. Or you can see the demo code in this repo.
+
+- **[ObjC]**: Means this property or method can be used on Objective-C.
+- **[ObjC++]**: Means this property or method can only be used on Objective-C++ which means it's must a `.mm` source file.
+
+##EMCVImage
+
+A wrapped image class. Contains image data and some ancillary data.
+
+###Property
+
+- **[ObjC++]**: `_mat`: A `cv::Mat` property. It's image data.
+
+###Instance Method
+
+- **[ObjC]**: `initWithPath`: Open a local image file with a `NSString` path.
+- **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy.
+- **[ObjC++]**: `initWithMat`: Init a instance with a `cv::Mat`.
+- **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` or something defined by OpenCV. The same as `cv::cvtColor`.
+- **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
+
+### Class Metod
 
 empty
+
+## NSImageView + EMCVLib
+
+### Property
+
+empty
+
+### Instance Method
+
+- **[ObjC]**: `drawCVImage`: Display a `EMCVImage`.
+- **[ObjC]**: `drawAndFitSizeWithCVImage`: Display and fit size with a `EMCVImage` instance.
+- **[ObjC]**: `setImageAndFitSizeWithImage`: Display and fit size with a `NSImage` instance.
+
+### Class Method
+
+empty
+
+# Contect
+
+Blog: [http://enumsblog.com](http://enumsblog.com)
+
+Email: [enum@enumsblog.com](enum@enumsblog.com)
+
+### HAVE FUN! : )

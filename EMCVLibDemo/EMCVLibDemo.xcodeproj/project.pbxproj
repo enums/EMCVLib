@@ -13,6 +13,7 @@
 		F3F9A54F1E9B1E2100CFEEF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F9A54E1E9B1E2100CFEEF8 /* Assets.xcassets */; };
 		F3F9A5521E9B1E2100CFEEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F9A5501E9B1E2100CFEEF8 /* Main.storyboard */; };
 		F3F9A5DF1E9B20D300CFEEF8 /* EMCVLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */; };
+		F3F9A5F01E9B268D00CFEEF8 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5EF1E9B268D00CFEEF8 /* OneViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		F3F9A5511E9B1E2100CFEEF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3F9A5531E9B1E2100CFEEF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMCVLib.framework; path = "../../../../Library/Developer/Xcode/DerivedData/EMCVLib-gxzgilkoegzcqidrscghtwqnmndf/Build/Products/Debug/EMCVLib.framework"; sourceTree = "<group>"; };
+		F3F9A5EE1E9B268D00CFEEF8 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneViewController.h; path = EMCVLibDemo/OneViewController.h; sourceTree = "<group>"; };
+		F3F9A5EF1E9B268D00CFEEF8 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneViewController.m; path = EMCVLibDemo/OneViewController.m; sourceTree = "<group>"; };
+		F3F9A5FD1E9B2A6800CFEEF8 /* opencv_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = opencv_c.h; path = EMCVLibDemo/opencv_c.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +47,11 @@
 		F3F9A5391E9B1E2100CFEEF8 = {
 			isa = PBXGroup;
 			children = (
+				F3F9A5FE1E9B2A7400CFEEF8 /* Headers */,
 				F3F9A54B1E9B1E2100CFEEF8 /* ViewController.h */,
 				F3F9A54C1E9B1E2100CFEEF8 /* ViewController.m */,
+				F3F9A5EE1E9B268D00CFEEF8 /* OneViewController.h */,
+				F3F9A5EF1E9B268D00CFEEF8 /* OneViewController.m */,
 				F3F9A5501E9B1E2100CFEEF8 /* Main.storyboard */,
 				F3F9A5441E9B1E2100CFEEF8 /* Support Files */,
 				F3F9A5431E9B1E2100CFEEF8 /* Products */,
@@ -87,6 +94,14 @@
 				F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3F9A5FE1E9B2A7400CFEEF8 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F3F9A5FD1E9B2A6800CFEEF8 /* opencv_c.h */,
+			);
+			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +178,7 @@
 				F3F9A54D1E9B1E2100CFEEF8 /* ViewController.m in Sources */,
 				F3F9A54A1E9B1E2100CFEEF8 /* main.m in Sources */,
 				F3F9A5471E9B1E2100CFEEF8 /* AppDelegate.m in Sources */,
+				F3F9A5F01E9B268D00CFEEF8 /* OneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4TF3NHEU2R;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = EMCVLibDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -290,6 +307,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4TF3NHEU2R;
+				HEADER_SEARCH_PATHS = /usr/local/include;
 				INFOPLIST_FILE = EMCVLibDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;

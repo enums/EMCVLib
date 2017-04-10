@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -653,7 +654,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>
@@ -676,18 +677,95 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="Menu" id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="60"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mIY-as-Shl">
+                                <rect key="frame" x="14" y="13" width="154" height="32"/>
+                                <buttonCell key="cell" type="push" title="One Image Sample" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="o8h-99-wuT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="gid-y5-LfR" kind="show" id="gaR-mT-SVt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="mIY-as-Shl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="458-ac-d8Q"/>
+                            <constraint firstItem="mIY-as-Shl" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="4vv-6w-BkL"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="546.5"/>
+        </scene>
+        <!--One Image Sample-->
+        <scene sceneID="pU1-kh-VHx">
+            <objects>
+                <viewController title="One Image Sample" id="gid-y5-LfR" customClass="OneViewController" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="Q5A-oj-Ep3">
+                        <rect key="frame" x="0.0" y="0.0" width="904" height="557"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ndv-nn-iBP">
+                                <rect key="frame" x="0.0" y="497" width="904" height="60"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cH9-Zc-IJk">
+                                        <rect key="frame" x="14" y="12" width="77" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="EG3-zx-Oq4">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showImage:" target="gid-y5-LfR" id="93H-Cr-COA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cH9-Zc-IJk" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="1cr-ct-wzy"/>
+                                    <constraint firstAttribute="height" constant="60" id="5zB-30-4uB"/>
+                                    <constraint firstItem="cH9-Zc-IJk" firstAttribute="leading" secondItem="Ndv-nn-iBP" secondAttribute="leading" constant="20" id="bR4-fH-40j"/>
+                                </constraints>
+                            </customView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z04-sW-XjF">
+                                <rect key="frame" x="0.0" y="0.0" width="904" height="498"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Jzb-eW-8Gh"/>
+                            </imageView>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="myO-JP-m2Z">
+                                <rect key="frame" x="704" y="0.0" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="7U5-eD-QYh"/>
+                                    <constraint firstAttribute="width" constant="200" id="ozw-IN-tNc"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="twR-Ey-Sff"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="myO-JP-m2Z" firstAttribute="trailing" secondItem="z04-sW-XjF" secondAttribute="trailing" id="2MI-pp-Sll"/>
+                            <constraint firstAttribute="trailing" secondItem="Ndv-nn-iBP" secondAttribute="trailing" id="4N2-Fp-eWT"/>
+                            <constraint firstAttribute="trailing" secondItem="z04-sW-XjF" secondAttribute="trailing" id="S3Q-ls-2K3"/>
+                            <constraint firstItem="Ndv-nn-iBP" firstAttribute="leading" secondItem="Q5A-oj-Ep3" secondAttribute="leading" id="WS1-Ma-kCe"/>
+                            <constraint firstItem="z04-sW-XjF" firstAttribute="leading" secondItem="Q5A-oj-Ep3" secondAttribute="leading" id="YuP-KU-5ym"/>
+                            <constraint firstAttribute="bottom" secondItem="z04-sW-XjF" secondAttribute="bottom" id="a3y-jQ-jhu"/>
+                            <constraint firstItem="myO-JP-m2Z" firstAttribute="bottom" secondItem="z04-sW-XjF" secondAttribute="bottom" id="afz-Gy-nX0"/>
+                            <constraint firstItem="Ndv-nn-iBP" firstAttribute="top" secondItem="Q5A-oj-Ep3" secondAttribute="top" id="ixJ-fG-kUX"/>
+                            <constraint firstItem="z04-sW-XjF" firstAttribute="top" secondItem="Ndv-nn-iBP" secondAttribute="bottom" constant="-1" id="ySn-M3-tdl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="z04-sW-XjF" id="Gvf-RC-LUG"/>
+                    </connections>
+                </viewController>
+                <customObject id="cOq-US-ed8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="1052"/>
         </scene>
     </scenes>
 </document>

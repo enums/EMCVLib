@@ -63,6 +63,13 @@
 		F3F9A5DA1E9B20B100CFEEF8 /* libopencv_videostab.2.4.13.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5A31E9B20B100CFEEF8 /* libopencv_videostab.2.4.13.dylib */; };
 		F3F9A5DB1E9B20B100CFEEF8 /* libopencv_videostab.2.4.13.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5A41E9B20B100CFEEF8 /* libopencv_videostab.2.4.13.dylib */; };
 		F3F9A5DC1E9B20B100CFEEF8 /* libopencv_videostab.2.4.13.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5A51E9B20B100CFEEF8 /* libopencv_videostab.2.4.13.dylib */; };
+		F3F9A5E61E9B23A800CFEEF8 /* EMCVImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5E41E9B23A800CFEEF8 /* EMCVImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3F9A5E71E9B23A800CFEEF8 /* EMCVImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5E51E9B23A800CFEEF8 /* EMCVImage.mm */; };
+		F3F9A5E91E9B248000CFEEF8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5E81E9B248000CFEEF8 /* CoreGraphics.framework */; };
+		F3F9A5ED1E9B24CD00CFEEF8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5EC1E9B24CD00CFEEF8 /* Cocoa.framework */; };
+		F3F9A5F41E9B26F000CFEEF8 /* NSImageView+EMCVLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5F21E9B26F000CFEEF8 /* NSImageView+EMCVLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3F9A5F51E9B26F000CFEEF8 /* NSImageView+EMCVLib.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5F31E9B26F000CFEEF8 /* NSImageView+EMCVLib.m */; };
+		F3F9A5FA1E9B299200CFEEF8 /* opencv.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5E11E9B211500CFEEF8 /* opencv.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,7 +132,12 @@
 		F3F9A5A41E9B20B100CFEEF8 /* libopencv_videostab.2.4.13.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videostab.2.4.13.dylib; path = ../../../../../../usr/local/Cellar/opencv/2.4.13.2/lib/libopencv_videostab.2.4.13.dylib; sourceTree = "<group>"; };
 		F3F9A5A51E9B20B100CFEEF8 /* libopencv_videostab.2.4.13.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_videostab.2.4.13.dylib; path = ../../../../../../usr/local/Cellar/opencv/2.4.13.2/lib/libopencv_videostab.2.4.13.dylib; sourceTree = "<group>"; };
 		F3F9A5E11E9B211500CFEEF8 /* opencv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = opencv.h; path = EMCVLib/opencv.h; sourceTree = "<group>"; };
-		F3F9A5E21E9B212A00CFEEF8 /* opencv_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = opencv_c.h; path = EMCVLib/opencv_c.h; sourceTree = "<group>"; };
+		F3F9A5E41E9B23A800CFEEF8 /* EMCVImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVImage.h; path = EMCVLib/EMCVImage.h; sourceTree = "<group>"; };
+		F3F9A5E51E9B23A800CFEEF8 /* EMCVImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVImage.mm; path = EMCVLib/EMCVImage.mm; sourceTree = "<group>"; };
+		F3F9A5E81E9B248000CFEEF8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F3F9A5EC1E9B24CD00CFEEF8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F3F9A5F21E9B26F000CFEEF8 /* NSImageView+EMCVLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImageView+EMCVLib.h"; path = "EMCVLib/NSImageView+EMCVLib.h"; sourceTree = "<group>"; };
+		F3F9A5F31E9B26F000CFEEF8 /* NSImageView+EMCVLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSImageView+EMCVLib.m"; path = "EMCVLib/NSImageView+EMCVLib.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F9A5ED1E9B24CD00CFEEF8 /* Cocoa.framework in Frameworks */,
+				F3F9A5E91E9B248000CFEEF8 /* CoreGraphics.framework in Frameworks */,
 				F3F9A5A61E9B20B100CFEEF8 /* libopencv_calib3d.2.4.13.dylib in Frameworks */,
 				F3F9A5A71E9B20B100CFEEF8 /* libopencv_calib3d.2.4.13.dylib in Frameworks */,
 				F3F9A5A81E9B20B100CFEEF8 /* libopencv_calib3d.2.4.13.dylib in Frameworks */,
@@ -197,6 +211,8 @@
 		F3F9A5591E9B1E5100CFEEF8 = {
 			isa = PBXGroup;
 			children = (
+				F3F9A5F11E9B26DC00CFEEF8 /* C */,
+				F3F9A5E31E9B239000CFEEF8 /* Model */,
 				F3F9A5E01E9B210100CFEEF8 /* Headers */,
 				F3F9A5651E9B1E5100CFEEF8 /* Support Files */,
 				F3F9A5641E9B1E5100CFEEF8 /* Products */,
@@ -225,6 +241,8 @@
 		F3F9A56E1E9B20B100CFEEF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F3F9A5EC1E9B24CD00CFEEF8 /* Cocoa.framework */,
+				F3F9A5E81E9B248000CFEEF8 /* CoreGraphics.framework */,
 				F3F9A56F1E9B20B100CFEEF8 /* libopencv_calib3d.2.4.13.dylib */,
 				F3F9A5701E9B20B100CFEEF8 /* libopencv_calib3d.2.4.13.dylib */,
 				F3F9A5711E9B20B100CFEEF8 /* libopencv_calib3d.2.4.13.dylib */,
@@ -288,9 +306,26 @@
 			isa = PBXGroup;
 			children = (
 				F3F9A5E11E9B211500CFEEF8 /* opencv.h */,
-				F3F9A5E21E9B212A00CFEEF8 /* opencv_c.h */,
 			);
 			name = Headers;
+			sourceTree = "<group>";
+		};
+		F3F9A5E31E9B239000CFEEF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F3F9A5E41E9B23A800CFEEF8 /* EMCVImage.h */,
+				F3F9A5E51E9B23A800CFEEF8 /* EMCVImage.mm */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F3F9A5F11E9B26DC00CFEEF8 /* C */ = {
+			isa = PBXGroup;
+			children = (
+				F3F9A5F21E9B26F000CFEEF8 /* NSImageView+EMCVLib.h */,
+				F3F9A5F31E9B26F000CFEEF8 /* NSImageView+EMCVLib.m */,
+			);
+			name = C;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +336,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3F9A5681E9B1E5100CFEEF8 /* EMCVLib.h in Headers */,
+				F3F9A5E61E9B23A800CFEEF8 /* EMCVImage.h in Headers */,
+				F3F9A5F41E9B26F000CFEEF8 /* NSImageView+EMCVLib.h in Headers */,
+				F3F9A5FA1E9B299200CFEEF8 /* opencv.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,6 +411,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3F9A5F51E9B26F000CFEEF8 /* NSImageView+EMCVLib.m in Sources */,
+				F3F9A5E71E9B23A800CFEEF8 /* EMCVImage.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

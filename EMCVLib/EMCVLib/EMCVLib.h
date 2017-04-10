@@ -8,7 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-#import "opencv_c.h"
+#import "EMCVImage.h"
+#import "NSImageView+EMCVLib.h"
 
 //! Project version number for EMCVLib.
 FOUNDATION_EXPORT double EMCVLibVersionNumber;

@@ -9,6 +9,6 @@
 #ifndef opencv_c_h
 #define opencv_c_h
 
-#include <opencv2/imgproc/types_c.h>
+#import <opencv2/imgproc/types_c.h>
 
 #endif /* opencv_c_h */
