@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 #import "Static.h"
+#import "EMCV.h"
 #import "EMCVImage.h"
 #import "EMCVSplitedImage.h"
 #import "EMCVVideo.h"

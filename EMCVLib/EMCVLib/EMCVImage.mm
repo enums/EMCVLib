@@ -121,12 +121,12 @@
         sizes[i] = size;
         ranges[i] = range;
     }
-    [self calHistWithDims:dims sizeList:sizes rangeList:ranges];
+    [self calHistWithDims:dims sizes:sizes ranges:ranges];
     delete[] sizes;
     delete[] ranges;
 }
 
-- (void)calHistWithDims:(int)dims sizeList:(int *)sizes rangeList:(float **)ranges {
+- (void)calHistWithDims:(int)dims sizes:(int *)sizes ranges:(float **)ranges {
     const int channels[] = {0, 1, 2, 3};
     calcHist(&_mat, 1, channels, Mat(), _hist, dims, sizes, (const float **)ranges);
 }

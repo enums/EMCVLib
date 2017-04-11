@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F337D4A31E9C626C00505334 /* MultiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F337D4A21E9C626C00505334 /* MultiViewController.m */; };
 		F3F9A5471E9B1E2100CFEEF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5461E9B1E2100CFEEF8 /* AppDelegate.m */; };
 		F3F9A54A1E9B1E2100CFEEF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5491E9B1E2100CFEEF8 /* main.m */; };
 		F3F9A54D1E9B1E2100CFEEF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A54C1E9B1E2100CFEEF8 /* ViewController.m */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F337D4A11E9C626C00505334 /* MultiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiViewController.h; path = EMCVLibDemo/MultiViewController.h; sourceTree = "<group>"; };
+		F337D4A21E9C626C00505334 /* MultiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiViewController.m; path = EMCVLibDemo/MultiViewController.m; sourceTree = "<group>"; };
 		F3F9A5421E9B1E2100CFEEF8 /* EMCVLibDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EMCVLibDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3F9A5451E9B1E2100CFEEF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3F9A5461E9B1E2100CFEEF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -52,6 +55,8 @@
 				F3F9A54C1E9B1E2100CFEEF8 /* ViewController.m */,
 				F3F9A5EE1E9B268D00CFEEF8 /* OneViewController.h */,
 				F3F9A5EF1E9B268D00CFEEF8 /* OneViewController.m */,
+				F337D4A11E9C626C00505334 /* MultiViewController.h */,
+				F337D4A21E9C626C00505334 /* MultiViewController.m */,
 				F3F9A5501E9B1E2100CFEEF8 /* Main.storyboard */,
 				F3F9A5441E9B1E2100CFEEF8 /* Support Files */,
 				F3F9A5431E9B1E2100CFEEF8 /* Products */,
@@ -178,6 +183,7 @@
 				F3F9A54D1E9B1E2100CFEEF8 /* ViewController.m in Sources */,
 				F3F9A54A1E9B1E2100CFEEF8 /* main.m in Sources */,
 				F3F9A5471E9B1E2100CFEEF8 /* AppDelegate.m in Sources */,
+				F337D4A31E9C626C00505334 /* MultiViewController.m in Sources */,
 				F3F9A5F01E9B268D00CFEEF8 /* OneViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

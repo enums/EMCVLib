@@ -45,7 +45,7 @@ using namespace cv;
 - (NSImage *)toImage;
 
 - (void)calHistWithDims:(int)dims size:(int)size range:(float *)range;
-- (void)calHistWithDims:(int)dims sizeList:(int *)sizes rangeList:(float **)ranges;
+- (void)calHistWithDims:(int)dims sizes:(int *)sizes ranges:(float **)ranges;
 - (void)normalizeHistWithValue:(double)value;
 
 @end

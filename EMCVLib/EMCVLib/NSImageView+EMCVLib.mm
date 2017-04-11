@@ -55,10 +55,8 @@
 - (void)drawRGBHistWithCVImage:(EMCVImage *)cvImg size:(int)size {
     int * colors[] = {kEMCVLibColorRed, kEMCVLibColorGreen, kEMCVLibColorBlue};
     int sizes[] = {size, size, size};
-    float range[] = {0, 255};
-    float * ranges[] = {range, range, range};
     EMCVSplitedImage * splitedImg = [cvImg splitImage];
-    [splitedImg calHistWithSizes:sizes range:ranges];
+    [splitedImg calHistWithSizes:sizes range:kEMCVLibRangesDefault3Dims];
     [splitedImg normalizeHistWithValue:self.frame.size.height];
     [self drawHistWithCVSplitedImage:splitedImg sizes:sizes rgbColors:colors];
 }

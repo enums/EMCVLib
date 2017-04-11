@@ -63,7 +63,7 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `splitImage`: Split image's channels.
 - **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
 - **[ObjC]**: `calHistWithDims:size:range`: Calculate histogram with the same size and range.
-- **[ObjC]**: `calHistWithDims:sizeList:rangeList`: Calculate histogram with the sizes and ranges.
+- **[ObjC]**: `calHistWithDims:sizes:ranges`: Calculate histogram with the sizes and ranges.
 - **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
 - **[ObjC]**: `drawARectWithCenter:size:rgbColor:thickness`: Draw a rect with specified center, size and thickness.	
 - **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified rect and thickness.	
@@ -122,6 +122,22 @@ A wrapped video class.
 
 empty
 
+## EMCV
+
+A wrapped functions whitch can do some computer vision calculate.
+
+### Property
+
+empty
+
+### Instance Method
+
+empty
+
+### Class Method
+
+- **[objC]**: `compareHistWithCVImage:andImage:withMethod`: Compare two `EMCVImage` instances' histogram. The method must be like `CV_COMP_CORREL` whitch is defined by OpenCV.
+- **[objC]**: `compareHistWithCVSplitedImage:andImage:withMethod:atChannal`: Compare two `EMCVSplitedImage` instances' histogram at the specified channal.
 
 ## NSImageView + EMCVLib
 
