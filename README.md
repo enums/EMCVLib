@@ -42,9 +42,9 @@ What can this library does now?
 
 Some screenshots of the demo.
 
-### Image Smooth and Histogram
+### Image Smooth
 
-![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/smooth_and_histogram.png)
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/smooth.png)
 
 ### Image Blending
 
