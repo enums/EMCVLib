@@ -59,10 +59,10 @@
         sizes[i] = size;
         ranges[i] = range;
     }
-    [self calHistWithSizes:sizes range:ranges];
+    [self calHistWithSizes:sizes ranges:ranges];
 }
 
-- (void)calHistWithSizes:(int *)sizes range:(float **)ranges {
+- (void)calHistWithSizes:(int *)sizes ranges:(float **)ranges {
     int dims = (int)_mats.size();
     _hists.clear();
     for (int i = 0; i < dims; i++) {

@@ -56,7 +56,7 @@
     int * colors[] = {kEMCVLibColorRed, kEMCVLibColorGreen, kEMCVLibColorBlue};
     int sizes[] = {size, size, size};
     EMCVSplitedImage * splitedImg = [cvImg splitImage];
-    [splitedImg calHistWithSizes:sizes range:kEMCVLibRangesDefault3Dims];
+    [splitedImg calHistWithSizes:sizes ranges:kEMCVLibRangesDefault];
     [splitedImg normalizeHistWithValue:self.frame.size.height];
     [self drawHistWithCVSplitedImage:splitedImg sizes:sizes rgbColors:colors];
 }

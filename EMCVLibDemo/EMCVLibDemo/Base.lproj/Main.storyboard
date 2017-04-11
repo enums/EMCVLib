@@ -891,17 +891,42 @@
                                             <action selector="matchTemplate:" target="hSJ-fp-MDT" id="aYE-x9-Onr"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5ea-Ae-HNq">
+                                        <rect key="frame" x="454" y="12" width="135" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Back Projection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u3M-4S-3TJ">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="doBackProjection:" target="hSJ-fp-MDT" id="6E5-Ac-gG6"/>
+                                        </connections>
+                                    </button>
+                                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-72-zEx">
+                                        <rect key="frame" x="591" y="19" width="40" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="AVA-gp-x6E"/>
+                                        </constraints>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="25" drawsBackground="YES" id="8r8-Hp-3o4">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="0DF-72-zEx" firstAttribute="leading" secondItem="5ea-Ae-HNq" secondAttribute="trailing" constant="8" id="0fY-GP-o9c"/>
                                     <constraint firstItem="D1g-3u-C4o" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="1Vf-nQ-f9T"/>
                                     <constraint firstItem="D1g-3u-C4o" firstAttribute="leading" secondItem="q9y-uI-VAW" secondAttribute="trailing" constant="12" id="3iV-vU-Zad"/>
                                     <constraint firstItem="OSg-nZ-bER" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="BcX-xK-bBH"/>
                                     <constraint firstAttribute="height" constant="60" id="C0e-Ol-8vA"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="OHf-ds-ytX"/>
+                                    <constraint firstItem="5ea-Ae-HNq" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="bMa-qw-L32"/>
                                     <constraint firstItem="OSg-nZ-bER" firstAttribute="leading" secondItem="D1g-3u-C4o" secondAttribute="trailing" constant="12" id="iP6-wA-9Vk"/>
                                     <constraint firstItem="VmY-PE-NKE" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="k3z-OT-2Cf"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="leading" secondItem="GTz-Ge-5P2" secondAttribute="leading" constant="20" id="m7z-0G-Tmi"/>
+                                    <constraint firstItem="0DF-72-zEx" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="rTj-WQ-qh5"/>
                                     <constraint firstItem="VmY-PE-NKE" firstAttribute="leading" secondItem="OSg-nZ-bER" secondAttribute="trailing" constant="12" id="rcA-8C-fVz"/>
+                                    <constraint firstItem="5ea-Ae-HNq" firstAttribute="leading" secondItem="VmY-PE-NKE" secondAttribute="trailing" constant="12" id="y2z-B9-UZn"/>
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="8x3-Tq-5c2">
@@ -1013,6 +1038,7 @@
                         <outlet property="imageViewA" destination="IXW-JP-DLD" id="EQ7-JU-es0"/>
                         <outlet property="imageViewB" destination="30F-UH-Epp" id="G9Q-mq-btG"/>
                         <outlet property="imageViewC" destination="f9L-GV-PlC" id="suA-1R-83A"/>
+                        <outlet property="sizeField" destination="0DF-72-zEx" id="if0-WW-dGj"/>
                         <outlet property="subImageViewA" destination="wj2-Az-jNt" id="5jE-5a-FZF"/>
                         <outlet property="subImageViewB" destination="ma8-H0-ou3" id="Xx5-ET-8PA"/>
                         <outlet property="subImageViewC" destination="SWx-Vz-x43" id="ZRE-h5-VnS"/>

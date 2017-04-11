@@ -15,7 +15,6 @@ static int kEMCVLibColorGreen[] = {0, 255, 0};
 static int kEMCVLibColorBlue[] = {0, 0, 255};
 
 static float kEMCVLibRangeDefault[] = {0, 255};
-static float * kEMCVLibRangesDefault1Dims[] = {kEMCVLibRangeDefault};
-static float * kEMCVLibRangesDefault2Dims[] = {kEMCVLibRangeDefault, kEMCVLibRangeDefault};
-static float * kEMCVLibRangesDefault3Dims[] = {kEMCVLibRangeDefault, kEMCVLibRangeDefault, kEMCVLibRangeDefault};
+static float * kEMCVLibRangesDefault[] = {kEMCVLibRangeDefault, kEMCVLibRangeDefault, kEMCVLibRangeDefault, kEMCVLibRangeDefault};
 
+static int kEMCVLibChannalDefault[] = {0, 1, 2, 3};

@@ -44,6 +44,7 @@ using namespace cv;
 - (void)gaussianBlurWithSize:(NSSize)size;
 - (NSImage *)toImage;
 
+- (void)calHistWithSize:(int)size range:(float *)range;
 - (void)calHistWithDims:(int)dims size:(int)size range:(float *)range;
 - (void)calHistWithDims:(int)dims sizes:(int *)sizes ranges:(float **)ranges;
 - (void)normalizeHistWithValue:(double)value;

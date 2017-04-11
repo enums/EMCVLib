@@ -8,6 +8,7 @@
 
 #import "EMCV.h"
 #import "opencv.h"
+#import "Static.h"
 
 @implementation EMCV
 
@@ -25,10 +26,27 @@
     Mat matchResult;
     matchResult.create(cols, rows, CV_32FC1);
     matchTemplate(img->_mat, templ->_mat, matchResult, method);
-    //    normalize(matchResult, matchResult, 0, 1, NORM_MINMAX, -1, Mat());
+//    normalize(matchResult, matchResult, 0, 1, NORM_MINMAX, -1, Mat());
     EMCVImage * ret = [[EMCVImage alloc] init];
     matchResult.convertTo(ret->_mat, CV_8U, 255);
     return ret;
 }
+
+
++ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ {
+    int dims = (int)img.channalCount;
+    return [self doBackProjectionWithImage:img andTempl:templ withDims:dims];
+}
+
++ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ withDims:(int)dims {
+    return [self doBackProjectionWithImage:img andTempl:templ atChannals:kEMCVLibChannalDefault andDims:dims andRanges:kEMCVLibRangesDefault];
+}
+
++ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ atChannals:(int *)channals andDims:(int)dims andRanges:(float **)ranges {
+    EMCVImage * backProj = [[EMCVImage alloc] init];
+    calcBackProject(&(img->_mat), dims, channals, templ->_hist, backProj->_mat, (const float **)ranges);
+    return backProj;
+}
+
 
 @end

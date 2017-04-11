@@ -14,6 +14,10 @@
 
 + (double)compareHistWithCVImage:(EMCVImage *)imgA andImage:(EMCVImage *)imgB withMethod:(int)method;
 + (double)compareHistWithCVSplitedImage:(EMCVSplitedImage *)imgA andImage:(EMCVSplitedImage *)imgB withMethod:(int)method atChannal:(int)channal;
+
 + (EMCVImage *)matchTemplateWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ withMethod:(int)method;
 
++ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ;
++ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ withDims:(int)dims;
++ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ atChannals:(int *)channals andDims:(int)dims andRanges:(float **)ranges;
 @end

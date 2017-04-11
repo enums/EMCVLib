@@ -39,7 +39,7 @@ using namespace cv;
 - (EMCVImage *)getImageWithChannal:(int)channal;
 
 - (void)calHistWithSize:(int)size range:(float *)range;
-- (void)calHistWithSizes:(int *)sizes range:(float **)ranges;
+- (void)calHistWithSizes:(int *)sizes ranges:(float **)ranges;
 - (void)calHistWithChannal:(int)channal size:(int)size range:(float *)range;
 
 - (void)normalizeHistWithValue:(double)value;

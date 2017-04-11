@@ -47,6 +47,10 @@ Some screenshots of the demo.
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/template_match.png)
 
+### Back Projection
+
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/back_projection.png)
+
 
 # Tips
 
@@ -81,6 +85,7 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` whitch is defined by OpenCV. The same as `cv::cvtColor`.
 - **[ObjC]**: `splitImage`: Split image's channels.
 - **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
+- **[ObjC]**: `calHistWithSize:range`: Calculate histogram using all channals with the same size and range.
 - **[ObjC]**: `calHistWithDims:size:range`: Calculate histogram with the same size and range.
 - **[ObjC]**: `calHistWithDims:sizes:ranges`: Calculate histogram with the sizes and ranges.
 - **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
@@ -158,6 +163,9 @@ empty
 - **[objC]**: `compareHistWithCVImage:andImage:withMethod`: Compare two `EMCVImage` instances' histogram. The method must be like `CV_COMP_CORREL` whitch is defined by OpenCV. The result is a `double` score.
 - **[objC]**: `compareHistWithCVSplitedImage:andImage:withMethod:atChannal`: Compare two `EMCVSplitedImage` instances' histogram at the specified channal.
 - **[ObjC]**: `matchTemplateWithImage:andTempl:withMethod`: Template Math. Find the location of the template image in the original image. The method must be like `CV_TM_SQDIFF_NORMED` whitch is defined by OpenCV. The result is a `EMCVImage` instance. It's a grey image. You can display it on a `NSImageView`.
+- **[ObjC]**: `doBackProjectionWithImage:andTempl`: Back Projection. The result is a `EMCVImage` instance. It's a grey image.
+- **[ObjC]**: `doBackProjectionWithImage:andTempl:withDims`: Do Back Projection with a specified dims.
+- **[ObjC]**: `doBackProjectionWithImage:andTempl:atChannals:andDims:andRange`: More detailed Back Projection method.
 
 ## NSImageView + EMCVLib
 

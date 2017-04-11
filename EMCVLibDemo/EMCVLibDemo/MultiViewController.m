@@ -20,6 +20,8 @@
 @property (weak) IBOutlet NSImageView *subImageViewB;
 @property (weak) IBOutlet NSImageView *subImageViewC;
 
+@property (weak) IBOutlet NSTextField *sizeField;
+
 @property (nonatomic) EMCVImage * curImageA;
 @property (nonatomic) EMCVImage * curImageB;
 @property (nonatomic) EMCVImage * curImageC;
@@ -100,6 +102,14 @@
     NSPoint maxPoint;
     [splitedImg findMinValue:nil outPoint:&maxPoint inChannal:0];
     [img drawARectWithCenter:maxPoint size:NSMakeSize(40, 40) rgbColor:kEMCVLibColorWhite thickness:2];
+    self.curImageC = img;
+}
+
+- (IBAction)doBackProjection:(id)sender {
+    int size = self.sizeField.intValue;
+    [self.curImageA calHistWithSize:size range:kEMCVLibRangeDefault];
+    [self.curImageB calHistWithSize:size range:kEMCVLibRangeDefault];
+    EMCVImage * img = [EMCV doBackProjectionWithImage:self.curImageA andTempl:self.curImageB withDims:3];
     self.curImageC = img;
 }
 

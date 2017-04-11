@@ -112,7 +112,10 @@
     }
     return image;
 }
-
+- (void)calHistWithSize:(int)size range:(float *)range {
+    int dims = (int)self.channalCount;
+    [self calHistWithDims:dims size:size range:range];
+}
 
 - (void)calHistWithDims:(int)dims size:(int)size range:(float *)range {
     int * sizes = new int[dims];
