@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -750,7 +750,7 @@
                                             <action selector="stopVideo:" target="gid-y5-LfR" id="iO1-U1-0pH"/>
                                         </connections>
                                     </button>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-n3-UYA">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-n3-UYA">
                                         <rect key="frame" x="849" y="22" width="35" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 fps" id="kJn-Kd-sbs">
                                             <font key="font" metaFont="system"/>
@@ -872,7 +872,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OSg-nZ-bER">
-                                        <rect key="frame" x="193" y="12" width="123" height="32"/>
+                                        <rect key="frame" x="289" y="13" width="123" height="32"/>
                                         <buttonCell key="cell" type="push" title="Compare Hist" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ejn-8p-uHf">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -882,7 +882,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VmY-PE-NKE">
-                                        <rect key="frame" x="316" y="12" width="138" height="32"/>
+                                        <rect key="frame" x="412" y="13" width="138" height="32"/>
                                         <buttonCell key="cell" type="push" title="Match Template" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p87-fe-L3E">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -892,7 +892,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5ea-Ae-HNq">
-                                        <rect key="frame" x="454" y="12" width="135" height="32"/>
+                                        <rect key="frame" x="550" y="13" width="135" height="32"/>
                                         <buttonCell key="cell" type="push" title="Back Projection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u3M-4S-3TJ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -901,8 +901,8 @@
                                             <action selector="doBackProjection:" target="hSJ-fp-MDT" id="6E5-Ac-gG6"/>
                                         </connections>
                                     </button>
-                                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-72-zEx">
-                                        <rect key="frame" x="591" y="19" width="40" height="22"/>
+                                    <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-72-zEx">
+                                        <rect key="frame" x="687" y="20" width="40" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="AVA-gp-x6E"/>
                                         </constraints>
@@ -912,6 +912,16 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rew-xc-gcn">
+                                        <rect key="frame" x="196" y="12" width="93" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Blending" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f9H-zO-Oxu">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="belnding:" target="hSJ-fp-MDT" id="QPR-vE-8mV"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0DF-72-zEx" firstAttribute="leading" secondItem="5ea-Ae-HNq" secondAttribute="trailing" constant="8" id="0fY-GP-o9c"/>
@@ -919,9 +929,11 @@
                                     <constraint firstItem="D1g-3u-C4o" firstAttribute="leading" secondItem="q9y-uI-VAW" secondAttribute="trailing" constant="12" id="3iV-vU-Zad"/>
                                     <constraint firstItem="OSg-nZ-bER" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="BcX-xK-bBH"/>
                                     <constraint firstAttribute="height" constant="60" id="C0e-Ol-8vA"/>
+                                    <constraint firstItem="Rew-xc-gcn" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="Ets-p0-4l8"/>
+                                    <constraint firstItem="Rew-xc-gcn" firstAttribute="leading" secondItem="D1g-3u-C4o" secondAttribute="trailing" constant="15" id="GNo-Af-7p7"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="OHf-ds-ytX"/>
                                     <constraint firstItem="5ea-Ae-HNq" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="bMa-qw-L32"/>
-                                    <constraint firstItem="OSg-nZ-bER" firstAttribute="leading" secondItem="D1g-3u-C4o" secondAttribute="trailing" constant="12" id="iP6-wA-9Vk"/>
+                                    <constraint firstItem="OSg-nZ-bER" firstAttribute="leading" secondItem="Rew-xc-gcn" secondAttribute="trailing" constant="12" id="jeY-94-Jdo"/>
                                     <constraint firstItem="VmY-PE-NKE" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="k3z-OT-2Cf"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="leading" secondItem="GTz-Ge-5P2" secondAttribute="leading" constant="20" id="m7z-0G-Tmi"/>
                                     <constraint firstItem="0DF-72-zEx" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="rTj-WQ-qh5"/>

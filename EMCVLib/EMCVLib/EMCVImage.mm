@@ -64,8 +64,24 @@
     return self;
 }
 
+- (EMCVImage *)makeACopy {
+    return [[EMCVImage alloc] initWithCVImage:self];
+}
+
 - (EMCVSplitedImage *)splitImage {
     return [[EMCVSplitedImage alloc] initWithCVImage:self];
+}
+
+- (void)blurWithSize:(NSSize)size {
+    blur(_mat, _mat, cv::Size(size.width, size.height));
+}
+
+- (void)medianBlurWithSize:(int)size {
+    medianBlur(_mat, _mat, size);
+}
+
+- (void)bilateralFilterWithDelta:(int)d andSigmaColor:(double)sc andSigmaSpace:(double)sp {
+    bilateralFilter(_mat, _mat, d, sc, sp);
 }
 
 - (void)gaussianBlurWithSize:(NSSize)size {

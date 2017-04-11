@@ -48,5 +48,10 @@
     return backProj;
 }
 
++ (EMCVImage *)blendingImage:(EMCVImage *)imgA withImage:(EMCVImage *)imgB useAlpha1:(double)a1 andAlpha2:(double)a2 andGama:(double)gamma {
+    EMCVImage * img = [[EMCVImage alloc] init];
+    addWeighted(imgA->_mat, a1, imgB->_mat, a2, gamma, img->_mat);
+    return img;
+}
 
 @end

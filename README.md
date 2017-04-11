@@ -34,7 +34,7 @@ Download the repo. Then drag the library project to your project.
 What can this library does now?
 
 - Display image and play video with real-time processing.
-- Color convert. Channals split. Image smooth.
+- Color convert. Channals split. Image smooth. Image blending.
 - Find extreme values and locations. Calculate and compare histograms.
 - Matching algorithm: Template Match, Back Projection.
 
@@ -42,10 +42,17 @@ What can this library does now?
 
 Some screenshots of the demo.
 
+### Image Smooth and Histogram
+
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/smooth_and_histogram.png)
+
+### Image Blending
+
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/blending.png)
+
 ### Max / Min value location of RGB
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/max_min_value_point_of_RGB.png)
-
 
 ### History Compare
 
@@ -69,7 +76,7 @@ Use `@autoreleasePool` when doing loop can solve some memory problems.
 Introduce each Class or Function in this library. Or you can see the demo code in this repo.
 
 - **[ObjC]**: Means this property or method can be used on Objective-C.
-- **[ObjC++]**: Means this property or method can only be used on Objective-C++ which means it's must a `.mm` source file.
+- **[ObjC++]**: Means this property or method can only be used on Objective-C++ which means it's a `.mm` source file.
 
 ## EMCVImage
 
@@ -89,7 +96,8 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `initWithSplitedImage `: Init a instance with a `EMCVSpritedImage` instance. Means to merge multi channel image.
 - **[ObjC++]**: `initWithMat`: Init a instance with a `cv::Mat`.
 - **[ObjC++]**: `initWithMat:cvtColor`: Init a instance with a `cv::Mat` and color format like `CV_BGR2RGB` whitch is defined by OpenCV.
-- **[ObjC++]**: `initWithNoCopyMat`: Init a instance with a `cv::Mat` and will not copy data.
+- **[ObjC++]**: `initWithNoCopyMat`: Init a instance with a `cv::Mat` and will not copy memory.
+- **[ObjC]**: `makeACopy`: Make a copy. It will copy memory.
 - **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` whitch is defined by OpenCV. The same as `cv::cvtColor`.
 - **[ObjC]**: `splitImage`: Split image's channels.
 - **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
@@ -174,6 +182,7 @@ empty
 - **[ObjC]**: `doBackProjectionWithImage:andTempl`: Back Projection. The result is a `EMCVImage` instance. It's a grey image.
 - **[ObjC]**: `doBackProjectionWithImage:andTempl:withDims`: Do Back Projection with a specified dims.
 - **[ObjC]**: `doBackProjectionWithImage:andTempl:atChannals:andDims:andRange`: More detailed Back Projection method.
+- **[ObjC]**: `blendingImage:withImage:useAlpha1:andAlpha2:andGamma`: Blending two image with alpha. These two images must have the same size.
 
 ## NSImageView + EMCVLib
 

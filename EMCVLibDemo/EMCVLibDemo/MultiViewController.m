@@ -86,6 +86,11 @@
     }];
 }
 
+- (IBAction)belnding:(id)sender {
+    EMCVImage * img = [EMCV blendingImage:self.curImageA withImage:self.curImageB useAlpha1:0.5 andAlpha2:0.5 andGama:0];
+    self.curImageC = img;
+}
+
 - (IBAction)compareHist:(id)sender {
     [self.curImageA calHistWithDims:3 size:128 range:kEMCVLibRangeDefault];
     [self.curImageB calHistWithDims:3 size:128 range:kEMCVLibRangeDefault];
