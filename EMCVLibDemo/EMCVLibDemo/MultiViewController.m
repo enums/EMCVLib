@@ -99,7 +99,7 @@
     EMCVSplitedImage * splitedImg = [img splitImage];
     NSPoint maxPoint;
     [splitedImg findMinValue:nil outPoint:&maxPoint inChannal:0];
-    [img drawARectWithCenter:maxPoint size:NSMakeSize(40, 40) rgbColor:kEMCVLibColorBlack thickness:2];
+    [img drawARectWithCenter:maxPoint size:NSMakeSize(40, 40) rgbColor:kEMCVLibColorWhite thickness:2];
     self.curImageC = img;
 }
 

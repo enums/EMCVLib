@@ -840,10 +840,10 @@
             </objects>
             <point key="canvasLocation" x="-446" y="1098"/>
         </scene>
-        <!--One Image Sample-->
+        <!--Multi Image Sample-->
         <scene sceneID="11F-oI-vLj">
             <objects>
-                <viewController title="One Image Sample" id="hSJ-fp-MDT" customClass="MultiViewController" sceneMemberID="viewController">
+                <viewController title="Multi Image Sample" id="hSJ-fp-MDT" customClass="MultiViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="bn1-GN-Bvb">
                         <rect key="frame" x="0.0" y="0.0" width="1707" height="557"/>
                         <autoresizingMask key="autoresizingMask"/>
