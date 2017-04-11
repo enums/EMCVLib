@@ -29,11 +29,30 @@ brew install opencv
 
 Download the repo. Then drag the library project to your project.
 
+
+# Screenshots
+
+Some screenshots of the demo.
+
+### Max / Min value location of RGB
+
+![](src/max min value point of RGB.png)
+
+
+### History Compare
+
+![](src/histogram compare.png)
+
+### Template Match
+
+![](src/template match.png)
+
+
 # Tips
 
 Use `@autoreleasePool` when doing loop can solve some memory problems.
 
-# Document
+# Documents
 
 Introduce each Class or Founction in this library. Or you can see the demo code in this repo.
 
