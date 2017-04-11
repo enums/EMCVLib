@@ -94,4 +94,13 @@
     printf("currel(1~-1): %f\nchisqu(0~∞): %f\nintersect(↑): %f\nbhattachayya(0~1): %f\n\n", currel, chisqr, intersect, bhattachayya);
 }
 
+- (IBAction)matchTemplate:(id)sender {
+    EMCVImage * img = [EMCV matchTemplateWithImage:self.curImageA andTempl:self.curImageB withMethod:CV_TM_SQDIFF_NORMED];
+    EMCVSplitedImage * splitedImg = [img splitImage];
+    NSPoint maxPoint;
+    [splitedImg findMinValue:nil outPoint:&maxPoint inChannal:0];
+    [img drawARectWithCenter:maxPoint size:NSMakeSize(40, 40) rgbColor:kEMCVLibColorBlack thickness:2];
+    self.curImageC = img;
+}
+
 @end

@@ -19,4 +19,16 @@
     return compareHist(imgA->_hists.at(channal), imgB->_hists.at(channal), method);
 }
 
++ (EMCVImage *)matchTemplateWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ withMethod:(int)method {
+    int cols = img->_mat.cols - templ->_mat.cols + 1;
+    int rows = img->_mat.rows - templ->_mat.rows + 1;
+    Mat matchResult;
+    matchResult.create(cols, rows, CV_32FC1);
+    matchTemplate(img->_mat, templ->_mat, matchResult, method);
+    //    normalize(matchResult, matchResult, 0, 1, NORM_MINMAX, -1, Mat());
+    EMCVImage * ret = [[EMCVImage alloc] init];
+    matchResult.convertTo(ret->_mat, CV_8U, 255);
+    return ret;
+}
+
 @end

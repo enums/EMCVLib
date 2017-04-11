@@ -881,6 +881,16 @@
                                             <action selector="compareHist:" target="hSJ-fp-MDT" id="d6p-fw-QF9"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VmY-PE-NKE">
+                                        <rect key="frame" x="316" y="12" width="138" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Match Template" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p87-fe-L3E">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="matchTemplate:" target="hSJ-fp-MDT" id="aYE-x9-Onr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="D1g-3u-C4o" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="1Vf-nQ-f9T"/>
@@ -889,7 +899,9 @@
                                     <constraint firstAttribute="height" constant="60" id="C0e-Ol-8vA"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="OHf-ds-ytX"/>
                                     <constraint firstItem="OSg-nZ-bER" firstAttribute="leading" secondItem="D1g-3u-C4o" secondAttribute="trailing" constant="12" id="iP6-wA-9Vk"/>
+                                    <constraint firstItem="VmY-PE-NKE" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="k3z-OT-2Cf"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="leading" secondItem="GTz-Ge-5P2" secondAttribute="leading" constant="20" id="m7z-0G-Tmi"/>
+                                    <constraint firstItem="VmY-PE-NKE" firstAttribute="leading" secondItem="OSg-nZ-bER" secondAttribute="trailing" constant="12" id="rcA-8C-fVz"/>
                                 </constraints>
                             </customView>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="8x3-Tq-5c2">

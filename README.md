@@ -96,8 +96,8 @@ A wrapped multi channel image class.
 - **[ObjC]**: `calHistWithChannal:size:range`: Calculate specified channal's histogram wit size and range. 
 - **[ObjC]**: `normalizeHistWithValue`: Normalize all channals' histogram to some value.
 - **[ObjC]**: `normalizeHistWithChannal:value`: Normalize specified channal's histogram to some value.
-- **[ObjC]**: `findMaxValue:outPoint:inChannal`:Find the max value and location in specified channal.
-- **[ObjC]**: `findMinValue:outPoint:inChannal`:Find the min value and location in specified channal.
+- **[ObjC]**: `findMaxValue:outPoint:inChannal`: Find the max value and location in specified channal.
+- **[ObjC]**: `findMinValue:outPoint:inChannal`: Find the min value and location in specified channal.
 
 
 ### Class Metod
@@ -136,8 +136,9 @@ empty
 
 ### Class Method
 
-- **[objC]**: `compareHistWithCVImage:andImage:withMethod`: Compare two `EMCVImage` instances' histogram. The method must be like `CV_COMP_CORREL` whitch is defined by OpenCV.
+- **[objC]**: `compareHistWithCVImage:andImage:withMethod`: Compare two `EMCVImage` instances' histogram. The method must be like `CV_COMP_CORREL` whitch is defined by OpenCV. The result is a `double` score.
 - **[objC]**: `compareHistWithCVSplitedImage:andImage:withMethod:atChannal`: Compare two `EMCVSplitedImage` instances' histogram at the specified channal.
+- **[ObjC]**: `matchTemplateWithImage:andTempl:withMethod`: Template Math. Find the location of the template image in the original image. The method must be like `CV_TM_SQDIFF_NORMED` whitch is defined by OpenCV. The result is a `EMCVImage` instance. It's a grey image. You can display it on a `NSImageView`.
 
 ## NSImageView + EMCVLib
 
