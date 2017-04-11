@@ -7,6 +7,7 @@
 //
 
 #import "EMCVSplitedImage.h"
+#import "Static.h"
 
 @implementation EMCVSplitedImage
 
@@ -106,6 +107,35 @@
     cv::Point minPoint;
     minMaxLoc(_mats.at(channal), value, nil, &minPoint, nil);
     *point = NSMakePoint(minPoint.x, minPoint.y);
+}
+
+- (EMCVImage *)newCannyWithThresh1:(double)thresh1 andThresh2:(double)thresh2 atChannal:(int)channal {
+    NSSize size = NSMakeSize(self->_mats.at(channal).cols, self->_mats.at(channal).rows);
+    EMCVImage * img = [[EMCVImage alloc] initWithSize:size andType:CV_8UC3 andColor:kEMCVLibColorBlack];
+    [self cannyOnCVImage:img withThresh1:thresh1 andThreash2:thresh2 atChannal:channal];
+    return img;
+}
+
+- (void)cannyOnCVImage:(EMCVImage *)img withThresh1:(double)thresh1 andThreash2:(double)thresh2 atChannal:(int)channal {
+    Canny(self->_mats.at(channal), img->_mat, thresh1, thresh2);
+}
+
+- (EMCVImage *)newDrawContoursWithMode:(int)mode andMethod:(int)method atChannal:(int)channal {
+    NSSize size = NSMakeSize(self->_mats.at(channal).cols, self->_mats.at(channal).rows);
+    EMCVImage * img = [[EMCVImage alloc] initWithSize:size andType:CV_8UC3 andColor:kEMCVLibColorBlack];
+    [self drawContoursOnImage:img withMode:mode andMethod:method atChannal:channal];
+    return img;
+}
+
+- (void)drawContoursOnImage:(EMCVImage *)img withMode:(int)mode andMethod:(int)method atChannal:(int)channal {
+    vector<vector<cv::Point>> contours;
+    vector<Vec4i> hierarchy;
+    findContours(self->_mats.at(channal), contours, hierarchy, mode, method);
+    for(int i = 0; i< contours.size(); i++) {
+        Scalar color = Scalar(kEMCVLibColorWhite[0], kEMCVLibColorWhite[1], kEMCVLibColorWhite[2]);
+        drawContours(img->_mat, contours, i, color, 2, 8, hierarchy);
+    }
+
 }
 
 

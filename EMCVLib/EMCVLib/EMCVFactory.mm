@@ -1,16 +1,16 @@
 //
-//  EMCV.m
+//  EMCVFactory.m
 //  EMCVLib
 //
 //  Created by 郑宇琦 on 2017/4/11.
 //  Copyright © 2017年 郑宇琦. All rights reserved.
 //
 
-#import "EMCV.h"
+#import "EMCVFactory.h"
 #import "opencv.h"
 #import "Static.h"
 
-@implementation EMCV
+@implementation EMCVFactory
 
 + (double)compareHistWithCVImage:(EMCVImage *)imgA andImage:(EMCVImage *)imgB withMethod:(int)method {
     return compareHist(imgA->_hist, imgB->_hist, method);

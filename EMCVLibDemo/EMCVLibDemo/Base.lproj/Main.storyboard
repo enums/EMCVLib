@@ -872,7 +872,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OSg-nZ-bER">
-                                        <rect key="frame" x="289" y="13" width="123" height="32"/>
+                                        <rect key="frame" x="382" y="13" width="123" height="32"/>
                                         <buttonCell key="cell" type="push" title="Compare Hist" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ejn-8p-uHf">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -882,7 +882,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VmY-PE-NKE">
-                                        <rect key="frame" x="412" y="13" width="138" height="32"/>
+                                        <rect key="frame" x="505" y="13" width="138" height="32"/>
                                         <buttonCell key="cell" type="push" title="Match Template" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p87-fe-L3E">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -892,7 +892,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5ea-Ae-HNq">
-                                        <rect key="frame" x="550" y="13" width="135" height="32"/>
+                                        <rect key="frame" x="643" y="13" width="135" height="32"/>
                                         <buttonCell key="cell" type="push" title="Back Projection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u3M-4S-3TJ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -901,8 +901,8 @@
                                             <action selector="doBackProjection:" target="hSJ-fp-MDT" id="6E5-Ac-gG6"/>
                                         </connections>
                                     </button>
-                                    <textField verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-72-zEx">
-                                        <rect key="frame" x="687" y="20" width="40" height="22"/>
+                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-72-zEx">
+                                        <rect key="frame" x="780" y="19" width="40" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="AVA-gp-x6E"/>
                                         </constraints>
@@ -912,8 +912,18 @@
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ifQ-P2-lyP">
+                                        <rect key="frame" x="193" y="12" width="96" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Contours" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MzJ-X1-p5t">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="contours:" target="hSJ-fp-MDT" id="Rb8-LE-3hK"/>
+                                        </connections>
+                                    </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rew-xc-gcn">
-                                        <rect key="frame" x="196" y="12" width="93" height="32"/>
+                                        <rect key="frame" x="289" y="13" width="93" height="32"/>
                                         <buttonCell key="cell" type="push" title="Blending" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="f9H-zO-Oxu">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -930,12 +940,14 @@
                                     <constraint firstItem="OSg-nZ-bER" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="BcX-xK-bBH"/>
                                     <constraint firstAttribute="height" constant="60" id="C0e-Ol-8vA"/>
                                     <constraint firstItem="Rew-xc-gcn" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="Ets-p0-4l8"/>
-                                    <constraint firstItem="Rew-xc-gcn" firstAttribute="leading" secondItem="D1g-3u-C4o" secondAttribute="trailing" constant="15" id="GNo-Af-7p7"/>
+                                    <constraint firstItem="Rew-xc-gcn" firstAttribute="leading" secondItem="ifQ-P2-lyP" secondAttribute="trailing" constant="12" id="Ivf-du-k0h"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="OHf-ds-ytX"/>
                                     <constraint firstItem="5ea-Ae-HNq" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="bMa-qw-L32"/>
+                                    <constraint firstItem="ifQ-P2-lyP" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="hre-aa-3fE"/>
                                     <constraint firstItem="OSg-nZ-bER" firstAttribute="leading" secondItem="Rew-xc-gcn" secondAttribute="trailing" constant="12" id="jeY-94-Jdo"/>
                                     <constraint firstItem="VmY-PE-NKE" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="k3z-OT-2Cf"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="leading" secondItem="GTz-Ge-5P2" secondAttribute="leading" constant="20" id="m7z-0G-Tmi"/>
+                                    <constraint firstItem="ifQ-P2-lyP" firstAttribute="leading" secondItem="D1g-3u-C4o" secondAttribute="trailing" constant="12" id="oTY-bY-CDd"/>
                                     <constraint firstItem="0DF-72-zEx" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="rTj-WQ-qh5"/>
                                     <constraint firstItem="VmY-PE-NKE" firstAttribute="leading" secondItem="OSg-nZ-bER" secondAttribute="trailing" constant="12" id="rcA-8C-fVz"/>
                                     <constraint firstItem="5ea-Ae-HNq" firstAttribute="leading" secondItem="VmY-PE-NKE" secondAttribute="trailing" constant="12" id="y2z-B9-UZn"/>

@@ -48,4 +48,9 @@ using namespace cv;
 - (void)findMaxValue:(double *)value outPoint:(NSPoint *)point inChannal:(int)channal;
 - (void)findMinValue:(double *)value outPoint:(NSPoint *)point inChannal:(int)channal;
 
+- (EMCVImage *)newCannyWithThresh1:(double)thresh1 andThresh2:(double)thresh2 atChannal:(int)channal;
+- (void)cannyOnCVImage:(EMCVImage *)img withThresh1:(double)thresh1 andThreash2:(double)thresh2 atChannal:(int)channal;
+- (EMCVImage *)newDrawContoursWithMode:(int)mode andMethod:(int)method atChannal:(int)channal;
+- (void)drawContoursOnImage:(EMCVImage *)img withMode:(int)mode andMethod:(int)method atChannal:(int)channal;
+
 @end

@@ -30,6 +30,11 @@
     return [self initWithMat: mat];
 }
 
+- (instancetype)initWithSize:(NSSize)size andType:(int)type andColor:(int *)rgb {
+    Mat mat = Mat(size.height, size.width, type, Scalar(rgb[0], rgb[1], rgb[2]));
+    return [self initWithNoCopyMat:mat];
+}
+
 - (instancetype)initWithCVImage:(EMCVImage *)img {
     return [self initWithMat:img->_mat];
 }

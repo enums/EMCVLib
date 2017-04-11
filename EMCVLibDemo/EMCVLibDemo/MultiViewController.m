@@ -87,22 +87,22 @@
 }
 
 - (IBAction)belnding:(id)sender {
-    EMCVImage * img = [EMCV blendingImage:self.curImageA withImage:self.curImageB useAlpha1:0.5 andAlpha2:0.5 andGama:0];
+    EMCVImage * img = [EMCVFactory blendingImage:self.curImageA withImage:self.curImageB useAlpha1:0.5 andAlpha2:0.5 andGama:0];
     self.curImageC = img;
 }
 
 - (IBAction)compareHist:(id)sender {
     [self.curImageA calHistWithDims:3 size:128 range:kEMCVLibRangeDefault];
     [self.curImageB calHistWithDims:3 size:128 range:kEMCVLibRangeDefault];
-    double currel = [EMCV compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CORREL];
-    double chisqr = [EMCV compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CHISQR];
-    double intersect = [EMCV compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_INTERSECT];
-    double bhattachayya = [EMCV compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_BHATTACHARYYA];
+    double currel = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CORREL];
+    double chisqr = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CHISQR];
+    double intersect = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_INTERSECT];
+    double bhattachayya = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_BHATTACHARYYA];
     printf("currel(1~-1): %f\nchisqu(0~∞): %f\nintersect(↑): %f\nbhattachayya(0~1): %f\n\n", currel, chisqr, intersect, bhattachayya);
 }
 
 - (IBAction)matchTemplate:(id)sender {
-    EMCVImage * img = [EMCV matchTemplateWithImage:self.curImageA andTempl:self.curImageB withMethod:CV_TM_SQDIFF_NORMED];
+    EMCVImage * img = [EMCVFactory matchTemplateWithImage:self.curImageA andTempl:self.curImageB withMethod:CV_TM_SQDIFF_NORMED];
     EMCVSplitedImage * splitedImg = [img splitImage];
     NSPoint maxPoint;
     [splitedImg findMinValue:nil outPoint:&maxPoint inChannal:0];
@@ -114,7 +114,16 @@
     int size = self.sizeField.intValue;
     [self.curImageA calHistWithSize:size range:kEMCVLibRangeDefault];
     [self.curImageB calHistWithSize:size range:kEMCVLibRangeDefault];
-    EMCVImage * img = [EMCV doBackProjectionWithImage:self.curImageA andTempl:self.curImageB withDims:3];
+    EMCVImage * img = [EMCVFactory doBackProjectionWithImage:self.curImageA andTempl:self.curImageB withDims:3];
+    self.curImageC = img;
+}
+
+- (IBAction)contours:(id)sender {
+    double tresh = self.sizeField.doubleValue;
+    EMCVSplitedImage * splitedImg = [self.curImageA splitImage];
+    EMCVImage * img = [[EMCVImage alloc] init];
+    [splitedImg cannyOnCVImage:img withThresh1:tresh andThreash2:tresh * 2 atChannal:0];
+    [splitedImg drawContoursOnImage:img withMode:CV_RETR_TREE andMethod:CV_CHAIN_APPROX_SIMPLE atChannal:0];
     self.curImageC = img;
 }
 

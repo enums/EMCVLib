@@ -35,7 +35,7 @@ What can this library does now?
 
 - Display image and play video with real-time processing.
 - Color convert. Channals split. Image smooth. Image blending.
-- Find extreme values and locations. Calculate and compare histograms.
+- Edge Detection. Find extreme values and locations. Calculate and compare histograms.
 - Matching algorithm: Template Match, Back Projection.
 
 # Screenshots
@@ -49,6 +49,10 @@ Some screenshots of the demo.
 ### Image Blending
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/blending.png)
+
+### Canny and Edge Detection
+
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/canny_and_contours.png)
 
 ### Max / Min value location of RGB
 
@@ -91,6 +95,7 @@ A wrapped image class. The default color format should be BGR when image opened 
 ### Instance Method
 
 - **[ObjC]**: `initWithPath`: Open a local image file with a `NSString` path.
+- **[ObjC]**: `initWithSize:andType:andColor`: Init a empty `EMCVImage` instance with type and color. Type must be like `CV_8UC3` whitch is defined by OpenCV. Color is a RGB value array.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy.
 - **[ObjC]**: `initWithCVImage:cvtColor`: Init a instance with a `EMCVImage` instance and color format. like `CV_BGR2RGB` whitch is defined by OpenCV.
 - **[ObjC]**: `initWithSplitedImage `: Init a instance with a `EMCVSpritedImage` instance. Means to merge multi channel image.
@@ -141,6 +146,10 @@ A wrapped multi channel image class.
 - **[ObjC]**: `normalizeHistWithChannal:value`: Normalize specified channal's histogram to some value.
 - **[ObjC]**: `findMaxValue:outPoint:inChannal`: Find the max value and location in specified channal.
 - **[ObjC]**: `findMinValue:outPoint:inChannal`: Find the min value and location in specified channal.
+- **[ObjC]**: `newCannyWithThresh1:andThresh2:atChannal`: Canny. Create a new `EMCVImage` instance and draw Canny image on it.
+- **[ObjC]**: `cannyOnImage:withThresh1:andThresh2:atChannal`: Canny. Draw Canny image on a specified image.
+- **[ObjC]**: `newDrawContoursWithMode:andMethod:atChannal`: Create a new `EMCVImage` instance and draw edge image on it. The mode must be like `CV_RETR_TREE` whitch is defined by OpenCV. The method must be like `CV_CHAIN_APPROX_SIMPLE` whitch is defined by OpenCV too.
+- **[ObjC]**: `drawContoursOnImage:WithMode:withThresh1:andThresh2:atChannal`: Draw edge image on a specified image.
 
 
 ### Class Metod
@@ -165,9 +174,9 @@ A wrapped video class.
 
 empty
 
-## EMCV
+## EMCVFactory
 
-A wrapped functions whitch can do some computer vision calculate.
+A wrapped functions whitch can do some computer vision calculations.
 
 ### Property
 

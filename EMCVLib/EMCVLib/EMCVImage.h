@@ -33,6 +33,7 @@ using namespace cv;
 @property (nonatomic, readonly) NSUInteger channalCount;
 
 - (instancetype)initWithPath:(NSString *)path;
+- (instancetype)initWithSize:(NSSize)size andType:(int)type andColor:(int *)color;
 - (instancetype)initWithCVImage:(EMCVImage *)img;
 - (instancetype)initWithCVImage:(EMCVImage *)img cvtColor:(int)color;
 - (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage;
