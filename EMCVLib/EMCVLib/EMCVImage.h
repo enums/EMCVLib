@@ -37,6 +37,7 @@ using namespace cv;
 - (instancetype)initWithCVImage:(EMCVImage *)img;
 - (instancetype)initWithCVImage:(EMCVImage *)img cvtColor:(int)color;
 - (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage;
+- (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage atChannal:(int)channal;
 
 - (EMCVImage *)makeACopy;
 

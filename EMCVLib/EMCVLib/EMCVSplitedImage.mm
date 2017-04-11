@@ -44,12 +44,20 @@
     return self;
 }
 
+- (void)threshold:(double)thresh atChannal:(int)channal {
+    [self threshold:thresh maxValue:255 type:CV_THRESH_TOZERO atChanal:channal];
+}
+
+- (void)threshold:(double)thresh maxValue:(double)maxValue type:(int)type atChanal:(int)channal {
+    threshold(_mats.at(channal), _mats.at(channal), thresh, maxValue, type);
+}
+
 - (EMCVImage *)mergeImage {
     return [[EMCVImage alloc] initWithSplitedImage:self];
 }
 
 - (EMCVImage *)getImageWithChannal:(int)channal {
-    return [[EMCVImage alloc] initWithMat:_mats.at(channal)];
+    return [[EMCVImage alloc] initWithSplitedImage:self atChannal:channal];
 }
 
 - (void)calHistWithSize:(int)size range:(float *)range {

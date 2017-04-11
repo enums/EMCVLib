@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -750,7 +750,7 @@
                                             <action selector="stopVideo:" target="gid-y5-LfR" id="iO1-U1-0pH"/>
                                         </connections>
                                     </button>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-n3-UYA">
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-n3-UYA">
                                         <rect key="frame" x="849" y="22" width="35" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 fps" id="kJn-Kd-sbs">
                                             <font key="font" metaFont="system"/>
@@ -871,18 +871,8 @@
                                             <action selector="showImageB:" target="hSJ-fp-MDT" id="CT7-JZ-YDa"/>
                                         </connections>
                                     </button>
-                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OSg-nZ-bER">
-                                        <rect key="frame" x="382" y="13" width="123" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Compare Hist" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ejn-8p-uHf">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="compareHist:" target="hSJ-fp-MDT" id="d6p-fw-QF9"/>
-                                        </connections>
-                                    </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VmY-PE-NKE">
-                                        <rect key="frame" x="505" y="13" width="138" height="32"/>
+                                        <rect key="frame" x="606" y="13" width="138" height="32"/>
                                         <buttonCell key="cell" type="push" title="Match Template" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p87-fe-L3E">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -892,7 +882,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5ea-Ae-HNq">
-                                        <rect key="frame" x="643" y="13" width="135" height="32"/>
+                                        <rect key="frame" x="744" y="13" width="135" height="32"/>
                                         <buttonCell key="cell" type="push" title="Back Projection" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="u3M-4S-3TJ">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -901,8 +891,8 @@
                                             <action selector="doBackProjection:" target="hSJ-fp-MDT" id="6E5-Ac-gG6"/>
                                         </connections>
                                     </button>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-72-zEx">
-                                        <rect key="frame" x="780" y="19" width="40" height="22"/>
+                                    <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DF-72-zEx">
+                                        <rect key="frame" x="881" y="19" width="40" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="AVA-gp-x6E"/>
                                         </constraints>
@@ -932,6 +922,26 @@
                                             <action selector="belnding:" target="hSJ-fp-MDT" id="QPR-vE-8mV"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-SK-22V">
+                                        <rect key="frame" x="382" y="12" width="101" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Threshold" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="KnN-Yw-vc8">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="threshold:" target="hSJ-fp-MDT" id="79d-pC-UgQ"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="OSg-nZ-bER">
+                                        <rect key="frame" x="483" y="12" width="123" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Compare Hist" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ejn-8p-uHf">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="compareHist:" target="hSJ-fp-MDT" id="d6p-fw-QF9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0DF-72-zEx" firstAttribute="leading" secondItem="5ea-Ae-HNq" secondAttribute="trailing" constant="8" id="0fY-GP-o9c"/>
@@ -940,11 +950,13 @@
                                     <constraint firstItem="OSg-nZ-bER" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="BcX-xK-bBH"/>
                                     <constraint firstAttribute="height" constant="60" id="C0e-Ol-8vA"/>
                                     <constraint firstItem="Rew-xc-gcn" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="Ets-p0-4l8"/>
+                                    <constraint firstItem="eSb-SK-22V" firstAttribute="leading" secondItem="Rew-xc-gcn" secondAttribute="trailing" constant="12" id="FaY-14-flK"/>
                                     <constraint firstItem="Rew-xc-gcn" firstAttribute="leading" secondItem="ifQ-P2-lyP" secondAttribute="trailing" constant="12" id="Ivf-du-k0h"/>
+                                    <constraint firstItem="eSb-SK-22V" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="N0h-vc-My9"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="OHf-ds-ytX"/>
                                     <constraint firstItem="5ea-Ae-HNq" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="bMa-qw-L32"/>
                                     <constraint firstItem="ifQ-P2-lyP" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="hre-aa-3fE"/>
-                                    <constraint firstItem="OSg-nZ-bER" firstAttribute="leading" secondItem="Rew-xc-gcn" secondAttribute="trailing" constant="12" id="jeY-94-Jdo"/>
+                                    <constraint firstItem="OSg-nZ-bER" firstAttribute="leading" secondItem="eSb-SK-22V" secondAttribute="trailing" constant="12" id="i7g-Ho-0L1"/>
                                     <constraint firstItem="VmY-PE-NKE" firstAttribute="centerY" secondItem="GTz-Ge-5P2" secondAttribute="centerY" id="k3z-OT-2Cf"/>
                                     <constraint firstItem="q9y-uI-VAW" firstAttribute="leading" secondItem="GTz-Ge-5P2" secondAttribute="leading" constant="20" id="m7z-0G-Tmi"/>
                                     <constraint firstItem="ifQ-P2-lyP" firstAttribute="leading" secondItem="D1g-3u-C4o" secondAttribute="trailing" constant="12" id="oTY-bY-CDd"/>

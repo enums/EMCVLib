@@ -35,6 +35,9 @@ using namespace cv;
 - (instancetype)initWithPath:(NSString *)path;
 - (instancetype)initWithCVImage:(EMCVImage *)img;
 
+- (void)threshold:(double)thresh atChannal:(int)channal;
+- (void)threshold:(double)thresh maxValue:(double)maxValue type:(int)type atChanal:(int)channal;
+
 - (EMCVImage *)mergeImage;
 - (EMCVImage *)getImageWithChannal:(int)channal;
 

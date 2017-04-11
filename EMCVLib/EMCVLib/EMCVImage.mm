@@ -61,6 +61,11 @@
     return [self initWithNoCopyMat:mat];
 }
 
+- (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage atChannal:(int)channal {
+    return [self initWithMat:splitedImage->_mats.at(channal)];
+}
+
+
 - (instancetype)initWithNoCopyMat:(Mat)mat {
     self = [super init];
     if (self) {

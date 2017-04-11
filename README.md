@@ -50,6 +50,10 @@ Some screenshots of the demo.
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/blending.png)
 
+### Threshold
+
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/threshold.png)
+
 ### Canny and Edge Detection
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/canny_and_contours.png)
@@ -98,7 +102,8 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `initWithSize:andType:andColor`: Init a empty `EMCVImage` instance with type and color. Type must be like `CV_8UC3` whitch is defined by OpenCV. Color is a RGB value array.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy.
 - **[ObjC]**: `initWithCVImage:cvtColor`: Init a instance with a `EMCVImage` instance and color format. like `CV_BGR2RGB` whitch is defined by OpenCV.
-- **[ObjC]**: `initWithSplitedImage `: Init a instance with a `EMCVSpritedImage` instance. Means to merge multi channel image.
+- **[ObjC]**: `initWithSplitedImage`: Init a instance with a `EMCVSpritedImage` instance. Means to merge multi channel image.
+- **[ObjC]**: `initWithSplitedImage:atChannal`: Init a instance with one of a `EMCVSpritedImage` instance's channal image.
 - **[ObjC++]**: `initWithMat`: Init a instance with a `cv::Mat`.
 - **[ObjC++]**: `initWithMat:cvtColor`: Init a instance with a `cv::Mat` and color format like `CV_BGR2RGB` whitch is defined by OpenCV.
 - **[ObjC++]**: `initWithNoCopyMat`: Init a instance with a `cv::Mat` and will not copy memory.
@@ -137,6 +142,8 @@ A wrapped multi channel image class.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy and split it.
 - **[ObjC++]**: `initWithMats`: Init a instance with a `std::vector<cv::Mat>`.
 - **[ObjC++]**: `initWithNoCopyMats`: Init a instance with a `std::vector<cv::Mat>` and will not copy data.
+- **[ObjC]**: `threshold:atChannal`: Threshold.
+- **[ObjC]**: `threshold:maxValue:type:atChannal`: Threshold. The type must be like `CV_THRESH_TOZERO` whitch is defined by OpenCV.
 - **[ObjC]**: `mergeImage`: Merge all channels to get a multi channel `EMCVImage` instance.
 - **[ObjC]**: `getImageWithChannal`: Get one of these channels to gen a `EMCVImage` instance.
 - **[ObjC]**: `calHistWithSize:range`: Calculate all channals' histogram with the same size and range.
