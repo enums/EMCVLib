@@ -36,16 +36,16 @@ Some screenshots of the demo.
 
 ### Max / Min value location of RGB
 
-![](src/max min value point of RGB.png)
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/max min value point of RGB.png)
 
 
 ### History Compare
 
-![](src/histogram compare.png)
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/histogram compare.png)
 
 ### Template Match
 
-![](src/template match.png)
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/template match.png)
 
 
 # Tips
