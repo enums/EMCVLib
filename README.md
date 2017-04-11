@@ -107,6 +107,9 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
 - **[ObjC]**: `drawARectWithCenter:size:rgbColor:thickness`: Draw a rect with specified center, size and thickness.	
 - **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified rect and thickness.	
+- **[ObjC]**: `blurWithSize`: Use Normalized Box Filter to smooth a image.
+- **[ObjC]**: `medianBlurWithSize`: Use Median Filter to smooth a image.
+- **[ObjC]**: `bilateralFilterWithDelta:andSigmaColor:andSigmaSpace`: Use Bilateral Filter to smooth a image.
 - **[ObjC]**: `gaussianBlurWithSize`: Do Gaussian Blur with a specified kernel size.
 
 ### Class Metod
