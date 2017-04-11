@@ -29,6 +29,14 @@ brew install opencv
 
 Download the repo. Then drag the library project to your project.
 
+# Functions
+
+What can this library does now?
+
+- Display image and play video with real-time processing.
+- Color convert. Channals split. Image smooth.
+- Find extreme values and locations. Calculate and compare histograms.
+- Matching algorithm: Template Match, Back Projection.
 
 # Screenshots
 
@@ -58,7 +66,7 @@ Use `@autoreleasePool` when doing loop can solve some memory problems.
 
 # Documents
 
-Introduce each Class or Founction in this library. Or you can see the demo code in this repo.
+Introduce each Class or Function in this library. Or you can see the demo code in this repo.
 
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++ which means it's must a `.mm` source file.
