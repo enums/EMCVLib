@@ -21,6 +21,14 @@
     return self;
 }
 
+- (instancetype)initWithDevice:(int)device {
+    self = [super init];
+    if (self) {
+        _capture = VideoCapture(device);
+    }
+    return self;
+}
+
 - (EMCVImage *)nextFrame {
     EMCVImage * img = [[EMCVImage alloc] init];
     _capture.read(img->_mat);
@@ -32,6 +40,5 @@
     EMCVSplitedImage * splitedImg = [img splitImage];
     return [splitedImg imageWithChannal:channal];
 }
-
 
 @end

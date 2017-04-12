@@ -48,6 +48,8 @@ using namespace cv;
 - (void)drawARect:(NSRect)rect rgbColor:(int *)rgb thickness:(int)thickness;
 - (void)drawACircleWithCenter:(NSPoint)center andRadius:(int)radius andColor:(int *)rgb andThickness:(int)thickness;
 - (void)cvtColor:(int)code;
+- (void)pyrUpWithRatio:(double)ratio;
+- (void)pyrDownWithRatio:(double)ratio;
 - (void)blurWithSize:(NSSize)size;
 - (void)medianBlurWithSize:(int)size;
 - (void)bilateralFilterWithDelta:(int)d andSigmaColor:(double)sc andSigmaSpace:(double)sp;

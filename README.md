@@ -70,6 +70,8 @@ Some screenshots of the demo.
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/template_match.png)
 
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/template_match_2.png)
+
 ### Back Projection
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/back_projection.png)
@@ -81,11 +83,15 @@ Use `@autoreleasePool` when doing loop can solve some memory problems.
 
 # Documents
 
-- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFactory.md)`EMCVFactory`: A wrapped functions whitch can do some computer vision calculations.
-- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVImage.md)`EMCVImage`: A wrapped image class.
-- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSplitedImage.md)`EMCVSplitedImage`: A wrapped multi channel image class.
-- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVVideo.md)`EMCVVideo`: A wrapped video class.
-- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/NSImageView+EMCVLib.md)`NSImageView + EMCVLib`: A category of NSImageView.
+API docs and bugs here.
+
+- [[Bug]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/bugs.md) Known bugs.
+
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFactory.md) `EMCVFactory`: A wrapped functions whitch can do some computer vision calculations.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVImage.md) `EMCVImage`: A wrapped image class.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSplitedImage.md) `EMCVSplitedImage`: A wrapped multi channel image class.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVVideo.md) `EMCVVideo`: A wrapped video class.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/NSImageView+EMCVLib.md) `NSImageView + EMCVLib`: A category of NSImageView.
 
 
 # Contect

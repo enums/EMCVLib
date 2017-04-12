@@ -25,6 +25,10 @@ A wrapped multi channel image class.
 - **[ObjC]**: `imageWithChannal`: Get one of these channels to gen a `EMCVImage` instance.
 - **[ObjC]**: `threshold:atChannal`: Threshold.
 - **[ObjC]**: `threshold:maxValue:type:atChannal`: Threshold. The type must be like `CV_THRESH_TOZERO` whitch is defined by OpenCV.
+- **[ObjC]**: `pyrUpWithRatio`: PyrUp with a ratio.
+- **[ObjC]**: `pyrDownWithRatio`: PyrDown with a ratio.
+- **[ObjC]**: `pyrUpWithRatio:AtChannal`: PyrUp with a ratio in a specified channal.
+- **[ObjC]**: `pyrDownWithRatio:AtChannal`: PyrDown with a ratio in a specified channal.
 - **[ObjC]**: `mergeImage`: Merge all channels to get a multi channel `EMCVImage` instance.
 - **[ObjC]**: `calHistWithSize:range`: Calculate all channals' histogram with the same size and range.
 - **[ObjC]**: `calHistWithSizes:ranges`: Calculate all channals' histogram wit sizes and ranges.

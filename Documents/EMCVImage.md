@@ -33,6 +33,8 @@ A wrapped image class. The default color format should be BGR when image opened 
 
 - **[ObjC]**: `makeACopy`: Make a copy. It will copy memory.
 - **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` whitch is defined by OpenCV. The same as `cv::cvtColor`.
+- **[ObjC]**: `pyrUpWithRatio`: PyrUp with a ratio.
+- **[ObjC]**: `pyrDownWithRatio`: PyrDown with a ratio.
 - **[ObjC]**: `splitImage`: Split image's channels.
 - **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
 - **[ObjC]**: `calHistWithSize:range`: Calculate histogram using all channals with the same size and range.

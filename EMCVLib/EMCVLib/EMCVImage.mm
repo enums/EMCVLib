@@ -129,6 +129,16 @@
     cvtColor(_mat, _mat, code);
 }
 
+- (void)pyrUpWithRatio:(double)ratio {
+    NSSize size = self.imageSize;
+    pyrUp(_mat, _mat, cv::Size(size.width * ratio, size.height * ratio));
+}
+
+- (void)pyrDownWithRatio:(double)ratio {
+    NSSize size = self.imageSize;
+    pyrDown(_mat, _mat, cv::Size(size.width * ratio, size.height * ratio));
+}
+
 - (NSImage *)toImage {
     NSImage *image = [[NSImage alloc] init];
     @autoreleasepool {

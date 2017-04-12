@@ -42,6 +42,11 @@ using namespace cv;
 - (EMCVImage *)imageWithChannal:(int)channal;
 - (NSSize)sizeWithChannal:(int)channal;
 
+- (void)pyrUpWithRatio:(double)ratio;
+- (void)pyrDownWithRatio:(double)ratio;
+- (void)pyrUpWithRatio:(double)ratio atChannal:(int)channal;
+- (void)pyrDownWithRatio:(double)ratio atChannal:(int)channal;
+
 - (void)calHistWithSize:(int)size range:(float *)range;
 - (void)calHistWithSizes:(int *)sizes ranges:(float **)ranges;
 - (void)calHistWithChannal:(int)channal size:(int)size range:(float *)range;

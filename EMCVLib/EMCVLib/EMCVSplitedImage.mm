@@ -64,6 +64,30 @@
     return [[EMCVImage alloc] initWithCVSplitedImage:self];
 }
 
+- (void)pyrUpWithRatio:(double)ratio {
+    int count = self.channalCount;
+    for (int i = 0; i < count; i++) {
+        [self pyrUpWithRatio:ratio atChannal:i];
+    }
+}
+
+- (void)pyrDownWithRatio:(double)ratio {
+    int count = self.channalCount;
+    for (int i = 0; i < count; i++) {
+        [self pyrDownWithRatio:ratio atChannal:i];
+    }
+}
+
+- (void)pyrUpWithRatio:(double)ratio atChannal:(int)channal {
+    NSSize size = [self sizeWithChannal:channal];
+    pyrUp(_mats.at(channal), _mats.at(channal), cv::Size(size.width * ratio, size.height * ratio));
+}
+
+- (void)pyrDownWithRatio:(double)ratio atChannal:(int)channal {
+    NSSize size = [self sizeWithChannal:channal];
+    pyrDown(_mats.at(channal), _mats.at(channal), cv::Size(size.width * ratio, size.height * ratio));
+}
+
 
 - (void)calHistWithSize:(int)size range:(float *)range {
     int dims = (int)_mats.size();

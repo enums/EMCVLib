@@ -14,6 +14,7 @@ A wrapped video class.
 ## Initialization
 
 - **[ObjC]**: `initWithPath`: Open a local video file with a `NSString` path.
+- **[ObjC]**: `initWithDevice`: Open a camera with index. If there is only one camera, set it to 0.
 
 ## Others
 

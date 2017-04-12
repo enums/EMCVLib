@@ -706,12 +706,24 @@
                                     <segue destination="hSJ-fp-MDT" kind="show" id="YKm-pp-0XP"/>
                                 </connections>
                             </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pTx-x9-icY">
+                                <rect key="frame" x="327" y="12" width="136" height="32"/>
+                                <buttonCell key="cell" type="push" title="Camera Sample" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hho-63-6up">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="qpy-3N-YDo" kind="show" id="U0d-zG-RgG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="pTx-x9-icY" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="2yt-13-5ZR"/>
                             <constraint firstItem="mIY-as-Shl" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="458-ac-d8Q"/>
                             <constraint firstItem="mIY-as-Shl" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="4vv-6w-BkL"/>
                             <constraint firstItem="BJ7-zz-iDn" firstAttribute="leading" secondItem="mIY-as-Shl" secondAttribute="trailing" constant="12" id="dBd-bI-DID"/>
                             <constraint firstItem="BJ7-zz-iDn" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="jsM-RL-Wju"/>
+                            <constraint firstItem="pTx-x9-icY" firstAttribute="leading" secondItem="BJ7-zz-iDn" secondAttribute="trailing" constant="12" id="trF-dV-kBl"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -834,11 +846,12 @@
                         <outlet property="fpsLabel" destination="tVZ-n3-UYA" id="IrG-U8-w0E"/>
                         <outlet property="imageView" destination="z04-sW-XjF" id="Gvf-RC-LUG"/>
                         <outlet property="subImageView" destination="myO-JP-m2Z" id="DJ3-C0-Zgz"/>
+                        <outlet property="videoBtn" destination="0cT-i3-IJa" id="0Mx-tK-zfJ"/>
                     </connections>
                 </viewController>
                 <customObject id="cOq-US-ed8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-446" y="1098"/>
+            <point key="canvasLocation" x="-1363" y="1151"/>
         </scene>
         <!--Multi Image Sample-->
         <scene sceneID="11F-oI-vLj">
@@ -873,7 +886,7 @@
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="VmY-PE-NKE">
                                         <rect key="frame" x="606" y="13" width="138" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Match Template" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p87-fe-L3E">
+                                        <buttonCell key="cell" type="push" title="Template Match" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="p87-fe-L3E">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -919,7 +932,7 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                         <connections>
-                                            <action selector="belnding:" target="hSJ-fp-MDT" id="QPR-vE-8mV"/>
+                                            <action selector="blending:" target="hSJ-fp-MDT" id="p5x-OO-oL4"/>
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eSb-SK-22V">
@@ -1082,7 +1095,202 @@
                 </viewController>
                 <customObject id="IkC-CY-wsF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1013.5" y="1097.5"/>
+            <point key="canvasLocation" x="97" y="1151"/>
+        </scene>
+        <!--Multi Image Sample-->
+        <scene sceneID="LEP-KO-dFf">
+            <objects>
+                <viewController title="Multi Image Sample" id="qpy-3N-YDo" customClass="CameraViewController" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="FJu-WL-tFz">
+                        <rect key="frame" x="0.0" y="0.0" width="1707" height="557"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="fJw-XW-2pM">
+                                <rect key="frame" x="0.0" y="497" width="1707" height="60"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rMk-Iq-stU">
+                                        <rect key="frame" x="14" y="12" width="75" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Video" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VNT-L5-gSx">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showVideo:" target="qpy-3N-YDo" id="RQi-hn-bQP"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Y3b-cz-QO9">
+                                        <rect key="frame" x="89" y="12" width="87" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Camera" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="glj-n6-5Uj">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showCamera:" target="qpy-3N-YDo" id="tqS-uq-kyC"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="94g-R4-lAm">
+                                        <rect key="frame" x="176" y="12" width="69" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rOA-IX-awp">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="stop:" target="qpy-3N-YDo" id="VxO-e9-9E3"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ag7-0L-D0z">
+                                        <rect key="frame" x="1650" y="21" width="35" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 fps" id="urq-B8-6Zq">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ksH-EC-D33">
+                                        <rect key="frame" x="245" y="13" width="77" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Image" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pjo-nK-6aM">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showImage:" target="qpy-3N-YDo" id="obW-nP-ihU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ksH-EC-D33" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="01A-yB-bRg"/>
+                                    <constraint firstItem="Y3b-cz-QO9" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="4HG-ft-79Y"/>
+                                    <constraint firstItem="Y3b-cz-QO9" firstAttribute="leading" secondItem="rMk-Iq-stU" secondAttribute="trailing" constant="12" id="4fa-8i-ksR"/>
+                                    <constraint firstItem="rMk-Iq-stU" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="Deu-rN-6Xm"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ag7-0L-D0z" secondAttribute="trailing" constant="24" id="Qd4-uq-A9S"/>
+                                    <constraint firstAttribute="height" constant="60" id="VHg-dG-ieO"/>
+                                    <constraint firstItem="rMk-Iq-stU" firstAttribute="leading" secondItem="fJw-XW-2pM" secondAttribute="leading" constant="20" id="Vct-BY-tEN"/>
+                                    <constraint firstItem="ksH-EC-D33" firstAttribute="leading" secondItem="94g-R4-lAm" secondAttribute="trailing" constant="12" id="lMv-tC-x5v"/>
+                                    <constraint firstItem="94g-R4-lAm" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="rWR-r6-BZT"/>
+                                    <constraint firstItem="Ag7-0L-D0z" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="sKv-Z2-R1E"/>
+                                    <constraint firstItem="94g-R4-lAm" firstAttribute="leading" secondItem="Y3b-cz-QO9" secondAttribute="trailing" constant="12" id="uEr-sF-bQl"/>
+                                </constraints>
+                            </customView>
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="AsD-et-azs">
+                                <rect key="frame" x="0.0" y="0.0" width="1707" height="496"/>
+                                <subviews>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="kDt-gz-CUx">
+                                        <rect key="frame" x="0.0" y="0.0" width="569" height="496"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sYR-PZ-6WR">
+                                                <rect key="frame" x="0.0" y="0.0" width="569" height="496"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Rin-mm-xee"/>
+                                            </imageView>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="96G-FQ-va4">
+                                                <rect key="frame" x="441" y="0.0" width="128" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="128" id="JHT-JT-QZB"/>
+                                                    <constraint firstAttribute="width" constant="128" id="eHA-6G-Ulf"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="h0a-Y7-SDo"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="sYR-PZ-6WR" firstAttribute="top" secondItem="kDt-gz-CUx" secondAttribute="top" id="0Ct-di-uIr"/>
+                                            <constraint firstAttribute="bottom" secondItem="sYR-PZ-6WR" secondAttribute="bottom" id="8M4-Tg-pS5"/>
+                                            <constraint firstItem="sYR-PZ-6WR" firstAttribute="leading" secondItem="kDt-gz-CUx" secondAttribute="leading" id="OQX-f6-SJn"/>
+                                            <constraint firstAttribute="bottom" secondItem="96G-FQ-va4" secondAttribute="bottom" id="abm-KS-ris"/>
+                                            <constraint firstAttribute="trailing" secondItem="sYR-PZ-6WR" secondAttribute="trailing" id="lli-gj-W8t"/>
+                                            <constraint firstAttribute="trailing" secondItem="96G-FQ-va4" secondAttribute="trailing" id="uOQ-kw-q75"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="xN1-81-g3Q">
+                                        <rect key="frame" x="569" y="0.0" width="569" height="496"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yvw-Tq-CSO">
+                                                <rect key="frame" x="0.0" y="0.0" width="569" height="496"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="OjE-ss-Urn"/>
+                                            </imageView>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qcm-6a-vGR">
+                                                <rect key="frame" x="441" y="0.0" width="128" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="128" id="5Wy-Kf-3ZB"/>
+                                                    <constraint firstAttribute="height" constant="128" id="jaG-b5-Gk7"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="V0F-PH-JBe"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Yvw-Tq-CSO" secondAttribute="bottom" id="CWK-j3-FOe"/>
+                                            <constraint firstItem="Yvw-Tq-CSO" firstAttribute="top" secondItem="xN1-81-g3Q" secondAttribute="top" id="SPV-F9-FO8"/>
+                                            <constraint firstAttribute="trailing" secondItem="qcm-6a-vGR" secondAttribute="trailing" id="dJ9-u8-YzG"/>
+                                            <constraint firstAttribute="trailing" secondItem="Yvw-Tq-CSO" secondAttribute="trailing" id="sbc-fd-r5d"/>
+                                            <constraint firstAttribute="bottom" secondItem="qcm-6a-vGR" secondAttribute="bottom" id="wbp-W8-KXN"/>
+                                            <constraint firstItem="Yvw-Tq-CSO" firstAttribute="leading" secondItem="xN1-81-g3Q" secondAttribute="leading" id="xNI-gZ-zz1"/>
+                                        </constraints>
+                                    </customView>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="GHx-6Z-GFd">
+                                        <rect key="frame" x="1138" y="0.0" width="569" height="496"/>
+                                        <subviews>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VKJ-pH-2lz">
+                                                <rect key="frame" x="0.0" y="0.0" width="569" height="496"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="eQz-HK-Vgt"/>
+                                            </imageView>
+                                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uCs-OA-d0Z">
+                                                <rect key="frame" x="441" y="0.0" width="128" height="128"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="128" id="FkF-le-V8u"/>
+                                                    <constraint firstAttribute="height" constant="128" id="ygg-yM-qBo"/>
+                                                </constraints>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="yMd-SM-dWB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="uCs-OA-d0Z" secondAttribute="trailing" id="8Dd-PK-hrx"/>
+                                            <constraint firstAttribute="trailing" secondItem="VKJ-pH-2lz" secondAttribute="trailing" id="RKK-bc-3FS"/>
+                                            <constraint firstItem="VKJ-pH-2lz" firstAttribute="leading" secondItem="GHx-6Z-GFd" secondAttribute="leading" id="Wt0-xT-4vp"/>
+                                            <constraint firstAttribute="bottom" secondItem="VKJ-pH-2lz" secondAttribute="bottom" id="Y3F-ff-ejE"/>
+                                            <constraint firstAttribute="bottom" secondItem="uCs-OA-d0Z" secondAttribute="bottom" id="fRa-LW-5V9"/>
+                                            <constraint firstItem="VKJ-pH-2lz" firstAttribute="top" secondItem="GHx-6Z-GFd" secondAttribute="top" id="iUa-Ys-1pN"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="kDt-gz-CUx" firstAttribute="top" secondItem="AsD-et-azs" secondAttribute="top" id="3e6-OZ-5gE"/>
+                                    <constraint firstItem="GHx-6Z-GFd" firstAttribute="width" secondItem="AsD-et-azs" secondAttribute="width" multiplier="1/3" id="6ca-2x-vFM"/>
+                                    <constraint firstItem="kDt-gz-CUx" firstAttribute="leading" secondItem="AsD-et-azs" secondAttribute="leading" id="ER7-bo-F2v"/>
+                                    <constraint firstItem="xN1-81-g3Q" firstAttribute="top" secondItem="AsD-et-azs" secondAttribute="top" id="JQj-Eb-LMA"/>
+                                    <constraint firstItem="kDt-gz-CUx" firstAttribute="width" secondItem="AsD-et-azs" secondAttribute="width" multiplier="1/3" id="SR2-58-0y1"/>
+                                    <constraint firstAttribute="bottom" secondItem="GHx-6Z-GFd" secondAttribute="bottom" id="SdY-Sa-5WK"/>
+                                    <constraint firstItem="xN1-81-g3Q" firstAttribute="width" secondItem="AsD-et-azs" secondAttribute="width" multiplier="1/3" id="UD1-Jx-RMz"/>
+                                    <constraint firstAttribute="bottom" secondItem="kDt-gz-CUx" secondAttribute="bottom" id="XBf-a1-YL3"/>
+                                    <constraint firstItem="xN1-81-g3Q" firstAttribute="centerX" secondItem="AsD-et-azs" secondAttribute="centerX" id="ZYD-yZ-AZy"/>
+                                    <constraint firstItem="GHx-6Z-GFd" firstAttribute="top" secondItem="AsD-et-azs" secondAttribute="top" id="aWL-HT-Z4n"/>
+                                    <constraint firstAttribute="bottom" secondItem="xN1-81-g3Q" secondAttribute="bottom" id="ddm-aq-FRj"/>
+                                    <constraint firstAttribute="trailing" secondItem="GHx-6Z-GFd" secondAttribute="trailing" id="lN9-d2-raj"/>
+                                </constraints>
+                            </customView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="AsD-et-azs" secondAttribute="trailing" id="2SU-nT-XxO"/>
+                            <constraint firstItem="fJw-XW-2pM" firstAttribute="leading" secondItem="FJu-WL-tFz" secondAttribute="leading" id="3qU-cl-t0C"/>
+                            <constraint firstAttribute="trailing" secondItem="fJw-XW-2pM" secondAttribute="trailing" id="EIl-Kh-J78"/>
+                            <constraint firstItem="fJw-XW-2pM" firstAttribute="top" secondItem="FJu-WL-tFz" secondAttribute="top" id="MGZ-6B-Zqd"/>
+                            <constraint firstAttribute="bottom" secondItem="AsD-et-azs" secondAttribute="bottom" id="Rua-0D-Sm8"/>
+                            <constraint firstItem="AsD-et-azs" firstAttribute="top" secondItem="fJw-XW-2pM" secondAttribute="bottom" constant="1" id="iQc-UT-NYf"/>
+                            <constraint firstItem="AsD-et-azs" firstAttribute="leading" secondItem="FJu-WL-tFz" secondAttribute="leading" id="oPY-GJ-O1w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraBtn" destination="Y3b-cz-QO9" id="wEj-ZM-3E4"/>
+                        <outlet property="fpsLabel" destination="Ag7-0L-D0z" id="Ity-my-E8K"/>
+                        <outlet property="imageView" destination="Yvw-Tq-CSO" id="2xL-hp-dbc"/>
+                        <outlet property="resultImageView" destination="VKJ-pH-2lz" id="sKx-h4-HW8"/>
+                        <outlet property="subImageView" destination="qcm-6a-vGR" id="v8H-aJ-ndg"/>
+                        <outlet property="subResultImageView" destination="uCs-OA-d0Z" id="f99-3E-Hbv"/>
+                        <outlet property="subVideoImageView" destination="96G-FQ-va4" id="gVv-0t-YOZ"/>
+                        <outlet property="videoBtn" destination="rMk-Iq-stU" id="GVP-80-qqm"/>
+                        <outlet property="videoImageView" destination="sYR-PZ-6WR" id="B3j-it-mnw"/>
+                    </connections>
+                </viewController>
+                <customObject id="Rve-eH-Bj2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930.5" y="1150.5"/>
         </scene>
     </scenes>
 </document>

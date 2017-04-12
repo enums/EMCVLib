@@ -86,7 +86,7 @@
     }];
 }
 
-- (IBAction)belnding:(id)sender {
+- (IBAction)blending:(id)sender {
     EMCVImage * img = [EMCVFactory blendingImage:self.curImageA withImage:self.curImageB useAlpha1:0.5 andAlpha2:0.5 andGama:0];
     self.curImageC = img;
 }
@@ -106,8 +106,11 @@
     EMCVSplitedImage * splitedImg = [img splitImage];
     NSPoint maxPoint;
     [splitedImg findMinValue:nil outPoint:&maxPoint inChannal:0];
-    [img drawARectWithCenter:maxPoint size:NSMakeSize(40, 40) rgbColor:kEMCVLibColorWhite thickness:2];
-    self.curImageC = img;
+    NSSize templSize = self.curImageB.imageSize;
+    maxPoint = NSMakePoint(maxPoint.x + templSize.width / 2, maxPoint.y + templSize.height / 2);
+    EMCVImage * result = [self.curImageA makeACopy];
+    [result drawARectWithCenter:maxPoint size:templSize rgbColor:kEMCVLibColorRed thickness:2];
+    self.curImageC = result;
 }
 
 - (IBAction)doBackProjection:(id)sender {
