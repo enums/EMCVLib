@@ -44,6 +44,10 @@
     return self;
 }
 
+- (EMCVImage *)imageWithChannal:(int)channal {
+    return [[EMCVImage alloc] initWithCVSplitedImage:self atChannal:channal];
+}
+
 - (void)threshold:(double)thresh atChannal:(int)channal {
     [self threshold:thresh maxValue:255 type:CV_THRESH_TOZERO atChanal:channal];
 }
@@ -53,12 +57,9 @@
 }
 
 - (EMCVImage *)mergeImage {
-    return [[EMCVImage alloc] initWithSplitedImage:self];
+    return [[EMCVImage alloc] initWithCVSplitedImage:self];
 }
 
-- (EMCVImage *)getImageWithChannal:(int)channal {
-    return [[EMCVImage alloc] initWithSplitedImage:self atChannal:channal];
-}
 
 - (void)calHistWithSize:(int)size range:(float *)range {
     int dims = (int)_mats.size();

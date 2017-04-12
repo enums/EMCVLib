@@ -55,13 +55,13 @@
     return [self initWithNoCopyMat:newMat];
 }
 
-- (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage {
+- (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage {
     Mat mat;
     merge(splitedImage->_mats, mat);
     return [self initWithNoCopyMat:mat];
 }
 
-- (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage atChannal:(int)channal {
+- (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage atChannal:(int)channal {
     return [self initWithMat:splitedImage->_mats.at(channal)];
 }
 

@@ -30,7 +30,7 @@
 - (EMCVImage *)nextFrameSplitedWithChannal:(int)channal {
     EMCVImage * img = [self nextFrame];
     EMCVSplitedImage * splitedImg = [img splitImage];
-    return [splitedImg getImageWithChannal:channal];
+    return [splitedImg imageWithChannal:channal];
 }
 
 

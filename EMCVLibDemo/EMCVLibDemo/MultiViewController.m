@@ -131,7 +131,7 @@
     double threshold = self.sizeField.doubleValue;
     EMCVSplitedImage * img = [self.curImageA splitImage];
     [img threshold:threshold atChannal:0];
-    self.curImageC = [img getImageWithChannal:0];
+    self.curImageC = [img imageWithChannal:0];
 }
 
 @end

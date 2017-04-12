@@ -39,7 +39,7 @@ using namespace cv;
 - (void)threshold:(double)thresh maxValue:(double)maxValue type:(int)type atChanal:(int)channal;
 
 - (EMCVImage *)mergeImage;
-- (EMCVImage *)getImageWithChannal:(int)channal;
+- (EMCVImage *)imageWithChannal:(int)channal;
 
 - (void)calHistWithSize:(int)size range:(float *)range;
 - (void)calHistWithSizes:(int *)sizes ranges:(float **)ranges;

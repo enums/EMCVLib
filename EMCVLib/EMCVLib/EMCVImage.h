@@ -36,8 +36,8 @@ using namespace cv;
 - (instancetype)initWithSize:(NSSize)size andType:(int)type andColor:(int *)color;
 - (instancetype)initWithCVImage:(EMCVImage *)img;
 - (instancetype)initWithCVImage:(EMCVImage *)img cvtColor:(int)color;
-- (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage;
-- (instancetype)initWithSplitedImage:(EMCVSplitedImage *)splitedImage atChannal:(int)channal;
+- (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage;
+- (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage atChannal:(int)channal;
 
 - (EMCVImage *)makeACopy;
 
