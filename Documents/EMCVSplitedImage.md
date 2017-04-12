@@ -10,6 +10,7 @@ A wrapped multi channel image class.
 - **[ObjC++]**: `_mats`: A `std::vector<cv::Mat>` object. It's single channal image data list.
 - **[ObjC++]**: `_hists`: A `std::vector<cv::MatND>` object. It's single channal histogram data list.
 - **[ObjC]**: `channalCount`: How much channals in current image;
+- **[ObjC]**: `sizeWithChannal`: Get size of the image at specified channal.
 
 # Instance Method
 
@@ -22,7 +23,6 @@ A wrapped multi channel image class.
 
 ## Others
 - **[ObjC]**: `imageWithChannal`: Get one of these channels to gen a `EMCVImage` instance.
-
 - **[ObjC]**: `threshold:atChannal`: Threshold.
 - **[ObjC]**: `threshold:maxValue:type:atChannal`: Threshold. The type must be like `CV_THRESH_TOZERO` whitch is defined by OpenCV.
 - **[ObjC]**: `mergeImage`: Merge all channels to get a multi channel `EMCVImage` instance.

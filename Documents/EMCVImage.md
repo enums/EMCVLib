@@ -13,6 +13,7 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC++]**: `_mat`: A `cv::Mat` object. It's image data.
 - **[ObjC++]**: `_hist`: A `cv::MatND` object. It's histogram data.
 - **[ObjC]**: `channalCount`: How much channals in current image;
+- **[ObjC]**: `imageSize`: Get size of the image.
 
 # Instance Method
 
@@ -38,8 +39,10 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `calHistWithDims:size:range`: Calculate histogram with the same size and range.
 - **[ObjC]**: `calHistWithDims:sizes:ranges`: Calculate histogram with the sizes and ranges.
 - **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
-- **[ObjC]**: `drawARectWithCenter:size:rgbColor:thickness`: Draw a rect with specified center, size and thickness.	
-- **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified rect and thickness.	
+- **[ObjC]**: `drawALineWithPoint:andPoint:andColor:andThickness`:Draw a line with specified points, color and thickness. 
+- **[ObjC]**: `drawARectWithCenter:size:rgbColor:thickness`: Draw a rect with specified center, size and thickness.
+- **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified rect and thickness.
+- **[ObjC]**: `drawACircleWithCenter:andRadius:andColor:andThickness`: Draw a circle with specified center, radius, color and thickness.	
 - **[ObjC]**: `blurWithSize`: Use Normalized Box Filter to smooth a image.
 - **[ObjC]**: `medianBlurWithSize`: Use Median Filter to smooth a image.
 - **[ObjC]**: `bilateralFilterWithDelta:andSigmaColor:andSigmaSpace`: Use Bilateral Filter to smooth a image.

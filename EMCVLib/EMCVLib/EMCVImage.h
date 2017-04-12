@@ -31,6 +31,7 @@ using namespace cv;
 #endif
 
 @property (nonatomic, readonly) NSUInteger channalCount;
+@property (nonatomic, readonly) NSSize imageSize;
 
 - (instancetype)initWithPath:(NSString *)path;
 - (instancetype)initWithSize:(NSSize)size andType:(int)type andColor:(int *)color;
@@ -42,8 +43,10 @@ using namespace cv;
 - (EMCVImage *)makeACopy;
 
 - (EMCVSplitedImage *)splitImage;
+- (void)drawALineWithPoint:(NSPoint)p1 andPoint:(NSPoint)p2 andColor:(int *)rgb andThickness:(int)thickness;
 - (void)drawARectWithCenter:(NSPoint)center size:(NSSize)size rgbColor:(int *)rgb thickness:(int)thickness;
 - (void)drawARect:(NSRect)rect rgbColor:(int *)rgb thickness:(int)thickness;
+- (void)drawACircleWithCenter:(NSPoint)center andRadius:(int)radius andColor:(int *)rgb andThickness:(int)thickness;
 - (void)cvtColor:(int)code;
 - (void)blurWithSize:(NSSize)size;
 - (void)medianBlurWithSize:(int)size;

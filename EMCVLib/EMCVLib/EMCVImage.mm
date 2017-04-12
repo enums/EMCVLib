@@ -21,7 +21,11 @@
 }
 
 - (NSUInteger)channalCount {
-    return (NSUInteger)self->_mat.elemSize();
+    return (NSUInteger)_mat.elemSize();
+}
+
+- (NSSize)imageSize {
+    return NSMakeSize(_mat.cols, _mat.rows);
 }
 
 - (instancetype)initWithPath:(NSString *)path {
@@ -98,11 +102,18 @@
     GaussianBlur(_mat, _mat, cv::Size(size.width, size.height), 0);
 }
 
+- (void)drawALineWithPoint:(NSPoint)p1 andPoint:(NSPoint)p2 andColor:(int *)rgb andThickness:(int)thickness {
+    line(_mat, cv::Point(p1.x, p1.y), cv::Point(p2.x, p2.y), Scalar(rgb[0], rgb[1], rgb[2]), thickness);
+}
+
 - (void)drawARectWithCenter:(NSPoint)center size:(NSSize)size rgbColor:(int *)rgb thickness:(int)thickness {
     NSRect rect = NSMakeRect(center.x - size.width / 2, center.y - size.height / 2, size.width, size.height);
     [self drawARect:rect rgbColor:rgb thickness:thickness];
 }
 
+- (void)drawACircleWithCenter:(NSPoint)center andRadius:(int)radius andColor:(int *)rgb andThickness:(int)thickness {
+    circle(_mat, cv::Point(center.x, center.y), radius, Scalar(rgb[0], rgb[1], rgb[2]), thickness);
+}
 
 - (void)drawARect:(NSRect)rect rgbColor:(int *)rgb thickness:(int)thickness {
     int x = (int)rect.origin.x;

@@ -40,6 +40,7 @@ using namespace cv;
 
 - (EMCVImage *)mergeImage;
 - (EMCVImage *)imageWithChannal:(int)channal;
+- (NSSize)sizeWithChannal:(int)channal;
 
 - (void)calHistWithSize:(int)size range:(float *)range;
 - (void)calHistWithSizes:(int *)sizes ranges:(float **)ranges;

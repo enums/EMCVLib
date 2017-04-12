@@ -48,6 +48,10 @@
     return [[EMCVImage alloc] initWithCVSplitedImage:self atChannal:channal];
 }
 
+- (NSSize)sizeWithChannal:(int)channal {
+    return NSMakeSize(_mats.at(channal).cols, _mats.at(channal).rows);
+}
+
 - (void)threshold:(double)thresh atChannal:(int)channal {
     [self threshold:thresh maxValue:255 type:CV_THRESH_TOZERO atChanal:channal];
 }
