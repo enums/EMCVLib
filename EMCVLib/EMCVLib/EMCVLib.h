@@ -12,6 +12,8 @@
 #import "EMCVFactory.h"
 #import "EMCVImage.h"
 #import "EMCVSplitedImage.h"
+#import "EMCVFilterOperation.h"
+#import "EMCVFilter.h"
 #import "EMCVVideo.h"
 #import "NSImageView+EMCVLib.h"
 

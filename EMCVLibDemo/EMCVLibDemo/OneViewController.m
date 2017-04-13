@@ -20,6 +20,8 @@
 @property (nonatomic) EMCVImage * curImage;
 @property (nonatomic) EMCVVideo * curVideo;
 
+@property (nonatomic) EMCVFilter * curFilter;
+
 @property (nonatomic) dispatch_queue_t videoQueue;
 @property (nonatomic) BOOL stopFlag;
 @property (nonatomic) BOOL exitFlag;
@@ -32,16 +34,18 @@
 - (void)setCurImage:(EMCVImage *)curImage {
     _curImage = curImage;
     if (curImage != nil) {
-        EMCVSplitedImage * splitedImage = [curImage splitImage];
+        EMCVImage * displayImg = [curImage makeACopy];
+        [self.curFilter runFilterWithCVImage:displayImg];
+        EMCVSplitedImage * splitedImage = [displayImg splitImage];
         NSPoint rPoint, gPoint, bPoint;
         [splitedImage findMaxValue:nil outPoint:&rPoint inChannal:0];
         [splitedImage findMaxValue:nil outPoint:&gPoint inChannal:1];
         [splitedImage findMaxValue:nil outPoint:&bPoint inChannal:2];
-        [curImage drawACircleWithCenter:rPoint andRadius:25 andColor:kEMCVLibColorRed andThickness:2];
-        [curImage drawACircleWithCenter:gPoint andRadius:25 andColor:kEMCVLibColorGreen andThickness:2];
-        [curImage drawACircleWithCenter:bPoint andRadius:25 andColor:kEMCVLibColorBlue andThickness:2];
-        [self.imageView drawCVImage:curImage];
-        [self.subImageView drawRGBHistWithCVImage:curImage size:128];
+        [displayImg drawACircleWithCenter:rPoint andRadius:25 andColor:kEMCVLibColorRed andThickness:2];
+        [displayImg drawACircleWithCenter:gPoint andRadius:25 andColor:kEMCVLibColorGreen andThickness:2];
+        [displayImg drawACircleWithCenter:bPoint andRadius:25 andColor:kEMCVLibColorBlue andThickness:2];
+        [self.imageView drawCVImage:displayImg];
+        [self.subImageView drawRGBHistWithCVImage:displayImg size:128];
     } else {
         [self.imageView setImage:nil];
         [self.subImageView setImage:nil];
@@ -53,6 +57,7 @@
     _exitFlag = false;
     _fpsCounter = 0;
     _stopFlag = true;
+    _curFilter = [[EMCVFilter alloc] init];
     _videoQueue = dispatch_queue_create("video", DISPATCH_QUEUE_SERIAL);
     dispatch_async(dispatch_queue_create("fps", DISPATCH_QUEUE_SERIAL), ^{
         while (!_exitFlag) {
@@ -84,6 +89,7 @@
 
 - (IBAction)cleanImage:(id)sender {
     self.curImage = nil;
+    [self.curFilter popAll];
 }
 
 - (IBAction)showVideo:(id)sender {
@@ -121,24 +127,30 @@
 }
 
 - (IBAction)smooth:(id)sender {
-    if (self.curImage != nil) {
-        [self.curImage gaussianBlurWithSize:NSMakeSize(7, 7)];
-        [self setCurImage:self.curImage];
-    }
+    [self.curFilter pushOperationBlock:^void(EMCVImage * img) {
+        [img gaussianBlurWithSize:NSMakeSize(7, 7)];
+    }];
+    [self setCurImage:self.curImage];
 }
 
 - (IBAction)lightness:(id)sender {
-    [self.curImage setBrightness:10];
+    [self.curFilter pushOperationBlock:^void(EMCVImage * img) {
+        [img setBrightness:10];
+    }];
     [self setCurImage:self.curImage];
 }
 
 - (IBAction)flipX:(id)sender {
-    [self.curImage flipWithXAxis];
+    [self.curFilter pushOperationBlock:^void(EMCVImage * img) {
+        [img flipWithXAxis];
+    }];
     [self setCurImage:self.curImage];
 }
 
 - (IBAction)flipY:(id)sender {
-    [self.curImage flipWithYAxis];
+    [self.curFilter pushOperationBlock:^void(EMCVImage * img) {
+        [img flipWithYAxis];
+    }];
     [self setCurImage:self.curImage];
 }
 

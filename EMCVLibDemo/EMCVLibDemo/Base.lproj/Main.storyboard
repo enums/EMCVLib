@@ -753,7 +753,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pdn-LJ-NA6">
-                                        <rect key="frame" x="241" y="13" width="69" height="32"/>
+                                        <rect key="frame" x="347" y="13" width="69" height="32"/>
                                         <buttonCell key="cell" type="push" title="Stop" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IC5-Db-QG5">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -771,8 +771,8 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-RV-6Yk">
-                                        <rect key="frame" x="91" y="12" width="75" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Clean" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="C3B-dY-wUH">
+                                        <rect key="frame" x="91" y="12" width="181" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Clean(Image and Filter)" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="C3B-dY-wUH">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -781,7 +781,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0cT-i3-IJa">
-                                        <rect key="frame" x="166" y="13" width="75" height="32"/>
+                                        <rect key="frame" x="272" y="13" width="75" height="32"/>
                                         <buttonCell key="cell" type="push" title="Video" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="grg-Ul-jBN">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -791,7 +791,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tvt-Gp-SGf">
-                                        <rect key="frame" x="310" y="13" width="87" height="32"/>
+                                        <rect key="frame" x="416" y="13" width="87" height="32"/>
                                         <buttonCell key="cell" type="push" title="Smooth" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LHQ-ui-xfM">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -801,7 +801,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-vk-DSm">
-                                        <rect key="frame" x="397" y="13" width="105" height="32"/>
+                                        <rect key="frame" x="503" y="13" width="105" height="32"/>
                                         <buttonCell key="cell" type="push" title="Brightness" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uuT-oD-9D6">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -811,7 +811,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-3s-H4b">
-                                        <rect key="frame" x="502" y="12" width="74" height="32"/>
+                                        <rect key="frame" x="608" y="12" width="74" height="32"/>
                                         <buttonCell key="cell" type="push" title="Flip X" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CT1-eC-8Up">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -821,7 +821,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="adK-xH-83G">
-                                        <rect key="frame" x="576" y="13" width="74" height="32"/>
+                                        <rect key="frame" x="682" y="13" width="74" height="32"/>
                                         <buttonCell key="cell" type="push" title="Flip Y" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LZl-I6-lPs">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>

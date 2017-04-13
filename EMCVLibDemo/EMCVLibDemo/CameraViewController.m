@@ -127,14 +127,10 @@
         while (!self.stopFlag && !self.exitFlag) {
             @autoreleasepool {
                 frame = [self.curVideo nextFrame];
-                [frame pyrDownWithRatio:0.5];
+//                [frame pyrDownWithRatio:0.5];
                 [frame cvtColor:CV_BGR2RGB];
                 dispatch_sync(dispatch_get_main_queue(), ^{
                     self.curVideoImage = frame;
-                    [frame pyrDownWithRatio:0.5];
-                    self.curImage = frame;
-                    [frame pyrDownWithRatio:0.5];
-                    self.curResultImage = frame;
                 });
                 self.fpsCounter++;
             }
