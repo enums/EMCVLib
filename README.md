@@ -1,37 +1,41 @@
 # EMCVLib
 
-An OpenCV library for macOS. ONLY MACOS NOW!
+An OpenCV framework for macOS. ONLY MACOS NOW!
 
 # Usage
 
 Needed macOS 10.10+ and OpenCV 2.4.x.
 
-## Install OpenCV 2.4.13.2 for macOS
+## Install OpenCV for macOS
 
-Install OpenCV with brew:
+<del>Install OpenCV with brew:</del>
 
-```bash
-brew tap homebrew/science
-brew install opencv
-```
+We cannot use brew to install OpenCV due to this issue: [[OpenCV #7833]](https://github.com/opencv/opencv/issues/7833)
 
-- Headers should be here: 
+It'll crash our program when releasing camera in Cocoa application.
+
+So we need to compile it ourselves.
+
+- Download this repo: [[trmbhs/opencv]](https://github.com/trmbhs/opencv)
+- Compile and install using CMake.
+
+Headers should be here: 
 
 `/usr/local/include/opencv`
 
 `/usr/local/include/opencv2`
 
-- Librarys should be here: 
+Librarys should be here: 
 
-`/usr/local/Cellar/opencv/2.4.13.2/lib`
+`/usr/local/lib`
 
-## Install the library
+## Install the framework
 
-Download the repo. Then drag the library project to your project.
+Download the repo. Then drag the framework project to your project.
 
 # Functions
 
-What can this library does now?
+What can this framework does now?
 
 - Display image and play video with real-time processing.
 - Color convert. Channals split. Image smooth. Image blending.
