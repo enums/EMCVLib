@@ -12,9 +12,9 @@ Needed macOS 10.10+ and OpenCV 2.4.x.
 
 We cannot use brew to install OpenCV due to this issue: [[OpenCV #7833]](https://github.com/opencv/opencv/issues/7833)
 
-It'll crash our program when releasing camera in Cocoa application.
+It'll crash when releasing camera in Cocoa application.
 
-So we need to compile it ourselves.
+So we need to compile it by ourselves.
 
 - Download this repo: [[trmbhs/opencv]](https://github.com/trmbhs/opencv)
 - Compile and install using CMake.

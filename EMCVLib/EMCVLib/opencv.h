@@ -9,6 +9,8 @@
 #ifndef opencv_h
 #define opencv_h
 
+#undef NO
+#undef check
 #import <opencv2/opencv.hpp>
 
 #endif /* opencv_h */
