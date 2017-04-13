@@ -19,16 +19,15 @@ empty.
 
 - **[ObjC]**: `init`: Init a instance empty filter;
 - **[ObjC]**: `initWithArray`: Init a instance with a `EMCVFilterOperation` array.
+
+## Others
+
 - **[ObjC]**: `pushOperation`: Push a `EMCVFilterOperation` instance.
 - **[ObjC]**: `pushOperationBlock`: Push a block instead a `EMCVFilterOperation` instance.
 - **[ObjC]**: `pushOperationBlock:andTag`: Push a block instead a `EMCVFilterOperation` instance and set a tag for it.
 - **[ObjC]**: `popOperation`: Pop a operation.
 - **[ObjC]**: `runFilterWithCVImage`: Run filter with a specified `EMCVImage` instance.
 - **[ObjC]**: `popAll`: Pop all operation.
-
-## Others
-
-empty.
 
 # Class Method
 
