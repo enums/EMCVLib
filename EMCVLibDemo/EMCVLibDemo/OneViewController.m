@@ -127,5 +127,19 @@
     }
 }
 
+- (IBAction)lightness:(id)sender {
+    [self.curImage setBrightness:10];
+    [self setCurImage:self.curImage];
+}
+
+- (IBAction)flipX:(id)sender {
+    [self.curImage flipWithXAxis];
+    [self setCurImage:self.curImage];
+}
+
+- (IBAction)flipY:(id)sender {
+    [self.curImage flipWithYAxis];
+    [self setCurImage:self.curImage];
+}
 
 @end

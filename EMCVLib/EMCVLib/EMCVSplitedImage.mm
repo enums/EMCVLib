@@ -64,6 +64,38 @@
     return [[EMCVImage alloc] initWithCVSplitedImage:self];
 }
 
+- (void)flipWithXAxis {
+    int count = self.channalCount;
+    for (int i = 0; i < count; i++) {
+        [self flipWithXAxisAtChannal:i];
+    }
+}
+- (void)flipWithYAxis {
+    int count = self.channalCount;
+    for (int i = 0; i < count; i++) {
+        [self flipWithYAxisAtChannal:i];
+    }
+}
+
+- (void)flipWithXAxisAtChannal:(int)channal {
+    flip(_mats.at(channal), _mats.at(channal), 1);
+}
+
+- (void)flipWithYAxisAtChannal:(int)channal {
+    flip(_mats.at(channal), _mats.at(channal), -1);
+}
+
+- (void)setBrightness:(double)brightness {
+    int count = self.channalCount;
+    for (int i = 0; i < count; i++) {
+        [self setBrightness:brightness atChannal:i];
+    }
+}
+
+- (void)setBrightness:(double)brightness atChannal:(int)channal {
+    _mats.at(channal).convertTo(_mats.at(channal), -1, 1, brightness);
+}
+
 - (void)pyrUpWithRatio:(double)ratio {
     int count = self.channalCount;
     for (int i = 0; i < count; i++) {

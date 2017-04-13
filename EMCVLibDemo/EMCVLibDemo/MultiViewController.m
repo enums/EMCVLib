@@ -124,6 +124,7 @@
 - (IBAction)contours:(id)sender {
     double tresh = self.sizeField.doubleValue;
     EMCVSplitedImage * splitedImg = [self.curImageA splitImage];
+    [splitedImg setBrightness:-20];
     EMCVImage * img = [[EMCVImage alloc] init];
     [splitedImg cannyOnCVImage:img withThresh1:tresh andThreash2:tresh * 2 atChannal:0];
     [splitedImg drawContoursOnImage:img withMode:CV_RETR_TREE andMethod:CV_CHAIN_APPROX_SIMPLE atChannal:0];

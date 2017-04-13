@@ -42,6 +42,14 @@ using namespace cv;
 - (EMCVImage *)imageWithChannal:(int)channal;
 - (NSSize)sizeWithChannal:(int)channal;
 
+- (void)flipWithXAxis;
+- (void)flipWithYAxis;
+- (void)flipWithXAxisAtChannal:(int)channal;
+- (void)flipWithYAxisAtChannal:(int)channal;
+
+- (void)setBrightness:(double)brightness;
+- (void)setBrightness:(double)brightness atChannal:(int)channal;
+
 - (void)pyrUpWithRatio:(double)ratio;
 - (void)pyrDownWithRatio:(double)ratio;
 - (void)pyrUpWithRatio:(double)ratio atChannal:(int)channal;

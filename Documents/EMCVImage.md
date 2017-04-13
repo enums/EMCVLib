@@ -33,6 +33,9 @@ A wrapped image class. The default color format should be BGR when image opened 
 
 - **[ObjC]**: `makeACopy`: Make a copy. It will copy memory.
 - **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` whitch is defined by OpenCV. The same as `cv::cvtColor`.
+- **[ObjC]**: `flipWithXAxis`: Flip with X axis.
+- **[ObjC]**: `flipWithYAxis`: Flip with Y axis.
+- **[ObjC]**: `setBrightness`: Set brightness with ± value.
 - **[ObjC]**: `pyrUpWithRatio`: PyrUp with a ratio.
 - **[ObjC]**: `pyrDownWithRatio`: PyrDown with a ratio.
 - **[ObjC]**: `splitImage`: Split image's channels.

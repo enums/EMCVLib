@@ -25,6 +25,10 @@ A wrapped multi channel image class.
 - **[ObjC]**: `imageWithChannal`: Get one of these channels to gen a `EMCVImage` instance.
 - **[ObjC]**: `threshold:atChannal`: Threshold.
 - **[ObjC]**: `threshold:maxValue:type:atChannal`: Threshold. The type must be like `CV_THRESH_TOZERO` whitch is defined by OpenCV.
+- **[ObjC]**: `flipWithXAxis`: Flip with X axis.
+- **[ObjC]**: `flipWithYAxis`: Flip with Y axis.
+- **[ObjC]**: `flipWithXAxisAtChannal`: Flip with X axis at a specified channal.
+- **[ObjC]**: `flipWithYAxisAtChannal`: Flip with Y axis at a specified channal.
 - **[ObjC]**: `pyrUpWithRatio`: PyrUp with a ratio.
 - **[ObjC]**: `pyrDownWithRatio`: PyrDown with a ratio.
 - **[ObjC]**: `pyrUpWithRatio:AtChannal`: PyrUp with a ratio in a specified channal.

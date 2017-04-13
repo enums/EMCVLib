@@ -139,6 +139,18 @@
     pyrDown(_mat, _mat, cv::Size(size.width * ratio, size.height * ratio));
 }
 
+- (void)flipWithXAxis {
+    flip(_mat, _mat, 1);
+}
+
+- (void)flipWithYAxis {
+    flip(_mat, _mat, -1);
+}
+
+- (void)setBrightness:(int)brightness {
+    _mat.convertTo(_mat, -1, 1, brightness);
+}
+
 - (NSImage *)toImage {
     NSImage *image = [[NSImage alloc] init];
     @autoreleasepool {

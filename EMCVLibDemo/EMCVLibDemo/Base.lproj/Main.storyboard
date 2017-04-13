@@ -800,19 +800,55 @@
                                             <action selector="smooth:" target="gid-y5-LfR" id="9Ni-i2-0uz"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fX4-vk-DSm">
+                                        <rect key="frame" x="397" y="13" width="105" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Brightness" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uuT-oD-9D6">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="lightness:" target="gid-y5-LfR" id="S22-PC-m28"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JyL-3s-H4b">
+                                        <rect key="frame" x="502" y="12" width="74" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Flip X" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CT1-eC-8Up">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="flipX:" target="gid-y5-LfR" id="019-y7-NgW"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="adK-xH-83G">
+                                        <rect key="frame" x="576" y="13" width="74" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Flip Y" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LZl-I6-lPs">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="flipY:" target="gid-y5-LfR" id="IqA-hA-gM4"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cH9-Zc-IJk" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="1cr-ct-wzy"/>
                                     <constraint firstAttribute="height" constant="60" id="5zB-30-4uB"/>
                                     <constraint firstItem="jVE-RV-6Yk" firstAttribute="leading" secondItem="cH9-Zc-IJk" secondAttribute="trailing" constant="12" id="6np-he-TJo"/>
+                                    <constraint firstItem="JyL-3s-H4b" firstAttribute="leading" secondItem="fX4-vk-DSm" secondAttribute="trailing" constant="12" id="8l9-Ri-j4b"/>
                                     <constraint firstItem="tvt-Gp-SGf" firstAttribute="leading" secondItem="Pdn-LJ-NA6" secondAttribute="trailing" constant="12" id="Bye-j2-QGS"/>
+                                    <constraint firstItem="fX4-vk-DSm" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="JkT-wM-IDw"/>
+                                    <constraint firstItem="adK-xH-83G" firstAttribute="leading" secondItem="JyL-3s-H4b" secondAttribute="trailing" constant="12" id="Kz1-LF-DYl"/>
                                     <constraint firstItem="tVZ-n3-UYA" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="Nao-jU-7hh"/>
+                                    <constraint firstItem="adK-xH-83G" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="PEe-bP-Ze1"/>
                                     <constraint firstItem="Pdn-LJ-NA6" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="bEY-Cu-wWm"/>
                                     <constraint firstItem="cH9-Zc-IJk" firstAttribute="leading" secondItem="Ndv-nn-iBP" secondAttribute="leading" constant="20" id="bR4-fH-40j"/>
                                     <constraint firstItem="jVE-RV-6Yk" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="cc0-v7-iuV"/>
+                                    <constraint firstItem="JyL-3s-H4b" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="efe-O2-r1D"/>
                                     <constraint firstItem="0cT-i3-IJa" firstAttribute="leading" secondItem="jVE-RV-6Yk" secondAttribute="trailing" constant="12" id="ig8-uf-I3r"/>
                                     <constraint firstItem="0cT-i3-IJa" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="kxk-xf-VwH"/>
                                     <constraint firstItem="Pdn-LJ-NA6" firstAttribute="leading" secondItem="0cT-i3-IJa" secondAttribute="trailing" constant="12" id="ptA-Ed-rrn"/>
+                                    <constraint firstItem="fX4-vk-DSm" firstAttribute="leading" secondItem="tvt-Gp-SGf" secondAttribute="trailing" constant="12" id="w8D-EA-PgW"/>
                                     <constraint firstItem="tvt-Gp-SGf" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="xHr-vy-yEG"/>
                                     <constraint firstAttribute="trailing" secondItem="tVZ-n3-UYA" secondAttribute="trailing" constant="22" id="zbX-UY-xtm"/>
                                 </constraints>
