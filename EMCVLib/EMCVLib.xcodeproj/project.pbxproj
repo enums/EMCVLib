@@ -96,11 +96,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		00CC2ADB3D2F305FF62CF427 /* libPods-EMCVLib-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMCVLib-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		35E174EFD34406609DF74FBD /* Pods-EMCVLib-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMCVLib-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMCVLib-iOS/Pods-EMCVLib-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		898508E1366968EAE28A599E /* Pods-EMCVLibiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMCVLibiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMCVLibiOS/Pods-EMCVLibiOS.release.xcconfig"; sourceTree = "<group>"; };
 		90EDB9430F0801A106982243 /* Pods-EMCVLibiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMCVLibiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMCVLibiOS/Pods-EMCVLibiOS.debug.xcconfig"; sourceTree = "<group>"; };
-		98210781245D1D420EA3AA80 /* Pods-EMCVLib-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMCVLib-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMCVLib-iOS/Pods-EMCVLib-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B023D923A0EE543D327A441F /* libPods-EMCVLibiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMCVLibiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F33119C41E9F9DAE00227D43 /* EMCVFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVFilter.h; path = EMCVLib/EMCVFilter.h; sourceTree = "<group>"; };
 		F33119C51E9F9DAE00227D43 /* EMCVFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCVFilter.m; path = EMCVLib/EMCVFilter.m; sourceTree = "<group>"; };
@@ -251,8 +248,6 @@
 		6B6D2104322B6705E940B011 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				98210781245D1D420EA3AA80 /* Pods-EMCVLib-iOS.debug.xcconfig */,
-				35E174EFD34406609DF74FBD /* Pods-EMCVLib-iOS.release.xcconfig */,
 				90EDB9430F0801A106982243 /* Pods-EMCVLibiOS.debug.xcconfig */,
 				898508E1366968EAE28A599E /* Pods-EMCVLibiOS.release.xcconfig */,
 			);
@@ -384,7 +379,6 @@
 				F38680AC1E9F8D2C00D974CA /* libopencv_videostab.3.2.0.dylib */,
 				F3F9A5EC1E9B24CD00CFEEF8 /* Cocoa.framework */,
 				F3F9A5E81E9B248000CFEEF8 /* CoreGraphics.framework */,
-				00CC2ADB3D2F305FF62CF427 /* libPods-EMCVLib-iOS.a */,
 				B023D923A0EE543D327A441F /* libPods-EMCVLibiOS.a */,
 			);
 			name = Frameworks;

@@ -57,6 +57,10 @@ What can this framework does now?
 
 Some screenshots of the demo.
 
+### iOS Image Sample
+
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/ios_image_sample.png)
+
 ### Image Smooth
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/smooth.png)

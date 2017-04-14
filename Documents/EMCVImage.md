@@ -23,6 +23,7 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC++]**: `initWithNoCopyMat`: Init a instance with a `cv::Mat` and will not copy memory.
 - **[ObjC++]**: `initWithMat:cvtColor`: Init a instance with a `cv::Mat` and color format like `CV_BGR2RGB` whitch is defined by OpenCV.
 - **[ObjC]**: `initWithPath`: Open a local image file with a `NSString` path.
+- **[ObjC]**: `initWithImage`: Init a instance with a `UIImage` instance.
 - **[ObjC]**: `initWithSize:andType:andColor`: Init a empty `EMCVImage` instance with type and color. Type must be like `CV_8UC3` whitch is defined by OpenCV. Color is a RGB value array.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy.
 - **[ObjC]**: `initWithCVImage:cvtColor`: Init a instance with a `EMCVImage` instance and color format. like `CV_BGR2RGB` whitch is defined by OpenCV.
@@ -38,6 +39,8 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `setBrightness`: Set brightness with ± value.
 - **[ObjC]**: `pyrUpWithRatio`: PyrUp with a ratio.
 - **[ObjC]**: `pyrDownWithRatio`: PyrDown with a ratio.
+- **[ObjC]**: `newCannyWithThresh1:andThresh2`: Canny. Create a new `EMCVImage` instance and draw Canny image on it.
+- **[ObjC]**: `cannyOnImage:WithThresh1:andThresh2`: Canny. Draw Canny image on a specified image.
 - **[ObjC]**: `splitImage`: Split image's channels.
 - **[ObjC]**: `toImage`: Converts image to a `NSImage` instance.
 - **[ObjC]**: `calHistWithSize:range`: Calculate histogram using all channals with the same size and range.

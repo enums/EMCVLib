@@ -57,6 +57,8 @@ using namespace cv;
 - (void)medianBlurWithSize:(int)size;
 - (void)bilateralFilterWithDelta:(int)d andSigmaColor:(double)sc andSigmaSpace:(double)sp;
 - (void)gaussianBlurWithSize:(NSSize)size;
+- (EMCVImage *)newCannyWithThresh1:(double)thresh1 andThresh2:(double)thresh2;
+- (void)cannyOnCVImage:(EMCVImage *)img withThresh1:(double)thresh1 andThreash2:(double)thresh2;
 
 - (void)calHistWithSize:(int)size range:(float *)range;
 - (void)calHistWithDims:(int)dims size:(int)size range:(float *)range;
@@ -64,9 +66,8 @@ using namespace cv;
 - (void)normalizeHistWithValue:(double)value;
 
 #if TARGET_OS_IPHONE
-
+- (instancetype)initWithImage:(UIImage *)img;
 - (UIImage *)toImage;
-
 #elif TARGET_OS_MAC
 - (NSImage *)toImage;
 #endif

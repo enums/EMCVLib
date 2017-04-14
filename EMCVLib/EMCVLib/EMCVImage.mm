@@ -7,8 +7,8 @@
 //
 
 #import "EMCVImage.h"
-#include "opencv.h"
-
+#import "opencv.h"
+#import "Static.h"
 
 @interface EMCVImage() {
     
@@ -151,6 +151,18 @@
     _mat.convertTo(_mat, -1, 1, brightness);
 }
 
+- (EMCVImage *)newCannyWithThresh1:(double)thresh1 andThresh2:(double)thresh2 {
+    NSSize size = NSMakeSize(self->_mat.cols, self->_mat.rows);
+    EMCVImage * img = [[EMCVImage alloc] initWithSize:size andType:CV_8UC3 andColor:kEMCVLibColorBlack];
+    [self cannyOnCVImage:img withThresh1:thresh1 andThreash2:thresh2];
+    return img;
+}
+
+- (void)cannyOnCVImage:(EMCVImage *)img withThresh1:(double)thresh1 andThreash2:(double)thresh2 {
+    Canny(self->_mat, img->_mat, thresh1, thresh2);
+}
+
+
 - (void)calHistWithSize:(int)size range:(float *)range {
     int dims = (int)self.channalCount;
     [self calHistWithDims:dims size:size range:range];
@@ -178,6 +190,30 @@
 }
 
 #if TARGET_OS_IPHONE
+
+- (instancetype)initWithImage:(UIImage *)img {
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(img.CGImage);
+    CGFloat cols = img.size.width;
+    CGFloat rows = img.size.height;
+    if  (img.imageOrientation == UIImageOrientationLeft || img.imageOrientation == UIImageOrientationRight) {
+        cols = img.size.height;
+        rows = img.size.width;
+    }
+    cv::Mat cvMat(rows, cols, CV_8UC4); // 8 bits per component, 4 channels
+    
+    CGContextRef contextRef = CGBitmapContextCreate(cvMat.data,                 // Pointer to backing data
+                                                    cols,                      // Width of bitmap
+                                                    rows,                     // Height of bitmap
+                                                    8,                          // Bits per component
+                                                    cvMat.step[0],              // Bytes per row
+                                                    colorSpace,                 // Colorspace
+                                                    kCGImageAlphaNoneSkipLast |
+                                                    kCGBitmapByteOrderDefault); // Bitmap info flags
+    
+    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), img.CGImage);
+    CGContextRelease(contextRef);
+    return [self initWithNoCopyMat:cvMat];
+}
 
 - (UIImage *)toImage {
     UIImage * img;

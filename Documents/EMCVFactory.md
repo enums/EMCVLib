@@ -28,3 +28,4 @@ empty
 - **[ObjC]**: `doBackProjectionWithImage:andTempl:withDims`: Do Back Projection with a specified dims.
 - **[ObjC]**: `doBackProjectionWithImage:andTempl:atChannals:andDims:andRange`: More detailed Back Projection method.
 - **[ObjC]**: `blendingImage:withImage:useAlpha1:andAlpha2:andGamma`: Blending two image with alpha. These two images must have the same size.
+- **[ObjC]**: `copyImage:toImage`: Copy a image memory to another image.

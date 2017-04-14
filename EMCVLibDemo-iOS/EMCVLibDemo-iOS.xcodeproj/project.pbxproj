@@ -7,129 +7,135 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F3311A1F1EA05B0800227D43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3311A1E1EA05B0800227D43 /* main.m */; };
-		F3311A221EA05B0800227D43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3311A211EA05B0800227D43 /* AppDelegate.m */; };
-		F3311A251EA05B0800227D43 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3311A241EA05B0800227D43 /* ViewController.m */; };
-		F3311A281EA05B0800227D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3311A261EA05B0800227D43 /* Main.storyboard */; };
-		F3311A2A1EA05B0800227D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3311A291EA05B0800227D43 /* Assets.xcassets */; };
-		F3311A2D1EA05B0800227D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3311A2B1EA05B0800227D43 /* LaunchScreen.storyboard */; };
-		F3311A4D1EA062B100227D43 /* Back_Projection_Source.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A461EA062B100227D43 /* Back_Projection_Source.JPG */; };
-		F3311A4E1EA062B100227D43 /* Back_Projection_Template.png in Resources */ = {isa = PBXBuildFile; fileRef = F3311A471EA062B100227D43 /* Back_Projection_Template.png */; };
-		F3311A4F1EA062B100227D43 /* Histogram_Compare_1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A481EA062B100227D43 /* Histogram_Compare_1.JPG */; };
-		F3311A501EA062B100227D43 /* Histogram_Compare_2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A491EA062B100227D43 /* Histogram_Compare_2.JPG */; };
-		F3311A511EA062B100227D43 /* rgb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3311A4A1EA062B100227D43 /* rgb.jpg */; };
-		F3311A521EA062B100227D43 /* Template_Match_Source.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A4B1EA062B100227D43 /* Template_Match_Source.JPG */; };
-		F3311A531EA062B100227D43 /* Template_Match_Template.png in Resources */ = {isa = PBXBuildFile; fileRef = F3311A4C1EA062B100227D43 /* Template_Match_Template.png */; };
-		F3311A5D1EA06E5A00227D43 /* EMCVLibiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3311A5C1EA06E5A00227D43 /* EMCVLibiOS.framework */; };
+		F3311A861EA09A8A00227D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3311A851EA09A8A00227D43 /* AppDelegate.swift */; };
+		F3311A8B1EA09A8A00227D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3311A891EA09A8A00227D43 /* Main.storyboard */; };
+		F3311A8D1EA09A8A00227D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3311A8C1EA09A8A00227D43 /* Assets.xcassets */; };
+		F3311A901EA09A8A00227D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3311A8E1EA09A8A00227D43 /* LaunchScreen.storyboard */; };
+		F3311A981EA09AA000227D43 /* EMCVLibiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3311A971EA09AA000227D43 /* EMCVLibiOS.framework */; };
+		F3311A991EA09AA000227D43 /* EMCVLibiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3311A971EA09AA000227D43 /* EMCVLibiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3311AA41EA09AC500227D43 /* Back_Projection_Source.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A9D1EA09AC500227D43 /* Back_Projection_Source.JPG */; };
+		F3311AA51EA09AC500227D43 /* Back_Projection_Template.png in Resources */ = {isa = PBXBuildFile; fileRef = F3311A9E1EA09AC500227D43 /* Back_Projection_Template.png */; };
+		F3311AA61EA09AC500227D43 /* Histogram_Compare_1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A9F1EA09AC500227D43 /* Histogram_Compare_1.JPG */; };
+		F3311AA71EA09AC500227D43 /* Histogram_Compare_2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311AA01EA09AC500227D43 /* Histogram_Compare_2.JPG */; };
+		F3311AA81EA09AC500227D43 /* rgb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3311AA11EA09AC500227D43 /* rgb.jpg */; };
+		F3311AA91EA09AC500227D43 /* Template_Match_Source.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311AA21EA09AC500227D43 /* Template_Match_Source.JPG */; };
+		F3311AAA1EA09AC500227D43 /* Template_Match_Template.png in Resources */ = {isa = PBXBuildFile; fileRef = F3311AA31EA09AC500227D43 /* Template_Match_Template.png */; };
+		F3311AAC1EA09C0600227D43 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3311AAB1EA09C0600227D43 /* ImageViewController.swift */; };
+		F3311AB41EA0AD7300227D43 /* test_img.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3311AB31EA0AD7300227D43 /* test_img.jpg */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F3311A9A1EA09AA000227D43 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F3311A991EA09AA000227D43 /* EMCVLibiOS.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		F3311A1A1EA05B0800227D43 /* EMCVLibDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EMCVLibDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3311A1E1EA05B0800227D43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F3311A201EA05B0800227D43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		F3311A211EA05B0800227D43 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F3311A231EA05B0800227D43 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "EMCVLibDemo-iOS/ViewController.h"; sourceTree = "<group>"; };
-		F3311A241EA05B0800227D43 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "EMCVLibDemo-iOS/ViewController.m"; sourceTree = "<group>"; };
-		F3311A271EA05B0800227D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F3311A291EA05B0800227D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F3311A2C1EA05B0800227D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		F3311A2E1EA05B0800227D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3311A461EA062B100227D43 /* Back_Projection_Source.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Back_Projection_Source.JPG; path = ../TestImages/Back_Projection_Source.JPG; sourceTree = "<group>"; };
-		F3311A471EA062B100227D43 /* Back_Projection_Template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back_Projection_Template.png; path = ../TestImages/Back_Projection_Template.png; sourceTree = "<group>"; };
-		F3311A481EA062B100227D43 /* Histogram_Compare_1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Histogram_Compare_1.JPG; path = ../TestImages/Histogram_Compare_1.JPG; sourceTree = "<group>"; };
-		F3311A491EA062B100227D43 /* Histogram_Compare_2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Histogram_Compare_2.JPG; path = ../TestImages/Histogram_Compare_2.JPG; sourceTree = "<group>"; };
-		F3311A4A1EA062B100227D43 /* rgb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rgb.jpg; path = ../TestImages/rgb.jpg; sourceTree = "<group>"; };
-		F3311A4B1EA062B100227D43 /* Template_Match_Source.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Template_Match_Source.JPG; path = ../TestImages/Template_Match_Source.JPG; sourceTree = "<group>"; };
-		F3311A4C1EA062B100227D43 /* Template_Match_Template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Template_Match_Template.png; path = ../TestImages/Template_Match_Template.png; sourceTree = "<group>"; };
-		F3311A5C1EA06E5A00227D43 /* EMCVLibiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMCVLibiOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/EMCVLibDemo-dxxszxjdgjgtfjckkytykrvpqquq/Build/Products/Debug-iphonesimulator/EMCVLibiOS.framework"; sourceTree = "<group>"; };
+		F3311A821EA09A8A00227D43 /* EMCVLibDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EMCVLibDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3311A851EA09A8A00227D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3311A8A1EA09A8A00227D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3311A8C1EA09A8A00227D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3311A8F1EA09A8A00227D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3311A911EA09A8A00227D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3311A971EA09AA000227D43 /* EMCVLibiOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMCVLibiOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3311A9D1EA09AC500227D43 /* Back_Projection_Source.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Back_Projection_Source.JPG; path = ../TestImages/Back_Projection_Source.JPG; sourceTree = "<group>"; };
+		F3311A9E1EA09AC500227D43 /* Back_Projection_Template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back_Projection_Template.png; path = ../TestImages/Back_Projection_Template.png; sourceTree = "<group>"; };
+		F3311A9F1EA09AC500227D43 /* Histogram_Compare_1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Histogram_Compare_1.JPG; path = ../TestImages/Histogram_Compare_1.JPG; sourceTree = "<group>"; };
+		F3311AA01EA09AC500227D43 /* Histogram_Compare_2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Histogram_Compare_2.JPG; path = ../TestImages/Histogram_Compare_2.JPG; sourceTree = "<group>"; };
+		F3311AA11EA09AC500227D43 /* rgb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rgb.jpg; path = ../TestImages/rgb.jpg; sourceTree = "<group>"; };
+		F3311AA21EA09AC500227D43 /* Template_Match_Source.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Template_Match_Source.JPG; path = ../TestImages/Template_Match_Source.JPG; sourceTree = "<group>"; };
+		F3311AA31EA09AC500227D43 /* Template_Match_Template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Template_Match_Template.png; path = ../TestImages/Template_Match_Template.png; sourceTree = "<group>"; };
+		F3311AAB1EA09C0600227D43 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageViewController.swift; path = "EMCVLibDemo-iOS/ImageViewController.swift"; sourceTree = "<group>"; };
+		F3311AAD1EA09D4E00227D43 /* bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bridge.h; path = "EMCVLibDemo-iOS/bridge.h"; sourceTree = "<group>"; };
+		F3311AB31EA0AD7300227D43 /* test_img.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test_img.jpg; path = ../TestImages/test_img.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F3311A171EA05B0800227D43 /* Frameworks */ = {
+		F3311A7F1EA09A8A00227D43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3311A5D1EA06E5A00227D43 /* EMCVLibiOS.framework in Frameworks */,
+				F3311A981EA09AA000227D43 /* EMCVLibiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		F3311A111EA05B0800227D43 = {
+		F3311A791EA09A8A00227D43 = {
 			isa = PBXGroup;
 			children = (
-				F3311A451EA062A000227D43 /* Src */,
-				F3311A231EA05B0800227D43 /* ViewController.h */,
-				F3311A241EA05B0800227D43 /* ViewController.m */,
-				F3311A261EA05B0800227D43 /* Main.storyboard */,
-				F3311A1C1EA05B0800227D43 /* EMCVLibDemo-iOS */,
-				F3311A1B1EA05B0800227D43 /* Products */,
-				F3311A591EA06C0000227D43 /* Frameworks */,
+				F3311AAD1EA09D4E00227D43 /* bridge.h */,
+				F3311A9C1EA09AB700227D43 /* Resource */,
+				F3311AAB1EA09C0600227D43 /* ImageViewController.swift */,
+				F3311A891EA09A8A00227D43 /* Main.storyboard */,
+				F3311A841EA09A8A00227D43 /* EMCVLibDemo-iOS */,
+				F3311A831EA09A8A00227D43 /* Products */,
+				F3311A9B1EA09AA500227D43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		F3311A1B1EA05B0800227D43 /* Products */ = {
+		F3311A831EA09A8A00227D43 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3311A1A1EA05B0800227D43 /* EMCVLibDemo-iOS.app */,
+				F3311A821EA09A8A00227D43 /* EMCVLibDemo-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F3311A1C1EA05B0800227D43 /* EMCVLibDemo-iOS */ = {
+		F3311A841EA09A8A00227D43 /* EMCVLibDemo-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F3311A201EA05B0800227D43 /* AppDelegate.h */,
-				F3311A211EA05B0800227D43 /* AppDelegate.m */,
-				F3311A291EA05B0800227D43 /* Assets.xcassets */,
-				F3311A2B1EA05B0800227D43 /* LaunchScreen.storyboard */,
-				F3311A2E1EA05B0800227D43 /* Info.plist */,
-				F3311A1D1EA05B0800227D43 /* Supporting Files */,
+				F3311A851EA09A8A00227D43 /* AppDelegate.swift */,
+				F3311A8C1EA09A8A00227D43 /* Assets.xcassets */,
+				F3311A8E1EA09A8A00227D43 /* LaunchScreen.storyboard */,
+				F3311A911EA09A8A00227D43 /* Info.plist */,
 			);
 			path = "EMCVLibDemo-iOS";
 			sourceTree = "<group>";
 		};
-		F3311A1D1EA05B0800227D43 /* Supporting Files */ = {
+		F3311A9B1EA09AA500227D43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3311A1E1EA05B0800227D43 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F3311A451EA062A000227D43 /* Src */ = {
-			isa = PBXGroup;
-			children = (
-				F3311A461EA062B100227D43 /* Back_Projection_Source.JPG */,
-				F3311A471EA062B100227D43 /* Back_Projection_Template.png */,
-				F3311A481EA062B100227D43 /* Histogram_Compare_1.JPG */,
-				F3311A491EA062B100227D43 /* Histogram_Compare_2.JPG */,
-				F3311A4A1EA062B100227D43 /* rgb.jpg */,
-				F3311A4B1EA062B100227D43 /* Template_Match_Source.JPG */,
-				F3311A4C1EA062B100227D43 /* Template_Match_Template.png */,
-			);
-			name = Src;
-			sourceTree = "<group>";
-		};
-		F3311A591EA06C0000227D43 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F3311A5C1EA06E5A00227D43 /* EMCVLibiOS.framework */,
+				F3311A971EA09AA000227D43 /* EMCVLibiOS.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F3311A9C1EA09AB700227D43 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F3311AB31EA0AD7300227D43 /* test_img.jpg */,
+				F3311A9D1EA09AC500227D43 /* Back_Projection_Source.JPG */,
+				F3311A9E1EA09AC500227D43 /* Back_Projection_Template.png */,
+				F3311A9F1EA09AC500227D43 /* Histogram_Compare_1.JPG */,
+				F3311AA01EA09AC500227D43 /* Histogram_Compare_2.JPG */,
+				F3311AA11EA09AC500227D43 /* rgb.jpg */,
+				F3311AA21EA09AC500227D43 /* Template_Match_Source.JPG */,
+				F3311AA31EA09AC500227D43 /* Template_Match_Template.png */,
+			);
+			name = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F3311A191EA05B0800227D43 /* EMCVLibDemo-iOS */ = {
+		F3311A811EA09A8A00227D43 /* EMCVLibDemo-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3311A311EA05B0800227D43 /* Build configuration list for PBXNativeTarget "EMCVLibDemo-iOS" */;
+			buildConfigurationList = F3311A941EA09A8A00227D43 /* Build configuration list for PBXNativeTarget "EMCVLibDemo-iOS" */;
 			buildPhases = (
-				F3311A161EA05B0800227D43 /* Sources */,
-				F3311A171EA05B0800227D43 /* Frameworks */,
-				F3311A181EA05B0800227D43 /* Resources */,
+				F3311A7E1EA09A8A00227D43 /* Sources */,
+				F3311A7F1EA09A8A00227D43 /* Frameworks */,
+				F3311A801EA09A8A00227D43 /* Resources */,
+				F3311A9A1EA09AA000227D43 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -137,26 +143,27 @@
 			);
 			name = "EMCVLibDemo-iOS";
 			productName = "EMCVLibDemo-iOS";
-			productReference = F3311A1A1EA05B0800227D43 /* EMCVLibDemo-iOS.app */;
+			productReference = F3311A821EA09A8A00227D43 /* EMCVLibDemo-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F3311A121EA05B0800227D43 /* Project object */ = {
+		F3311A7A1EA09A8A00227D43 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "郑宇琦";
 				TargetAttributes = {
-					F3311A191EA05B0800227D43 = {
+					F3311A811EA09A8A00227D43 = {
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 4TF3NHEU2R;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = F3311A151EA05B0800227D43 /* Build configuration list for PBXProject "EMCVLibDemo-iOS" */;
+			buildConfigurationList = F3311A7D1EA09A8A00227D43 /* Build configuration list for PBXProject "EMCVLibDemo-iOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -164,63 +171,63 @@
 				en,
 				Base,
 			);
-			mainGroup = F3311A111EA05B0800227D43;
-			productRefGroup = F3311A1B1EA05B0800227D43 /* Products */;
+			mainGroup = F3311A791EA09A8A00227D43;
+			productRefGroup = F3311A831EA09A8A00227D43 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3311A191EA05B0800227D43 /* EMCVLibDemo-iOS */,
+				F3311A811EA09A8A00227D43 /* EMCVLibDemo-iOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F3311A181EA05B0800227D43 /* Resources */ = {
+		F3311A801EA09A8A00227D43 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3311A4F1EA062B100227D43 /* Histogram_Compare_1.JPG in Resources */,
-				F3311A531EA062B100227D43 /* Template_Match_Template.png in Resources */,
-				F3311A521EA062B100227D43 /* Template_Match_Source.JPG in Resources */,
-				F3311A511EA062B100227D43 /* rgb.jpg in Resources */,
-				F3311A2D1EA05B0800227D43 /* LaunchScreen.storyboard in Resources */,
-				F3311A2A1EA05B0800227D43 /* Assets.xcassets in Resources */,
-				F3311A501EA062B100227D43 /* Histogram_Compare_2.JPG in Resources */,
-				F3311A4D1EA062B100227D43 /* Back_Projection_Source.JPG in Resources */,
-				F3311A4E1EA062B100227D43 /* Back_Projection_Template.png in Resources */,
-				F3311A281EA05B0800227D43 /* Main.storyboard in Resources */,
+				F3311AB41EA0AD7300227D43 /* test_img.jpg in Resources */,
+				F3311AA61EA09AC500227D43 /* Histogram_Compare_1.JPG in Resources */,
+				F3311AAA1EA09AC500227D43 /* Template_Match_Template.png in Resources */,
+				F3311AA91EA09AC500227D43 /* Template_Match_Source.JPG in Resources */,
+				F3311AA81EA09AC500227D43 /* rgb.jpg in Resources */,
+				F3311A901EA09A8A00227D43 /* LaunchScreen.storyboard in Resources */,
+				F3311A8D1EA09A8A00227D43 /* Assets.xcassets in Resources */,
+				F3311AA71EA09AC500227D43 /* Histogram_Compare_2.JPG in Resources */,
+				F3311AA41EA09AC500227D43 /* Back_Projection_Source.JPG in Resources */,
+				F3311AA51EA09AC500227D43 /* Back_Projection_Template.png in Resources */,
+				F3311A8B1EA09A8A00227D43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F3311A161EA05B0800227D43 /* Sources */ = {
+		F3311A7E1EA09A8A00227D43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3311A251EA05B0800227D43 /* ViewController.m in Sources */,
-				F3311A221EA05B0800227D43 /* AppDelegate.m in Sources */,
-				F3311A1F1EA05B0800227D43 /* main.m in Sources */,
+				F3311A861EA09A8A00227D43 /* AppDelegate.swift in Sources */,
+				F3311AAC1EA09C0600227D43 /* ImageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		F3311A261EA05B0800227D43 /* Main.storyboard */ = {
+		F3311A891EA09A8A00227D43 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F3311A271EA05B0800227D43 /* Base */,
+				F3311A8A1EA09A8A00227D43 /* Base */,
 			);
 			name = Main.storyboard;
 			path = "EMCVLibDemo-iOS";
 			sourceTree = "<group>";
 		};
-		F3311A2B1EA05B0800227D43 /* LaunchScreen.storyboard */ = {
+		F3311A8E1EA09A8A00227D43 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				F3311A2C1EA05B0800227D43 /* Base */,
+				F3311A8F1EA09A8A00227D43 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -228,7 +235,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		F3311A2F1EA05B0800227D43 /* Debug */ = {
+		F3311A921EA09A8A00227D43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,11 +280,13 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F3311A301EA05B0800227D43 /* Release */ = {
+		F3311A931EA09A8A00227D43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -315,59 +324,72 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		F3311A321EA05B0800227D43 /* Debug */ = {
+		F3311A951EA09A8A00227D43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4TF3NHEU2R;
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public/OpenCV\"",
+					/usr/local/include,
+				);
 				INFOPLIST_FILE = "EMCVLibDemo-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Enum.EMCVLibDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EMCVLibDemo-iOS/bridge.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		F3311A331EA05B0800227D43 /* Release */ = {
+		F3311A961EA09A8A00227D43 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4TF3NHEU2R;
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers/Public/OpenCV\"",
+					/usr/local/include,
+				);
 				INFOPLIST_FILE = "EMCVLibDemo-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Enum.EMCVLibDemo-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "EMCVLibDemo-iOS/bridge.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3311A151EA05B0800227D43 /* Build configuration list for PBXProject "EMCVLibDemo-iOS" */ = {
+		F3311A7D1EA09A8A00227D43 /* Build configuration list for PBXProject "EMCVLibDemo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3311A2F1EA05B0800227D43 /* Debug */,
-				F3311A301EA05B0800227D43 /* Release */,
+				F3311A921EA09A8A00227D43 /* Debug */,
+				F3311A931EA09A8A00227D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3311A311EA05B0800227D43 /* Build configuration list for PBXNativeTarget "EMCVLibDemo-iOS" */ = {
+		F3311A941EA09A8A00227D43 /* Build configuration list for PBXNativeTarget "EMCVLibDemo-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3311A321EA05B0800227D43 /* Debug */,
-				F3311A331EA05B0800227D43 /* Release */,
+				F3311A951EA09A8A00227D43 /* Debug */,
+				F3311A961EA09A8A00227D43 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = F3311A121EA05B0800227D43 /* Project object */;
+	rootObject = F3311A7A1EA09A8A00227D43 /* Project object */;
 }

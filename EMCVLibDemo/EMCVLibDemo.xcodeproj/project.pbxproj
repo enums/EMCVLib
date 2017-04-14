@@ -7,17 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F3311A701EA0973F00227D43 /* EMCVLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3311A6F1EA0973F00227D43 /* EMCVLib.framework */; };
+		F3311A711EA0973F00227D43 /* EMCVLib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3311A6F1EA0973F00227D43 /* EMCVLib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F337D4A31E9C626C00505334 /* MultiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F337D4A21E9C626C00505334 /* MultiViewController.m */; };
 		F386807B1E9E48BF00D974CA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38680791E9E48BF00D974CA /* CameraViewController.m */; };
 		F3F9A5471E9B1E2100CFEEF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5461E9B1E2100CFEEF8 /* AppDelegate.m */; };
 		F3F9A54A1E9B1E2100CFEEF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5491E9B1E2100CFEEF8 /* main.m */; };
 		F3F9A54F1E9B1E2100CFEEF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F9A54E1E9B1E2100CFEEF8 /* Assets.xcassets */; };
 		F3F9A5521E9B1E2100CFEEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F9A5501E9B1E2100CFEEF8 /* Main.storyboard */; };
-		F3F9A5DF1E9B20D300CFEEF8 /* EMCVLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */; };
 		F3F9A5F01E9B268D00CFEEF8 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5EF1E9B268D00CFEEF8 /* OneViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F3311A721EA0973F00227D43 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F3311A711EA0973F00227D43 /* EMCVLib.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F3311A6F1EA0973F00227D43 /* EMCVLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EMCVLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3311AB21EA0AC1B00227D43 /* opencv_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = opencv_c.h; path = EMCVLibDemo/opencv_c.h; sourceTree = "<group>"; };
 		F337D4A11E9C626C00505334 /* MultiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiViewController.h; path = EMCVLibDemo/MultiViewController.h; sourceTree = "<group>"; };
 		F337D4A21E9C626C00505334 /* MultiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiViewController.m; path = EMCVLibDemo/MultiViewController.m; sourceTree = "<group>"; };
 		F38680781E9E48BF00D974CA /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CameraViewController.h; path = EMCVLibDemo/CameraViewController.h; sourceTree = "<group>"; };
@@ -29,10 +46,8 @@
 		F3F9A54E1E9B1E2100CFEEF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F9A5511E9B1E2100CFEEF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3F9A5531E9B1E2100CFEEF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMCVLib.framework; path = "../../../../Library/Developer/Xcode/DerivedData/EMCVLib-gxzgilkoegzcqidrscghtwqnmndf/Build/Products/Debug/EMCVLib.framework"; sourceTree = "<group>"; };
 		F3F9A5EE1E9B268D00CFEEF8 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OneViewController.h; path = EMCVLibDemo/OneViewController.h; sourceTree = "<group>"; };
 		F3F9A5EF1E9B268D00CFEEF8 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OneViewController.m; path = EMCVLibDemo/OneViewController.m; sourceTree = "<group>"; };
-		F3F9A5FD1E9B2A6800CFEEF8 /* opencv_c.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = opencv_c.h; path = EMCVLibDemo/opencv_c.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F9A5DF1E9B20D300CFEEF8 /* EMCVLib.framework in Frameworks */,
+				F3311A701EA0973F00227D43 /* EMCVLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +65,7 @@
 		F3F9A5391E9B1E2100CFEEF8 = {
 			isa = PBXGroup;
 			children = (
-				F3F9A5FE1E9B2A7400CFEEF8 /* Headers */,
+				F3311AB21EA0AC1B00227D43 /* opencv_c.h */,
 				F3F9A5EE1E9B268D00CFEEF8 /* OneViewController.h */,
 				F3F9A5EF1E9B268D00CFEEF8 /* OneViewController.m */,
 				F337D4A11E9C626C00505334 /* MultiViewController.h */,
@@ -96,17 +111,9 @@
 		F3F9A5DD1E9B20D300CFEEF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */,
+				F3311A6F1EA0973F00227D43 /* EMCVLib.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F3F9A5FE1E9B2A7400CFEEF8 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				F3F9A5FD1E9B2A6800CFEEF8 /* opencv_c.h */,
-			);
-			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +126,7 @@
 				F3F9A53E1E9B1E2100CFEEF8 /* Sources */,
 				F3F9A53F1E9B1E2100CFEEF8 /* Frameworks */,
 				F3F9A5401E9B1E2100CFEEF8 /* Resources */,
+				F3311A721EA0973F00227D43 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

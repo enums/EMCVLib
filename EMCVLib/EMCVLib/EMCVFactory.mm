@@ -54,4 +54,10 @@
     return img;
 }
 
++ (void)copyImage:(EMCVImage *)src toImage:(EMCVImage *)dst {
+    Mat newMat;
+    src->_mat.copyTo(newMat);
+    dst->_mat = newMat;
+}
+
 @end

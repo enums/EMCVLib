@@ -23,4 +23,7 @@
 
 + (EMCVImage *)blendingImage:(EMCVImage *)imgA withImage:(EMCVImage *)imgB useAlpha1:(double)a1 andAlpha2:(double)a2 andGama:(double)gamma;
 
++ (void)copyImage:(EMCVImage *)src toImage:(EMCVImage *)dst;
+
+
 @end
