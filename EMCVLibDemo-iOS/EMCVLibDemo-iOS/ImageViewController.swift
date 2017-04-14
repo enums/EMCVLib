@@ -41,8 +41,8 @@ class ImageViewController: UIViewController, UITableViewDataSource, UITableViewD
         })),
         ("Threshold", EMCVFilterOperation.init(block: { img in
             let splitedImg = img!.splitImage()!;
-            splitedImg.threshold(25, atChannal: 0)
-            EMCVFactory.copy(splitedImg.image(withChannal: 0), to: img)
+            splitedImg.image(atChannal: 0).threshold(25)
+            EMCVFactory.copy(splitedImg.image(atChannal: 0), to: img)
         }))
         
     ]
@@ -86,12 +86,12 @@ class ImageViewController: UIViewController, UITableViewDataSource, UITableViewD
         var rPoint = CGPoint.init()
         var gPoint = CGPoint.init()
         var bPoint = CGPoint.init()
-        splitedImg.findMaxValue(nil, outPoint: &rPoint, inChannal: 0)
+        splitedImg.image(atChannal: 0).findMaxValue(nil, outPoint: &rPoint)
         displayImg.drawARect(withCenter: rPoint, size: CGSize.init(width: 20, height: 20), rgbColor: &kEMCVLibColorRed.0, thickness: 2)
         if splitedImg.channalCount == 3 {
-            splitedImg.findMaxValue(nil, outPoint: &gPoint, inChannal: 1)
+            splitedImg.image(atChannal: 1).findMaxValue(nil, outPoint: &gPoint)
             displayImg.drawARect(withCenter: gPoint, size: CGSize.init(width: 20, height: 20), rgbColor: &kEMCVLibColorGreen.0, thickness: 2)
-            splitedImg.findMaxValue(nil, outPoint: &bPoint, inChannal: 2)
+            splitedImg.image(atChannal: 2).findMaxValue(nil, outPoint: &bPoint)
             displayImg.drawARect(withCenter: bPoint, size: CGSize.init(width: 20, height: 20), rgbColor: &kEMCVLibColorBlue.0, thickness: 2)
         }
 

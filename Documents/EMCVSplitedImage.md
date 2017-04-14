@@ -10,7 +10,6 @@ A wrapped multi channel image class.
 - **[ObjC++]**: `_mats`: A `std::vector<cv::Mat>` object. It's single channal image data list.
 - **[ObjC++]**: `_hists`: A `std::vector<cv::MatND>` object. It's single channal histogram data list.
 - **[ObjC]**: `channalCount`: How much channals in current image;
-- **[ObjC]**: `sizeWithChannal`: Get size of the image at specified channal.
 
 # Instance Method
 
@@ -21,30 +20,13 @@ A wrapped multi channel image class.
 - **[ObjC]**: `initWithPath`: Open a local image file with a `NSString` path.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy and split it.
 
+
 ## Others
-- **[ObjC]**: `imageWithChannal`: Get one of these channels to gen a `EMCVImage` instance.
-- **[ObjC]**: `threshold:atChannal`: Threshold.
-- **[ObjC]**: `threshold:maxValue:type:atChannal`: Threshold. The type must be like `CV_THRESH_TOZERO` whitch is defined by OpenCV.
-- **[ObjC]**: `flipWithXAxis`: Flip with X axis.
-- **[ObjC]**: `flipWithYAxis`: Flip with Y axis.
-- **[ObjC]**: `flipWithXAxisAtChannal`: Flip with X axis at a specified channal.
-- **[ObjC]**: `flipWithYAxisAtChannal`: Flip with Y axis at a specified channal.
-- **[ObjC]**: `pyrUpWithRatio`: PyrUp with a ratio.
-- **[ObjC]**: `pyrDownWithRatio`: PyrDown with a ratio.
-- **[ObjC]**: `pyrUpWithRatio:AtChannal`: PyrUp with a ratio in a specified channal.
-- **[ObjC]**: `pyrDownWithRatio:AtChannal`: PyrDown with a ratio in a specified channal.
+- **[ObjC]**: `imageAtChannal`: Get one of these channels to gen a `EMCVImage` instance.
+- **[ObjC]**: `imageCopyAtChannal`: Copy one of these channels to gen a `EMCVImage` instance.
 - **[ObjC]**: `mergeImage`: Merge all channels to get a multi channel `EMCVImage` instance.
-- **[ObjC]**: `calHistWithSize:range`: Calculate all channals' histogram with the same size and range.
-- **[ObjC]**: `calHistWithSizes:ranges`: Calculate all channals' histogram wit sizes and ranges.
-- **[ObjC]**: `calHistWithChannal:size:range`: Calculate specified channal's histogram wit size and range. 
-- **[ObjC]**: `normalizeHistWithValue`: Normalize all channals' histogram to some value.
-- **[ObjC]**: `normalizeHistWithChannal:value`: Normalize specified channal's histogram to some value.
-- **[ObjC]**: `findMaxValue:outPoint:inChannal`: Find the max value and location in specified channal.
-- **[ObjC]**: `findMinValue:outPoint:inChannal`: Find the min value and location in specified channal.
-- **[ObjC]**: `newCannyWithThresh1:andThresh2:atChannal`: Canny. Create a new `EMCVImage` instance and draw Canny image on it.
-- **[ObjC]**: `cannyOnImage:withThresh1:andThresh2:atChannal`: Canny. Draw Canny image on a specified image.
-- **[ObjC]**: `newDrawContoursWithMode:andMethod:atChannal`: Create a new `EMCVImage` instance and draw edge image on it. The mode must be like `CV_RETR_TREE` whitch is defined by OpenCV. The method must be like `CV_CHAIN_APPROX_SIMPLE` whitch is defined by OpenCV too.
-- **[ObjC]**: `drawContoursOnImage:WithMode:withThresh1:andThresh2:atChannal`: Draw edge image on a specified image.
+- **[ObjC]**: `sizeAtChannal`: Get size of the image at specified channal.
+
 
 # Class Method
 

@@ -19,7 +19,6 @@ A wrapped video class.
 ## Others
 
 - **[ObjC]**: `nextFrame`: Get next frame in the current video. Return a `EMCVImage` instance.
-- **[ObjC]**: `nextFrameSplitedWithChannal`: Get next single channal frame in the current video. Return a `EMCVImage` instance.
 
 # Class Method
 

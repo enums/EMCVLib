@@ -21,7 +21,7 @@
 }
 
 - (NSUInteger)channalCount {
-    return (NSUInteger)_mat.elemSize();
+    return (NSUInteger)_mat.channels();
 }
 
 - (NSSize)imageSize {
@@ -47,6 +47,16 @@
     return [self initWithMat:img->_mat cvtColor:color];
 }
 
+- (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage {
+    Mat mat;
+    merge(splitedImage->_mats, mat);
+    return [self initWithNoCopyMat:mat];
+}
+
+- (instancetype)initWithCVSingleImage:(EMCVSingleImage *)singleImage {
+    return [self initWithMat:singleImage->_mat];
+}
+
 - (instancetype)initWithMat:(Mat)mat cvtColor:(int)color {
     Mat newMat;
     cvtColor(mat, newMat, color);
@@ -58,17 +68,6 @@
     mat.copyTo(newMat);
     return [self initWithNoCopyMat:newMat];
 }
-
-- (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage {
-    Mat mat;
-    merge(splitedImage->_mats, mat);
-    return [self initWithNoCopyMat:mat];
-}
-
-- (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage atChannal:(int)channal {
-    return [self initWithMat:splitedImage->_mats.at(channal)];
-}
-
 
 - (instancetype)initWithNoCopyMat:(Mat)mat {
     self = [super init];
@@ -83,7 +82,9 @@
 }
 
 - (EMCVSplitedImage *)splitImage {
-    return [[EMCVSplitedImage alloc] initWithCVImage:self];
+    vector<Mat> mats;
+    split(_mat, mats);
+    return [[EMCVSplitedImage alloc] initWithNoCopyMats:mats];
 }
 
 - (void)blurWithSize:(NSSize)size {
@@ -161,7 +162,6 @@
 - (void)cannyOnCVImage:(EMCVImage *)img withThresh1:(double)thresh1 andThreash2:(double)thresh2 {
     Canny(self->_mat, img->_mat, thresh1, thresh2);
 }
-
 
 - (void)calHistWithSize:(int)size range:(float *)range {
     int dims = (int)self.channalCount;

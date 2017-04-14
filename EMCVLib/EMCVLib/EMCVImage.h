@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "platform.h"
 #import "EMCVSplitedImage.h"
+#import "EMCVSingleImage.h"
 
+@class EMCVSingleImage;
 @class EMCVSplitedImage;
 
 #ifdef __cplusplus
@@ -38,7 +40,7 @@ using namespace cv;
 - (instancetype)initWithCVImage:(EMCVImage *)img;
 - (instancetype)initWithCVImage:(EMCVImage *)img cvtColor:(int)color;
 - (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage;
-- (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage atChannal:(int)channal;
+- (instancetype)initWithCVSingleImage:(EMCVSingleImage *)singleImage;
 
 - (EMCVImage *)makeACopy;
 

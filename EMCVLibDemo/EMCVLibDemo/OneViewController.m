@@ -38,14 +38,21 @@
         [self.curFilter runFilterWithCVImage:displayImg];
         EMCVSplitedImage * splitedImage = [displayImg splitImage];
         NSPoint rPoint, gPoint, bPoint;
-        [splitedImage findMaxValue:nil outPoint:&rPoint inChannal:0];
-        [splitedImage findMaxValue:nil outPoint:&gPoint inChannal:1];
-        [splitedImage findMaxValue:nil outPoint:&bPoint inChannal:2];
+        [[splitedImage imageAtChannal:0] findMaxValue:nil outPoint:&rPoint];
         [displayImg drawACircleWithCenter:rPoint andRadius:25 andColor:kEMCVLibColorRed andThickness:2];
-        [displayImg drawACircleWithCenter:gPoint andRadius:25 andColor:kEMCVLibColorGreen andThickness:2];
-        [displayImg drawACircleWithCenter:bPoint andRadius:25 andColor:kEMCVLibColorBlue andThickness:2];
+        if (splitedImage.channalCount >= 3) {
+            [[splitedImage imageAtChannal:1] findMaxValue:nil outPoint:&gPoint];
+            [[splitedImage imageAtChannal:2] findMaxValue:nil outPoint:&bPoint];
+            [displayImg drawACircleWithCenter:gPoint andRadius:25 andColor:kEMCVLibColorGreen andThickness:2];
+            [displayImg drawACircleWithCenter:bPoint andRadius:25 andColor:kEMCVLibColorBlue andThickness:2];
+            [self.subImageView drawRGBHistWithCVImage:displayImg size:128];
+        } else {
+            [displayImg calHistWithSize:128 range:kEMCVLibRangeDefault];
+            [displayImg normalizeHistWithValue:128];
+            [self.subImageView drawHistWithCVImage:displayImg size:128 rgbColor:kEMCVLibColorWhite];
+        }
         [self.imageView drawCVImage:displayImg];
-        [self.subImageView drawRGBHistWithCVImage:displayImg size:128];
+        
     } else {
         [self.imageView setImage:nil];
         [self.subImageView setImage:nil];
@@ -152,6 +159,12 @@
         [img flipWithYAxis];
     }];
     [self setCurImage:self.curImage];
+}
+
+- (IBAction)cornerHarris:(id)sender {
+//    EMCVSplitedImage * splitedImg = [self.curImage splitImage];
+//    EMCVSingleImage * singleImg = [[splitedImg imageAtChannal:0] newCornerHarrisWithBlockSize:2 andKSize:3];
+//    [self setCurImage:[[EMCVImage alloc] initWithCVSingleImage:singleImg]];
 }
 
 @end

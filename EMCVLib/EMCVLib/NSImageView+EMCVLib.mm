@@ -53,13 +53,24 @@
 }
 
 - (void)drawRGBHistWithCVImage:(EMCVImage *)cvImg size:(int)size {
-    int * colors[] = {kEMCVLibColorRed, kEMCVLibColorGreen, kEMCVLibColorBlue};
-    int sizes[] = {size, size, size};
+    Mat histMat = Mat((int)self.frame.size.height, (int)self.frame.size.width, CV_8UC3, Scalar(0, 0, 0));
     EMCVSplitedImage * splitedImg = [cvImg splitImage];
-    [splitedImg calHistWithSizes:sizes ranges:kEMCVLibRangesDefault];
-    [splitedImg normalizeHistWithValue:self.frame.size.height];
-    [self drawHistWithCVSplitedImage:splitedImg sizes:sizes rgbColors:colors];
+    EMCVSingleImage * rImg = [splitedImg imageAtChannal:0];
+    EMCVSingleImage * gImg = [splitedImg imageAtChannal:1];
+    EMCVSingleImage * bImg = [splitedImg imageAtChannal:2];
+    [rImg calHistWithSize:size];
+    [gImg calHistWithSize:size];
+    [bImg calHistWithSize:size];
+    [rImg normalizeHistWithValue:self.frame.size.height];
+    [gImg normalizeHistWithValue:self.frame.size.height];
+    [bImg normalizeHistWithValue:self.frame.size.height];
+    [self drawHistOnMat:histMat withHist:rImg->_hist size:size color:Scalar(255, 0, 0)];
+    [self drawHistOnMat:histMat withHist:gImg->_hist size:size color:Scalar(0, 255, 0)];
+    [self drawHistOnMat:histMat withHist:bImg->_hist size:size color:Scalar(0, 0, 255)];
+    EMCVImage * img = [[EMCVImage alloc] initWithNoCopyMat:histMat];
+    [self drawCVImage:img];
 }
+
 
 - (void)drawHistWithCVImage:(EMCVImage *)cvImg size:(int)size rgbColor:(int *)rgb {
     Mat histImage = Mat((int)self.frame.size.height, (int)self.frame.size.width, CV_8UC3, Scalar(0, 0, 0));
@@ -68,19 +79,9 @@
     [self setImageAndFitSizeWithImage:[img toImage]];
 }
 
-- (void)drawHistWithCVSplitedImage:(EMCVSplitedImage *)splitedImg sizes:(int *)sizes rgbColors:(int **)rgbs {
-    int dims = (int)splitedImg->_mats.size();
+- (void)drawHistWithCVSingleImage:(EMCVSingleImage *)cvImg size:(int)size rgbColor:(int *)rgb {
     Mat histImage = Mat((int)self.frame.size.height, (int)self.frame.size.width, CV_8UC3, Scalar(0, 0, 0));
-    for (int i = 0; i < dims; i++) {
-        [self drawHistOnMat:histImage withHist:splitedImg->_hists.at(i) size:sizes[i] color:Scalar(rgbs[i][0], rgbs[i][1], rgbs[i][2])];
-    }
-    EMCVImage * img = [[EMCVImage alloc] initWithNoCopyMat:histImage];
-    [self setImageAndFitSizeWithImage:[img toImage]];
-}
-
-- (void)drawHistWithCVSplitedImage:(EMCVSplitedImage *)splitedImg channal:(int)channal size:(int)size rgbColor:(int *)rgb {
-    Mat histImage = Mat((int)self.frame.size.height, (int)self.frame.size.width, CV_8UC3, Scalar(0, 0, 0));
-    [self drawHistOnMat:histImage withHist:splitedImg->_hists.at(channal) size:size color:Scalar(rgb[0], rgb[1], rgb[2])];
+    [self drawHistOnMat:histImage withHist:cvImg->_hist size:size color:Scalar(rgb[0], rgb[1], rgb[2])];
     EMCVImage * img = [[EMCVImage alloc] initWithNoCopyMat:histImage];
     [self setImageAndFitSizeWithImage:[img toImage]];
 }

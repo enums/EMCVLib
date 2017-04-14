@@ -26,7 +26,6 @@ using namespace cv;
 
 - (void)drawRGBHistWithCVImage:(EMCVImage *)cvImg size:(int)size;
 - (void)drawHistWithCVImage:(EMCVImage *)cvImg size:(int)size rgbColor:(int *)rgb;
-- (void)drawHistWithCVSplitedImage:(EMCVSplitedImage *)splitedImg sizes:(int *)sizes rgbColors:(int **)rgbs;
-- (void)drawHistWithCVSplitedImage:(EMCVSplitedImage *)splitedImg channal:(int)channal size:(int)size rgbColor:(int *)rgb;
+- (void)drawHistWithCVSingleImage:(EMCVSingleImage *)cvImg size:(int)size rgbColor:(int *)rgb;
 
 @end

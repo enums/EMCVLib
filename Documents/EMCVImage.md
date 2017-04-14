@@ -4,9 +4,10 @@
 
 A wrapped image class. The default color format should be BGR when image opened from file.
 
-
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++.
+
+See: [[EMCVSplitedImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSplitedImage.md) [[EMCVSingleImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSingleImage.md) 
 
 # Property
 
@@ -27,7 +28,7 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: `initWithSize:andType:andColor`: Init a empty `EMCVImage` instance with type and color. Type must be like `CV_8UC3` whitch is defined by OpenCV. Color is a RGB value array.
 - **[ObjC]**: `initWithCVImage`: Init a instance with a `EMCVImage` instance. Means to make a copy.
 - **[ObjC]**: `initWithCVImage:cvtColor`: Init a instance with a `EMCVImage` instance and color format. like `CV_BGR2RGB` whitch is defined by OpenCV.
-- **[ObjC]**: `initWithCVSplitedImage`: Init a instance with a `EMCVSpritedImage` instance. Means to merge multi channel image.
+- **[ObjC]**: `initWithCVSingleImage`: Init a instance with a `initWithCVSingleImage` instance. Means to init a single channal image.
 - **[ObjC]**: `initWithCVSplitedImage:atChannal`: Init a instance with one of a `EMCVSpritedImage` instance's channal image.
 
 ## Others

@@ -48,7 +48,13 @@
 - (void)setImage:(EMCVImage *)img view:(NSImageView *)view subView:(NSImageView *)subView {
     if (img != nil) {
         [view drawCVImage:img];
-        [subView drawRGBHistWithCVImage:img size:128];
+        if (img.channalCount == 3) {
+            [subView drawRGBHistWithCVImage:img size:128];
+        } else {
+            [img calHistWithSize:128 range:kEMCVLibRangeDefault];
+            [img normalizeHistWithValue:128];
+            [subView drawHistWithCVImage:img size:128 rgbColor:kEMCVLibColorWhite];
+        }
     } else {
         [view setImage:nil];
         [subView setImage:nil];
@@ -105,7 +111,7 @@
     EMCVImage * img = [EMCVFactory matchTemplateWithImage:self.curImageA andTempl:self.curImageB withMethod:CV_TM_SQDIFF_NORMED];
     EMCVSplitedImage * splitedImg = [img splitImage];
     NSPoint maxPoint;
-    [splitedImg findMinValue:nil outPoint:&maxPoint inChannal:0];
+    [[splitedImg imageAtChannal:0] findMinValue:nil outPoint:&maxPoint];
     NSSize templSize = self.curImageB.imageSize;
     maxPoint = NSMakePoint(maxPoint.x + templSize.width / 2, maxPoint.y + templSize.height / 2);
     EMCVImage * result = [self.curImageA makeACopy];
@@ -131,8 +137,8 @@
 - (IBAction)threshold:(id)sender {
     double threshold = self.sizeField.doubleValue;
     EMCVSplitedImage * img = [self.curImageA splitImage];
-    [img threshold:threshold atChannal:0];
-    self.curImageC = [img imageWithChannal:0];
+    [[img imageAtChannal:0] threshold:threshold];
+    self.curImageC = [[EMCVImage alloc] initWithCVSingleImage:[img imageAtChannal:0]];
 }
 
 @end

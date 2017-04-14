@@ -16,10 +16,6 @@
     return compareHist(imgA->_hist, imgB->_hist, method);
 }
 
-+ (double)compareHistWithCVSplitedImage:(EMCVSplitedImage *)imgA andImage:(EMCVSplitedImage *)imgB withMethod:(int)method atChannal:(int)channal {
-    return compareHist(imgA->_hists.at(channal), imgB->_hists.at(channal), method);
-}
-
 + (EMCVImage *)matchTemplateWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ withMethod:(int)method {
     int cols = img->_mat.cols - templ->_mat.cols + 1;
     int rows = img->_mat.rows - templ->_mat.rows + 1;
@@ -54,10 +50,28 @@
     return img;
 }
 
-+ (void)copyImage:(EMCVImage *)src toImage:(EMCVImage *)dst {
++ (void)copyCVImage:(EMCVImage *)src toCVImage:(EMCVImage *)dst {
     Mat newMat;
     src->_mat.copyTo(newMat);
     dst->_mat = newMat;
 }
+
++ (void)copyCVImage:(EMCVImage *)src toCVSingleImage:(EMCVSingleImage *)dst {
+    Mat newMat;
+    src->_mat.copyTo(newMat);
+    dst->_mat = newMat;
+}
+
++ (void)copyCVSingleImage:(EMCVSingleImage *)src toCVSingleImage:(EMCVSingleImage *)dst {
+    Mat newMat;
+    src->_mat.copyTo(newMat);
+    dst->_mat = newMat;
+}
++ (void)copyCVSingleImage:(EMCVSingleImage *)src toCVImage:(EMCVImage *)dst {
+    Mat newMat;
+    src->_mat.copyTo(newMat);
+    dst->_mat = newMat;
+}
+
 
 @end

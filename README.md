@@ -48,7 +48,7 @@ Download the repo. Then drag the framework project to your project.
 
 What can this framework does now?
 
-- Display image and play real-time processing video whit customized filter.
+- Display image and play real-time processing video with customized filter.
 - Color convert. Channals split. Image flip, smooth, blending.
 - Edge Detection. Find extreme values and locations. Calculate and compare histograms.
 - Matching algorithm: Template Match, Back Projection.
@@ -109,6 +109,7 @@ API docs and bugs here.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFactory.md) `EMCVFactory`: A wrapped functions whitch can do some computer vision calculations.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVImage.md) `EMCVImage`: A wrapped image class.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSplitedImage.md) `EMCVSplitedImage`: A wrapped multi channel image class.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSingleImage.md) `EMCVSingleImage`: A wrapped single channel image class.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFilter.md) `EMCVFilter`: A wrapped image filter.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFilterOperation.md) `EMCVFilterOperation`: A wrapped image operation by using block.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVVideo.md) `EMCVVideo`: A wrapped video class.
