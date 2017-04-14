@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Cocoa/Cocoa.h>
+#import "platform.h"
 #import "EMCVSplitedImage.h"
 
 @class EMCVSplitedImage;
@@ -57,12 +57,19 @@ using namespace cv;
 - (void)medianBlurWithSize:(int)size;
 - (void)bilateralFilterWithDelta:(int)d andSigmaColor:(double)sc andSigmaSpace:(double)sp;
 - (void)gaussianBlurWithSize:(NSSize)size;
-- (NSImage *)toImage;
 
 - (void)calHistWithSize:(int)size range:(float *)range;
 - (void)calHistWithDims:(int)dims size:(int)size range:(float *)range;
 - (void)calHistWithDims:(int)dims sizes:(int *)sizes ranges:(float **)ranges;
 - (void)normalizeHistWithValue:(double)value;
+
+#if TARGET_OS_IPHONE
+
+- (UIImage *)toImage;
+
+#elif TARGET_OS_MAC
+- (NSImage *)toImage;
+#endif
 
 @end
 

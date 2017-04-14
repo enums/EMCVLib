@@ -1,0 +1,373 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3311A1F1EA05B0800227D43 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3311A1E1EA05B0800227D43 /* main.m */; };
+		F3311A221EA05B0800227D43 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3311A211EA05B0800227D43 /* AppDelegate.m */; };
+		F3311A251EA05B0800227D43 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3311A241EA05B0800227D43 /* ViewController.m */; };
+		F3311A281EA05B0800227D43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3311A261EA05B0800227D43 /* Main.storyboard */; };
+		F3311A2A1EA05B0800227D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3311A291EA05B0800227D43 /* Assets.xcassets */; };
+		F3311A2D1EA05B0800227D43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3311A2B1EA05B0800227D43 /* LaunchScreen.storyboard */; };
+		F3311A4D1EA062B100227D43 /* Back_Projection_Source.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A461EA062B100227D43 /* Back_Projection_Source.JPG */; };
+		F3311A4E1EA062B100227D43 /* Back_Projection_Template.png in Resources */ = {isa = PBXBuildFile; fileRef = F3311A471EA062B100227D43 /* Back_Projection_Template.png */; };
+		F3311A4F1EA062B100227D43 /* Histogram_Compare_1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A481EA062B100227D43 /* Histogram_Compare_1.JPG */; };
+		F3311A501EA062B100227D43 /* Histogram_Compare_2.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A491EA062B100227D43 /* Histogram_Compare_2.JPG */; };
+		F3311A511EA062B100227D43 /* rgb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F3311A4A1EA062B100227D43 /* rgb.jpg */; };
+		F3311A521EA062B100227D43 /* Template_Match_Source.JPG in Resources */ = {isa = PBXBuildFile; fileRef = F3311A4B1EA062B100227D43 /* Template_Match_Source.JPG */; };
+		F3311A531EA062B100227D43 /* Template_Match_Template.png in Resources */ = {isa = PBXBuildFile; fileRef = F3311A4C1EA062B100227D43 /* Template_Match_Template.png */; };
+		F3311A5D1EA06E5A00227D43 /* EMCVLibiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3311A5C1EA06E5A00227D43 /* EMCVLibiOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F3311A1A1EA05B0800227D43 /* EMCVLibDemo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EMCVLibDemo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3311A1E1EA05B0800227D43 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3311A201EA05B0800227D43 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3311A211EA05B0800227D43 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3311A231EA05B0800227D43 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = "EMCVLibDemo-iOS/ViewController.h"; sourceTree = "<group>"; };
+		F3311A241EA05B0800227D43 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = "EMCVLibDemo-iOS/ViewController.m"; sourceTree = "<group>"; };
+		F3311A271EA05B0800227D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3311A291EA05B0800227D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3311A2C1EA05B0800227D43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3311A2E1EA05B0800227D43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3311A461EA062B100227D43 /* Back_Projection_Source.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Back_Projection_Source.JPG; path = ../TestImages/Back_Projection_Source.JPG; sourceTree = "<group>"; };
+		F3311A471EA062B100227D43 /* Back_Projection_Template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Back_Projection_Template.png; path = ../TestImages/Back_Projection_Template.png; sourceTree = "<group>"; };
+		F3311A481EA062B100227D43 /* Histogram_Compare_1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Histogram_Compare_1.JPG; path = ../TestImages/Histogram_Compare_1.JPG; sourceTree = "<group>"; };
+		F3311A491EA062B100227D43 /* Histogram_Compare_2.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Histogram_Compare_2.JPG; path = ../TestImages/Histogram_Compare_2.JPG; sourceTree = "<group>"; };
+		F3311A4A1EA062B100227D43 /* rgb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = rgb.jpg; path = ../TestImages/rgb.jpg; sourceTree = "<group>"; };
+		F3311A4B1EA062B100227D43 /* Template_Match_Source.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Template_Match_Source.JPG; path = ../TestImages/Template_Match_Source.JPG; sourceTree = "<group>"; };
+		F3311A4C1EA062B100227D43 /* Template_Match_Template.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Template_Match_Template.png; path = ../TestImages/Template_Match_Template.png; sourceTree = "<group>"; };
+		F3311A5C1EA06E5A00227D43 /* EMCVLibiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EMCVLibiOS.framework; path = "../../../../Library/Developer/Xcode/DerivedData/EMCVLibDemo-dxxszxjdgjgtfjckkytykrvpqquq/Build/Products/Debug-iphonesimulator/EMCVLibiOS.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3311A171EA05B0800227D43 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3311A5D1EA06E5A00227D43 /* EMCVLibiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3311A111EA05B0800227D43 = {
+			isa = PBXGroup;
+			children = (
+				F3311A451EA062A000227D43 /* Src */,
+				F3311A231EA05B0800227D43 /* ViewController.h */,
+				F3311A241EA05B0800227D43 /* ViewController.m */,
+				F3311A261EA05B0800227D43 /* Main.storyboard */,
+				F3311A1C1EA05B0800227D43 /* EMCVLibDemo-iOS */,
+				F3311A1B1EA05B0800227D43 /* Products */,
+				F3311A591EA06C0000227D43 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F3311A1B1EA05B0800227D43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3311A1A1EA05B0800227D43 /* EMCVLibDemo-iOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3311A1C1EA05B0800227D43 /* EMCVLibDemo-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				F3311A201EA05B0800227D43 /* AppDelegate.h */,
+				F3311A211EA05B0800227D43 /* AppDelegate.m */,
+				F3311A291EA05B0800227D43 /* Assets.xcassets */,
+				F3311A2B1EA05B0800227D43 /* LaunchScreen.storyboard */,
+				F3311A2E1EA05B0800227D43 /* Info.plist */,
+				F3311A1D1EA05B0800227D43 /* Supporting Files */,
+			);
+			path = "EMCVLibDemo-iOS";
+			sourceTree = "<group>";
+		};
+		F3311A1D1EA05B0800227D43 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3311A1E1EA05B0800227D43 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3311A451EA062A000227D43 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				F3311A461EA062B100227D43 /* Back_Projection_Source.JPG */,
+				F3311A471EA062B100227D43 /* Back_Projection_Template.png */,
+				F3311A481EA062B100227D43 /* Histogram_Compare_1.JPG */,
+				F3311A491EA062B100227D43 /* Histogram_Compare_2.JPG */,
+				F3311A4A1EA062B100227D43 /* rgb.jpg */,
+				F3311A4B1EA062B100227D43 /* Template_Match_Source.JPG */,
+				F3311A4C1EA062B100227D43 /* Template_Match_Template.png */,
+			);
+			name = Src;
+			sourceTree = "<group>";
+		};
+		F3311A591EA06C0000227D43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F3311A5C1EA06E5A00227D43 /* EMCVLibiOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3311A191EA05B0800227D43 /* EMCVLibDemo-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3311A311EA05B0800227D43 /* Build configuration list for PBXNativeTarget "EMCVLibDemo-iOS" */;
+			buildPhases = (
+				F3311A161EA05B0800227D43 /* Sources */,
+				F3311A171EA05B0800227D43 /* Frameworks */,
+				F3311A181EA05B0800227D43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EMCVLibDemo-iOS";
+			productName = "EMCVLibDemo-iOS";
+			productReference = F3311A1A1EA05B0800227D43 /* EMCVLibDemo-iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3311A121EA05B0800227D43 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "郑宇琦";
+				TargetAttributes = {
+					F3311A191EA05B0800227D43 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 4TF3NHEU2R;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = F3311A151EA05B0800227D43 /* Build configuration list for PBXProject "EMCVLibDemo-iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3311A111EA05B0800227D43;
+			productRefGroup = F3311A1B1EA05B0800227D43 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3311A191EA05B0800227D43 /* EMCVLibDemo-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3311A181EA05B0800227D43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3311A4F1EA062B100227D43 /* Histogram_Compare_1.JPG in Resources */,
+				F3311A531EA062B100227D43 /* Template_Match_Template.png in Resources */,
+				F3311A521EA062B100227D43 /* Template_Match_Source.JPG in Resources */,
+				F3311A511EA062B100227D43 /* rgb.jpg in Resources */,
+				F3311A2D1EA05B0800227D43 /* LaunchScreen.storyboard in Resources */,
+				F3311A2A1EA05B0800227D43 /* Assets.xcassets in Resources */,
+				F3311A501EA062B100227D43 /* Histogram_Compare_2.JPG in Resources */,
+				F3311A4D1EA062B100227D43 /* Back_Projection_Source.JPG in Resources */,
+				F3311A4E1EA062B100227D43 /* Back_Projection_Template.png in Resources */,
+				F3311A281EA05B0800227D43 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3311A161EA05B0800227D43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3311A251EA05B0800227D43 /* ViewController.m in Sources */,
+				F3311A221EA05B0800227D43 /* AppDelegate.m in Sources */,
+				F3311A1F1EA05B0800227D43 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F3311A261EA05B0800227D43 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3311A271EA05B0800227D43 /* Base */,
+			);
+			name = Main.storyboard;
+			path = "EMCVLibDemo-iOS";
+			sourceTree = "<group>";
+		};
+		F3311A2B1EA05B0800227D43 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3311A2C1EA05B0800227D43 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3311A2F1EA05B0800227D43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F3311A301EA05B0800227D43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3311A321EA05B0800227D43 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4TF3NHEU2R;
+				INFOPLIST_FILE = "EMCVLibDemo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Enum.EMCVLibDemo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3311A331EA05B0800227D43 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4TF3NHEU2R;
+				INFOPLIST_FILE = "EMCVLibDemo-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Enum.EMCVLibDemo-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3311A151EA05B0800227D43 /* Build configuration list for PBXProject "EMCVLibDemo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3311A2F1EA05B0800227D43 /* Debug */,
+				F3311A301EA05B0800227D43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3311A311EA05B0800227D43 /* Build configuration list for PBXNativeTarget "EMCVLibDemo-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3311A321EA05B0800227D43 /* Debug */,
+				F3311A331EA05B0800227D43 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3311A121EA05B0800227D43 /* Project object */;
+}

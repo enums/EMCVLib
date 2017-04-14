@@ -151,26 +151,6 @@
     _mat.convertTo(_mat, -1, 1, brightness);
 }
 
-- (NSImage *)toImage {
-    NSImage *image = [[NSImage alloc] init];
-    @autoreleasepool {
-        NSData *data = [NSData dataWithBytes:_mat.data length:_mat.elemSize() * _mat.total()];
-        CGColorSpaceRef colorSpace;
-        if (_mat.elemSize() == 1) {
-            colorSpace = CGColorSpaceCreateDeviceGray();
-        } else {
-            colorSpace = CGColorSpaceCreateDeviceRGB();
-        }
-        CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
-        CGImageRef imageRef = CGImageCreate(_mat.cols, _mat.rows, 8, 8 * _mat.elemSize(), _mat.step[0], colorSpace, kCGImageAlphaNone | kCGBitmapByteOrderDefault, provider, NULL, false, kCGRenderingIntentDefault);
-        NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
-        [image addRepresentation:bitmapRep];
-        CGImageRelease(imageRef);
-        CGDataProviderRelease(provider);
-        CGColorSpaceRelease(colorSpace);
-    }
-    return image;
-}
 - (void)calHistWithSize:(int)size range:(float *)range {
     int dims = (int)self.channalCount;
     [self calHistWithDims:dims size:size range:range];
@@ -196,5 +176,51 @@
 - (void)normalizeHistWithValue:(double)value  {
     normalize(_hist, _hist, 0, value, NORM_MINMAX, -1, Mat());
 }
+
+#if TARGET_OS_IPHONE
+
+- (UIImage *)toImage {
+    UIImage * img;
+    @autoreleasepool {
+        NSData *data = [NSData dataWithBytes:_mat.data length:_mat.elemSize() * _mat.total()];
+        CGColorSpaceRef colorSpace;
+        if (_mat.elemSize() == 1) {
+            colorSpace = CGColorSpaceCreateDeviceGray();
+        } else {
+            colorSpace = CGColorSpaceCreateDeviceRGB();
+        }
+        CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
+        CGImageRef imageRef = CGImageCreate(_mat.cols, _mat.rows, 8, 8 * _mat.elemSize(), _mat.step[0], colorSpace, kCGImageAlphaNone | kCGBitmapByteOrderDefault, provider, NULL, false, kCGRenderingIntentDefault);
+        img = [[UIImage alloc] initWithCGImage:imageRef];
+        CGImageRelease(imageRef);
+        CGDataProviderRelease(provider);
+        CGColorSpaceRelease(colorSpace);
+    }
+    return img;
+}
+
+#elif TARGET_OS_MAC
+
+- (NSImage *)toImage {
+    NSImage *image = [[NSImage alloc] init];
+    @autoreleasepool {
+        NSData *data = [NSData dataWithBytes:_mat.data length:_mat.elemSize() * _mat.total()];
+        CGColorSpaceRef colorSpace;
+        if (_mat.elemSize() == 1) {
+            colorSpace = CGColorSpaceCreateDeviceGray();
+        } else {
+            colorSpace = CGColorSpaceCreateDeviceRGB();
+        }
+        CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
+        CGImageRef imageRef = CGImageCreate(_mat.cols, _mat.rows, 8, 8 * _mat.elemSize(), _mat.step[0], colorSpace, kCGImageAlphaNone | kCGBitmapByteOrderDefault, provider, NULL, false, kCGRenderingIntentDefault);
+        NSBitmapImageRep *bitmapRep = [[NSBitmapImageRep alloc] initWithCGImage:imageRef];
+        [image addRepresentation:bitmapRep];
+        CGImageRelease(imageRef);
+        CGDataProviderRelease(provider);
+        CGColorSpaceRelease(colorSpace);
+    }
+    return image;
+}
+#endif
 
 @end

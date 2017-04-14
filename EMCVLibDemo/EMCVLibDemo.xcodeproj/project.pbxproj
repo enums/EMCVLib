@@ -11,7 +11,6 @@
 		F386807B1E9E48BF00D974CA /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F38680791E9E48BF00D974CA /* CameraViewController.m */; };
 		F3F9A5471E9B1E2100CFEEF8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5461E9B1E2100CFEEF8 /* AppDelegate.m */; };
 		F3F9A54A1E9B1E2100CFEEF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5491E9B1E2100CFEEF8 /* main.m */; };
-		F3F9A54D1E9B1E2100CFEEF8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A54C1E9B1E2100CFEEF8 /* ViewController.m */; };
 		F3F9A54F1E9B1E2100CFEEF8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F9A54E1E9B1E2100CFEEF8 /* Assets.xcassets */; };
 		F3F9A5521E9B1E2100CFEEF8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F9A5501E9B1E2100CFEEF8 /* Main.storyboard */; };
 		F3F9A5DF1E9B20D300CFEEF8 /* EMCVLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F9A5DE1E9B20D300CFEEF8 /* EMCVLib.framework */; };
@@ -27,8 +26,6 @@
 		F3F9A5451E9B1E2100CFEEF8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F3F9A5461E9B1E2100CFEEF8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		F3F9A5491E9B1E2100CFEEF8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F3F9A54B1E9B1E2100CFEEF8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = EMCVLibDemo/ViewController.h; sourceTree = "<group>"; };
-		F3F9A54C1E9B1E2100CFEEF8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = EMCVLibDemo/ViewController.m; sourceTree = "<group>"; };
 		F3F9A54E1E9B1E2100CFEEF8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3F9A5511E9B1E2100CFEEF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3F9A5531E9B1E2100CFEEF8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,8 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				F3F9A5FE1E9B2A7400CFEEF8 /* Headers */,
-				F3F9A54B1E9B1E2100CFEEF8 /* ViewController.h */,
-				F3F9A54C1E9B1E2100CFEEF8 /* ViewController.m */,
 				F3F9A5EE1E9B268D00CFEEF8 /* OneViewController.h */,
 				F3F9A5EF1E9B268D00CFEEF8 /* OneViewController.m */,
 				F337D4A11E9C626C00505334 /* MultiViewController.h */,
@@ -185,7 +180,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3F9A54D1E9B1E2100CFEEF8 /* ViewController.m in Sources */,
 				F3F9A54A1E9B1E2100CFEEF8 /* main.m in Sources */,
 				F3F9A5471E9B1E2100CFEEF8 /* AppDelegate.m in Sources */,
 				F386807B1E9E48BF00D974CA /* CameraViewController.m in Sources */,

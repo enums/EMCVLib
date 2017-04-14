@@ -1,12 +1,23 @@
 # EMCVLib
 
-An OpenCV framework for macOS. ONLY MACOS NOW!
+An OpenCV framework for iOS and macOS.
 
 # Usage
 
+Needed iOS 8.0+.
+
 Needed macOS 10.10+ and OpenCV 2.4.x.
 
-## Install OpenCV for macOS
+## iOS: Install OpenCV for iOS
+
+Install OpenCV by using Cocoapods.
+
+```bash
+cd EMCVLib
+pod install
+```
+
+## macOS: Install OpenCV for macOS
 
 <del>Install OpenCV with brew:</del>
 
@@ -98,6 +109,7 @@ API docs and bugs here.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFilterOperation.md) `EMCVFilterOperation`: A wrapped image operation by using block.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVVideo.md) `EMCVVideo`: A wrapped video class.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/NSImageView+EMCVLib.md) `NSImageView + EMCVLib`: A category of NSImageView.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/UIImageView+EMCVLib.md) `UIImageView + EMCVLib`: A category of UIImageView.
 
 
 # Contect

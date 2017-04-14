@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Cocoa/Cocoa.h>
+#import "platform.h"
 #import "EMCVImage.h"
 
 #ifdef __cplusplus
