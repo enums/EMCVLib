@@ -44,6 +44,7 @@ using namespace std;
 - (void)calHistWithSize:(int)size;
 - (void)calHistWithSize:(int)size range:(float *)range;
 
+- (void)normalizeImageWithValue:(double)value;
 - (void)normalizeHistWithValue:(double)value;
 
 - (void)findMaxValue:(double *)value outPoint:(NSPoint *)point;
@@ -55,7 +56,9 @@ using namespace std;
 - (EMCVSingleImage *)newDrawContoursWithMode:(int)mode andMethod:(int)method;
 - (void)drawContoursOnImage:(EMCVSingleImage *)img withMode:(int)mode andMethod:(int)method andColor:(int)value;
 
-//- (EMCVSingleImage *)newCornerHarrisWithBlockSize:(int)blockSize andKSize:(int)ksize;
-//- (void)cornerHarrisOnImage:(EMCVSingleImage *)img withBlockSize:(int)blockSize andKSize:(int)ksize;
+- (EMCVSingleImage *)newCornerHarrisWithBlockSize:(int)blockSize andKSize:(int)ksize andK:(double)k;
+- (void)cornerHarrisOnImage:(EMCVSingleImage *)img withBlockSize:(int)blockSize andKSize:(int)ksize andK:(double)k;
+
+- (void)convertScaleAbs;
 
 @end

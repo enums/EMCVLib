@@ -79,6 +79,9 @@
 }
 
 
+- (void)normalizeImageWithValue:(double)value {
+    normalize(_mat, _mat, 0, value, NORM_MINMAX, -1, Mat());
+}
 - (void)normalizeHistWithValue:(double)value {
     normalize(_hist, _hist, 0, value, NORM_MINMAX, -1, Mat());
 }
@@ -123,16 +126,20 @@
     }
 }
 
-//- (EMCVSingleImage *)newCornerHarrisWithBlockSize:(int)blockSize andKSize:(int)ksize {
-//    NSSize size = self.imageSize;
-//    EMCVSingleImage * img = [[EMCVSingleImage alloc] initWithSize:size andType:CV_8UC1 andValue:0];
-//    [self cornerHarrisOnImage:img withBlockSize:blockSize andKSize:ksize];
-//    return img;
-//}
-//
-//- (void)cornerHarrisOnImage:(EMCVImage *)img withBlockSize:(int)blockSize andKSize:(int)ksize {
-//    cornerHarris(_mat, img->_mat, blockSize, ksize, BORDER_DEFAULT);
-//}
+- (EMCVSingleImage *)newCornerHarrisWithBlockSize:(int)blockSize andKSize:(int)ksize andK:(double)k {
+    NSSize size = self.imageSize;
+    EMCVSingleImage * img = [[EMCVSingleImage alloc] initWithSize:size andType:CV_32FC1 andValue:0];
+    [self cornerHarrisOnImage:img withBlockSize:blockSize andKSize:ksize andK: k];
+    return img;
+}
+
+- (void)cornerHarrisOnImage:(EMCVSingleImage *)img withBlockSize:(int)blockSize andKSize:(int)ksize andK:(double)k {
+    cornerHarris(_mat, img->_mat, blockSize, ksize, k, BORDER_DEFAULT);
+}
+
+- (void)convertScaleAbs {
+    convertScaleAbs(_mat, _mat);
+}
 
 
 @end

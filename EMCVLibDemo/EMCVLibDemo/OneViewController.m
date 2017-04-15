@@ -162,9 +162,11 @@
 }
 
 - (IBAction)cornerHarris:(id)sender {
-//    EMCVSplitedImage * splitedImg = [self.curImage splitImage];
-//    EMCVSingleImage * singleImg = [[splitedImg imageAtChannal:0] newCornerHarrisWithBlockSize:2 andKSize:3];
-//    [self setCurImage:[[EMCVImage alloc] initWithCVSingleImage:singleImg]];
+    EMCVSplitedImage * splitedImg = [self.curImage splitImage];
+    EMCVSingleImage * singleImg = [[splitedImg imageAtChannal:0] newCornerHarrisWithBlockSize:2 andKSize:3 andK:0.04];
+    [singleImg normalizeImageWithValue:255];
+    [singleImg convertScaleAbs];
+    [self setCurImage:[[EMCVImage alloc] initWithCVSingleImage:singleImg]];
 }
 
 @end

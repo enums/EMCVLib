@@ -65,6 +65,8 @@ using namespace cv;
 - (void)calHistWithSize:(int)size range:(float *)range;
 - (void)calHistWithDims:(int)dims size:(int)size range:(float *)range;
 - (void)calHistWithDims:(int)dims sizes:(int *)sizes ranges:(float **)ranges;
+
+- (void)normalizeImageWithValue:(double)value;
 - (void)normalizeHistWithValue:(double)value;
 
 #if TARGET_OS_IPHONE

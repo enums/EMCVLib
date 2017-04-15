@@ -47,7 +47,8 @@ See: [[EMCVSplitedImage]](https://github.com/trmbhs/EMCVLib/blob/master/Document
 - **[ObjC]**: `calHistWithSize:range`: Calculate histogram using all channals with the same size and range.
 - **[ObjC]**: `calHistWithDims:size:range`: Calculate histogram with the same size and range.
 - **[ObjC]**: `calHistWithDims:sizes:ranges`: Calculate histogram with the sizes and ranges.
-- **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
+- **[ObjC]**: `normalizeImageWithValue`: Normalize image to a value.
+- **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to a value.
 - **[ObjC]**: `drawALineWithPoint:andPoint:andColor:andThickness`:Draw a line with specified points, color and thickness. 
 - **[ObjC]**: `drawARectWithCenter:size:rgbColor:thickness`: Draw a rect with specified center, size and thickness.
 - **[ObjC]**: `drawARect:rgbColor:thickness`: Draw a rect with specified rect and thickness.

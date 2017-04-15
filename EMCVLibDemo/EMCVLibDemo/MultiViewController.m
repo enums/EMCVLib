@@ -137,7 +137,8 @@
 - (IBAction)threshold:(id)sender {
     double threshold = self.sizeField.doubleValue;
     EMCVSplitedImage * img = [self.curImageA splitImage];
-    [[img imageAtChannal:0] threshold:threshold];
+    EMCVSingleImage * singleImg = [img imageAtChannal:0];
+    [singleImg threshold:threshold];
     self.curImageC = [[EMCVImage alloc] initWithCVSingleImage:[img imageAtChannal:0]];
 }
 

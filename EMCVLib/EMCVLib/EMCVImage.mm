@@ -185,6 +185,9 @@
     calcHist(&_mat, 1, channels, Mat(), _hist, dims, sizes, (const float **)ranges);
 }
 
+- (void)normalizeImageWithValue:(double)value  {
+    normalize(_mat, _mat, 0, value, NORM_MINMAX, -1, Mat());
+}
 - (void)normalizeHistWithValue:(double)value  {
     normalize(_hist, _hist, 0, value, NORM_MINMAX, -1, Mat());
 }

@@ -31,13 +31,16 @@ A wrapped single channel image class.
 - **[ObjC]**: `calHistWithSize`: Calculate histogram with the same size and default range.
 - **[ObjC]**: `calHistWithSize:range`: Calculate histogram with size and range.
 - **[ObjC]**: `calHistWithChannal:size:range`: Calculate specified channal's histogram with size and range. 
-- **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to some value.
+- **[ObjC]**: `normalizeImageWithValue`: Normalize image to a value.
+- **[ObjC]**: `normalizeHistWithValue`: Normalize histogram to a value.
 - **[ObjC]**: `findMaxValue:outPoint`: Find the max value and location.
 - **[ObjC]**: `findMinValue:outPoint`: Find the min value and location.
 - **[ObjC]**: `newCannyWithThresh1:andThresh2`: Canny. Create a new `EMCVSingleImage` instance and draw Canny image on it.
 - **[ObjC]**: `cannyOnImage:withThresh1:andThresh2`: Canny. Draw Canny image on a specified image.
 - **[ObjC]**: `newDrawContoursWithMode:andMethod`: Create a new `EMCVSingleImage` instance and draw edge image on it. The mode must be like `CV_RETR_TREE` whitch is defined by OpenCV. The method must be like `CV_CHAIN_APPROX_SIMPLE` whitch is defined by OpenCV too.
 - **[ObjC]**: `drawContoursOnImage:WithMode:withThresh1:andThresh2`: Draw edge image on a specified image.
+- **[ObjC]**: `newCornerHarrisWithBlockSize:andKSize:andK`: Create a new `EMCVSingleImage` instance and do Corner Harris on it.
+- **[ObjC]**: `cornerHarrisOnImage:withBlockSize:andKSize:andK`: do Corner Harris on a specified image.
 
 # Class Method
 
