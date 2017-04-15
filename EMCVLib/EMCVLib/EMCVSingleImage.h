@@ -30,8 +30,8 @@ using namespace std;
 
 - (instancetype)initWithSize:(NSSize)size andType:(int)type andValue:(int)value;
 
-- (void)forEachPixelWithBlock:(void(^)(unsigned char *))block;
-- (void)forPixelAtX:(int)x andY:(int)y withBlock:(void(^)(unsigned char *))block;
+- (void)forEachPixelWithBlock:(void(^)(int, int, unsigned char *))block;
+- (void)forPixelAtX:(int)x andY:(int)y withBlock:(void(^)(int, int, unsigned char *))block;
 
 - (void)threshold:(double)thresh;
 - (void)threshold:(double)thresh maxValue:(double)maxValue type:(int)type;

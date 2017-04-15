@@ -42,8 +42,8 @@ using namespace cv;
 - (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage;
 - (instancetype)initWithCVSingleImage:(EMCVSingleImage *)singleImage;
 
-- (void)forEachPixelWithBlock:(void(^)(unsigned char *))block;
-- (void)forEachPixelAtX:(int)x andY:(int)y withBlock:(void(^)(unsigned char *))block;
+- (void)forEachPixelWithBlock:(void(^)(int, int, unsigned char *))block;
+- (void)forEachPixelAtX:(int)x andY:(int)y withBlock:(void(^)(int, int, unsigned char *))block;
 
 - (EMCVImage *)makeACopy;
 

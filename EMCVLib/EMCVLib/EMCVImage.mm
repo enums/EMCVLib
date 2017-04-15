@@ -77,7 +77,7 @@
     return self;
 }
 
-- (void)forEachPixelWithBlock:(void(^)(unsigned char *))block {
+- (void)forEachPixelWithBlock:(void(^)(int, int, unsigned char *))block {
     for (int y = 0; y < _mat.rows; y++) {
         for (int x = 0; x < _mat.cols; x++) {
             [self forEachPixelAtX:x andY:y withBlock:block];
@@ -85,9 +85,9 @@
     }
 }
 
-- (void)forEachPixelAtX:(int)x andY:(int)y withBlock:(void(^)(unsigned char *))block {
+- (void)forEachPixelAtX:(int)x andY:(int)y withBlock:(void(^)(int, int, unsigned char *))block {
     unsigned char * ptr = _mat.ptr(y, x);
-    block(ptr);
+    block(x, y, ptr);
 }
 
 - (EMCVImage *)makeACopy {
