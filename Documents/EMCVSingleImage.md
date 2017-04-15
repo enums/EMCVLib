@@ -21,6 +21,8 @@ A wrapped single channel image class.
 - **[ObjC]**: `initWithSize:andType:andValue`: Init a empty `EMCVSingleImage` instance with type and color. Type must be like `CV_8UC1` whitch is defined by OpenCV. Value is a 0~255 integer.
 
 ## Others
+- **[ObjC]**: `forEachPixelWithBlock`: Enumerate each pixel and run a block with pixel's memory pointer.
+- **[ObjC]**: `forEachPixelAtX:andY:withBlock`: Run a block with the specified pixel's memory pointer.
 - **[ObjC]**: `threshold`: Threshold.
 - **[ObjC]**: `threshold:maxValue:type`: Threshold. The type must be like `CV_THRESH_TOZERO` whitch is defined by OpenCV.
 - **[ObjC]**: `flipWithXAxis`: Flip with X axis.

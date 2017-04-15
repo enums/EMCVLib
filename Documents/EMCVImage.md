@@ -33,6 +33,8 @@ See: [[EMCVSplitedImage]](https://github.com/trmbhs/EMCVLib/blob/master/Document
 
 ## Others
 
+- **[ObjC]**: `forEachPixelWithBlock`: Enumerate each pixel and run a block with pixel's memory pointer.
+- **[ObjC]**: `forEachPixelAtX:andY:withBlock`: Run a block with the specified pixel's memory pointer.
 - **[ObjC]**: `makeACopy`: Make a copy. It will copy memory.
 - **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` whitch is defined by OpenCV. The same as `cv::cvtColor`.
 - **[ObjC]**: `flipWithXAxis`: Flip with X axis.

@@ -40,6 +40,19 @@
     return self;
 }
 
+- (void)forEachPixelWithBlock:(void(^)(unsigned char *))block {
+    for (int y = 0; y < _mat.rows; y++) {
+        for (int x = 0; x < _mat.cols; x++) {
+            [self forPixelAtX:x andY:y withBlock:block];
+        }
+    }
+}
+
+- (void)forPixelAtX:(int)x andY:(int)y withBlock:(void(^)(unsigned char *))block {
+    unsigned char * ptr = _mat.ptr(y, x);
+    block(ptr);
+}
+
 - (void)threshold:(double)thresh {
     [self threshold:thresh maxValue:255 type:CV_THRESH_TOZERO];
 }
