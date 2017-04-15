@@ -77,9 +77,9 @@ Some screenshots of the demo.
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/canny_and_contours.png)
 
-### Max / Min value location of RGB
+### Corner Harris
 
-![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/max_min_value_point_of_RGB.png)
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/corner_harris.png)
 
 ### History Compare
 

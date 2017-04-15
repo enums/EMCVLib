@@ -166,7 +166,19 @@
     EMCVSingleImage * singleImg = [[splitedImg imageAtChannal:0] newCornerHarrisWithBlockSize:2 andKSize:3 andK:0.04];
     [singleImg normalizeImageWithValue:255];
     [singleImg convertScaleAbs];
-    [self setCurImage:[[EMCVImage alloc] initWithCVSingleImage:singleImg]];
+    EMCVImage * img = [[EMCVImage alloc] initWithCVSingleImage:singleImg];
+    NSMutableArray<NSValue *> * arr = [[NSMutableArray alloc] init];
+    [img forEachPixelWithBlock:^void(int x, int y, unsigned char * ptr) {
+        if (*ptr > 150) {
+            NSValue * value = [NSValue valueWithPoint:NSMakePoint(x, y)];
+            [arr addObject:value];
+        }
+    }];
+    for (NSValue * value in arr) {
+        NSPoint point = value.pointValue;
+        [img drawACircleWithCenter:point andRadius:10 andColor:kEMCVLibColorBlack andThickness:2];
+    }
+    [self setCurImage:img];
 }
 
 @end
