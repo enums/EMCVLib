@@ -29,12 +29,13 @@ using namespace cv;
 #endif
 
 - (instancetype)initWithPath:(NSString *)path;
+- (instancetype)initWithBasicImage:(EMCVBasicImage *)basicImage;
+- (instancetype)initWithBasicImageWithNoCopy:(EMCVBasicImage *)basicImage;
 - (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage;
 - (instancetype)initWithCVSingleImage:(EMCVSingleImage *)singleImage;
 
 - (EMCVImage *)makeACopy;
 
-- (EMCVSplitedImage *)splitImage;
 - (EMCVImage *)newCannyWithThresh1:(double)thresh1 andThresh2:(double)thresh2;
 - (void)cannyOnCVImage:(EMCVImage *)img withThresh1:(double)thresh1 andThreash2:(double)thresh2;
 

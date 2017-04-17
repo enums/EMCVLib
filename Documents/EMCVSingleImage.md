@@ -17,7 +17,9 @@ empty.
 
 ## Initialization
 
-empty.
+- **[ObjC]**: `initWithBasicImage`: Init a instance with a `EMCVBasicImage`. It'll copy memory.
+- **[ObjC]**: `initWithBasicImageWithNoCopy`: Init a instance with a `EMCVBasicImage`. It'll not copy memory.
+
 
 ## Others
 - **[ObjC]**: `threshold`: Threshold.

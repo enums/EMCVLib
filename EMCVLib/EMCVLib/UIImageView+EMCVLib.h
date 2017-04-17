@@ -19,10 +19,10 @@ using namespace cv;
 - (void)drawHistOnMat:(Mat)mat withHist:(MatND)hist size:(int)size color:(Scalar)color;
 #endif
 
-- (void)drawCVImage:(EMCVImage *)cvImg;
+- (void)drawCVImage:(EMCVBasicImage *)cvImg;
 
-- (void)drawRGBHistWithCVImage:(EMCVImage *)cvImg size:(int)size;
-- (void)drawHistWithCVImage:(EMCVImage *)cvImg size:(int)size rgbColor:(int *)rgb;
+- (void)drawRGBHistWithCVImage:(EMCVBasicImage *)cvImg size:(int)size;
+- (void)drawHistWithCVImage:(EMCVBasicImage *)cvImg size:(int)size rgbColor:(int *)rgb;
 - (void)drawHistWithCVSplitedImage:(EMCVSplitedImage *)splitedImg sizes:(int *)sizes rgbColors:(int **)rgbs;
 - (void)drawHistWithCVSplitedImage:(EMCVSplitedImage *)splitedImg channal:(int)channal size:(int)size rgbColor:(int *)rgb;
 

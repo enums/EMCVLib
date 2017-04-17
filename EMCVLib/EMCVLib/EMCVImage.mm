@@ -31,6 +31,14 @@ class CppObject {
     return [self initWithMat: mat];
 }
 
+- (instancetype)initWithBasicImage:(EMCVBasicImage *)basicImage {
+    return [self initWithMat:basicImage->_mat];
+}
+
+- (instancetype)initWithBasicImageWithNoCopy:(EMCVBasicImage *)basicImage {
+    return [self initWithNoCopyMat:basicImage->_mat];
+}
+
 - (instancetype)initWithCVSplitedImage:(EMCVSplitedImage *)splitedImage {
     Mat mat;
     merge(splitedImage->_mats, mat);
@@ -45,13 +53,6 @@ class CppObject {
 - (EMCVImage *)makeACopy {
     return [[EMCVImage alloc] initWithMat:_mat];
 }
-
-- (EMCVSplitedImage *)splitImage {
-    vector<Mat> mats;
-    split(_mat, mats);
-    return [[EMCVSplitedImage alloc] initWithNoCopyMats:mats];
-}
-
 
 
 - (EMCVImage *)newCannyWithThresh1:(double)thresh1 andThresh2:(double)thresh2 {

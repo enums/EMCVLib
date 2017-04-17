@@ -19,13 +19,13 @@ using namespace cv;
 - (void)drawHistOnMat:(Mat)mat withHist:(MatND)hist size:(int)size color:(Scalar)color;
 #endif
 
-- (void)drawCVImage:(EMCVImage *)cvImg;
-- (void)drawAndFitSizeWithCVImage:(EMCVImage *)cvImg;
+- (void)drawCVImage:(EMCVBasicImage *)cvImg;
+- (void)drawAndFitSizeWithCVImage:(EMCVBasicImage *)cvImg;
 
 - (void)setImageAndFitSizeWithImage:(NSImage *)img;
 
-- (void)drawRGBHistWithCVImage:(EMCVImage *)cvImg size:(int)size;
-- (void)drawHistWithCVImage:(EMCVImage *)cvImg size:(int)size rgbColor:(int *)rgb;
+- (void)drawRGBHistWithCVImage:(EMCVBasicImage *)cvImg size:(int)size;
+- (void)drawHistWithCVImage:(EMCVBasicImage *)cvImg size:(int)size rgbColor:(int *)rgb;
 - (void)drawHistWithCVSingleImage:(EMCVSingleImage *)cvImg size:(int)size rgbColor:(int *)rgb;
 
 @end

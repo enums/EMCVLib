@@ -9,9 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "platform.h"
 
+@class EMCVSplitedImage;
+
 #ifdef __cplusplus
 #include "opencv.h"
 using namespace cv;
+using namespace std;
 #endif
 
 @interface EMCVBasicImage : NSObject
@@ -29,6 +32,8 @@ using namespace cv;
 @property (nonatomic, readonly) NSSize imageSize;
 
 - (instancetype)initWithSize:(NSSize)size andType:(int)type andColor:(int *)color;
+- (EMCVBasicImage *)makeACopy;
+- (EMCVSplitedImage *)splitImage;
 
 - (void)cvtColor:(int)code;
 

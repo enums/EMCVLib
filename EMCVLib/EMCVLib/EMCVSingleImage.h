@@ -10,6 +10,7 @@
 #import "EMCVBasicImage.h"
 #import "EMCVImage.h"
 
+
 #ifdef __cplusplus
 #include "opencv.h"
 using namespace cv;
@@ -21,6 +22,8 @@ using namespace std;
 {
 }
 #endif
+- (instancetype)initWithBasicImage:(EMCVBasicImage *)basicImage;
+- (instancetype)initWithBasicImageWithNoCopy:(EMCVBasicImage *)basicImage;
 
 - (void)threshold:(double)thresh;
 - (void)threshold:(double)thresh maxValue:(double)maxValue type:(int)type;

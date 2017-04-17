@@ -7,6 +7,7 @@
 //
 
 #import "EMCVBasicImage.h"
+#import "EMCVSplitedImage.h"
 #import "Static.h"
 
 @implementation EMCVBasicImage
@@ -46,6 +47,12 @@
 
 - (EMCVBasicImage *)makeACopy {
     return [[EMCVBasicImage alloc] initWithMat:_mat];
+}
+
+- (EMCVSplitedImage *)splitImage {
+    vector<Mat> mats;
+    split(_mat, mats);
+    return [[EMCVSplitedImage alloc] initWithNoCopyMats:mats];
 }
 
 - (void)cvtColor:(int)code {

@@ -20,7 +20,9 @@ empty.
 ## Initialization
 
 - **[ObjC]**: `initWithPath`: Open a local image file with a `NSString` path.
-- **[ObjC]**: `initWithCVSingleImage`: Init a instance with a `initWithCVSingleImage` instance. Means to init a single channal image.
+- **[ObjC]**: `initWithBasicImage`: Init a instance with a `EMCVBasicImage`. It'll copy memory.
+- **[ObjC]**: `initWithBasicImageWithNoCopy`: Init a instance with a `EMCVBasicImage`. It'll not copy memory.
+- **[ObjC]**: `initWithCVSingleImage`: Init a instance with a `EMCVSingleImage` instance. Means to init a single channal image.
 - **[ObjC]**: `initWithCVSplitedImage`: Init a instance with a `EMCVSpritedImage` instance.
 
 ## Others
@@ -30,7 +32,6 @@ empty.
 - **[ObjC]**: `makeACopy`: Make a copy. It will copy memory.
 - **[ObjC]**: `newCannyWithThresh1:andThresh2`: Canny. Create a new `EMCVImage` instance and draw Canny image on it.
 - **[ObjC]**: `cannyOnImage:WithThresh1:andThresh2`: Canny. Draw Canny image on a specified image.
-- **[ObjC]**: `splitImage`: Split image's channels.
 
 
 # Class Method

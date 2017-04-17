@@ -11,12 +11,12 @@
 
 @implementation NSImageView (EMCVLib)
 
-- (void)drawCVImage:(EMCVImage *)cvImg {
+- (void)drawCVImage:(EMCVBasicImage *)cvImg {
     NSImage * img = [cvImg toImage];
     [self setImage:img];
 }
 
-- (void)drawAndFitSizeWithCVImage:(EMCVImage *)cvImg {
+- (void)drawAndFitSizeWithCVImage:(EMCVBasicImage *)cvImg {
     NSImage * img = [cvImg toImage];
     [self setImageAndFitSizeWithImage:img];
 }
@@ -52,7 +52,7 @@
     }
 }
 
-- (void)drawRGBHistWithCVImage:(EMCVImage *)cvImg size:(int)size {
+- (void)drawRGBHistWithCVImage:(EMCVBasicImage *)cvImg size:(int)size {
     Mat histMat = Mat((int)self.frame.size.height, (int)self.frame.size.width, CV_8UC3, Scalar(0, 0, 0));
     EMCVSplitedImage * splitedImg = [cvImg splitImage];
     EMCVSingleImage * rImg = [splitedImg imageAtChannal:0];
@@ -72,7 +72,7 @@
 }
 
 
-- (void)drawHistWithCVImage:(EMCVImage *)cvImg size:(int)size rgbColor:(int *)rgb {
+- (void)drawHistWithCVImage:(EMCVBasicImage *)cvImg size:(int)size rgbColor:(int *)rgb {
     Mat histImage = Mat((int)self.frame.size.height, (int)self.frame.size.width, CV_8UC3, Scalar(0, 0, 0));
     [self drawHistOnMat:histImage withHist:cvImg->_hist size:size color:Scalar(rgb[0], rgb[1], rgb[2])];
     EMCVImage * img = [[EMCVImage alloc] initWithNoCopyMat:histImage];

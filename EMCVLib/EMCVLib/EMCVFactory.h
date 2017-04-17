@@ -12,19 +12,17 @@
 
 @interface EMCVFactory : NSObject
 
-+ (double)compareHistWithCVImage:(EMCVImage *)imgA andImage:(EMCVImage *)imgB withMethod:(int)method;
++ (double)compareHistWithCVImage:(EMCVBasicImage *)imgA andImage:(EMCVBasicImage *)imgB withMethod:(int)method;
 
-+ (EMCVImage *)matchTemplateWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ withMethod:(int)method;
++ (EMCVBasicImage *)matchTemplateWithImage:(EMCVBasicImage *)img andTempl:(EMCVBasicImage *)templ withMethod:(int)method;
 
-+ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ;
-+ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ withDims:(int)dims;
-+ (EMCVImage *)doBackProjectionWithImage:(EMCVImage *)img andTempl:(EMCVImage *)templ atChannals:(int *)channals andDims:(int)dims andRanges:(float **)ranges;
++ (EMCVBasicImage *)doBackProjectionWithImage:(EMCVBasicImage *)img andTempl:(EMCVBasicImage *)templ;
++ (EMCVBasicImage *)doBackProjectionWithImage:(EMCVBasicImage *)img andTempl:(EMCVBasicImage *)templ withDims:(int)dims;
++ (EMCVBasicImage *)doBackProjectionWithImage:(EMCVBasicImage *)img andTempl:(EMCVBasicImage *)templ atChannals:(int *)channals andDims:(int)dims andRanges:(float **)ranges;
 
-+ (EMCVImage *)blendingImage:(EMCVImage *)imgA withImage:(EMCVImage *)imgB useAlpha1:(double)a1 andAlpha2:(double)a2 andGama:(double)gamma;
++ (EMCVBasicImage *)blendingImage:(EMCVBasicImage *)imgA withImage:(EMCVBasicImage *)imgB useAlpha1:(double)a1 andAlpha2:(double)a2 andGama:(double)gamma;
 
-+ (void)copyCVImage:(EMCVImage *)src toCVImage:(EMCVImage *)dst;
-+ (void)copyCVImage:(EMCVImage *)src toCVSingleImage:(EMCVSingleImage *)dst;
-+ (void)copyCVSingleImage:(EMCVSingleImage *)src toCVSingleImage:(EMCVSingleImage *)dst;
-+ (void)copyCVSingleImage:(EMCVSingleImage *)src toCVImage:(EMCVImage *)dst;
++ (void)copyCVImage:(EMCVBasicImage *)src toCVImage:(EMCVBasicImage *)dst;
+
 
 @end

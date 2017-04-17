@@ -32,6 +32,7 @@ See: [[EMCVImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVI
 - **[ObjC]**: `forEachPixelAtX:andY:withBlock`: Run a block with the specified pixel's memory pointer.
 - **[ObjC]**: `cvtColor`: Converts image from one color space to another. the Param must be like `CV_BGR2RGB` whitch is defined by OpenCV. The same as `cv::cvtColor`.
 - **[ObjC]**: `makeACopy`: Make a copy. It will copy memory.
+- **[ObjC]**: `splitImage`: Split image's channels.
 - **[ObjC]**: `flipWithXAxis`: Flip with X axis.
 - **[ObjC]**: `flipWithYAxis`: Flip with Y axis.
 - **[ObjC]**: `setBrightness`: Set brightness with ± value.

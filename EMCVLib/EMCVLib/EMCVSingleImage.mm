@@ -11,6 +11,14 @@
 
 @implementation EMCVSingleImage
 
+- (instancetype)initWithBasicImage:(EMCVBasicImage *)basicImage {
+    return [self initWithMat:basicImage->_mat];
+}
+- (instancetype)initWithBasicImageWithNoCopy:(EMCVBasicImage *)basicImage {
+    return [self initWithNoCopyMat:basicImage->_mat];
+}
+
+
 - (void)threshold:(double)thresh {
     [self threshold:thresh maxValue:255 type:CV_THRESH_TOZERO];
 }

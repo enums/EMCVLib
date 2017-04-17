@@ -22,30 +22,30 @@
 
 @property (weak) IBOutlet NSTextField *sizeField;
 
-@property (nonatomic) EMCVImage * curImageA;
-@property (nonatomic) EMCVImage * curImageB;
-@property (nonatomic) EMCVImage * curImageC;
+@property (nonatomic) EMCVBasicImage * curImageA;
+@property (nonatomic) EMCVBasicImage * curImageB;
+@property (nonatomic) EMCVBasicImage * curImageC;
 
 @end
 
 @implementation MultiViewController
 
-- (void)setCurImageA:(EMCVImage *)curImageA {
+- (void)setCurImageA:(EMCVBasicImage *)curImageA {
     _curImageA = curImageA;
     [self setImage:curImageA view:_imageViewA subView:_subImageViewA];
 }
 
-- (void)setCurImageB:(EMCVImage *)curImageB {
+- (void)setCurImageB:(EMCVBasicImage *)curImageB {
     _curImageB = curImageB;
     [self setImage:curImageB view:_imageViewB subView:_subImageViewB];
 }
 
-- (void)setCurImageC:(EMCVImage *)curImageC {
+- (void)setCurImageC:(EMCVBasicImage *)curImageC {
     _curImageC = curImageC;
     [self setImage:curImageC view:_imageViewC subView:_subImageViewC];
 }
 
-- (void)setImage:(EMCVImage *)img view:(NSImageView *)view subView:(NSImageView *)subView {
+- (void)setImage:(EMCVBasicImage *)img view:(NSImageView *)view subView:(NSImageView *)subView {
     if (img != nil) {
         [view drawCVImage:img];
         if (img.channalCount == 3) {
@@ -93,7 +93,7 @@
 }
 
 - (IBAction)blending:(id)sender {
-    EMCVImage * img = [EMCVFactory blendingImage:self.curImageA withImage:self.curImageB useAlpha1:0.5 andAlpha2:0.5 andGama:0];
+    EMCVBasicImage * img = [EMCVFactory blendingImage:self.curImageA withImage:self.curImageB useAlpha1:0.5 andAlpha2:0.5 andGama:0];
     self.curImageC = img;
 }
 
@@ -108,13 +108,13 @@
 }
 
 - (IBAction)matchTemplate:(id)sender {
-    EMCVImage * img = [EMCVFactory matchTemplateWithImage:self.curImageA andTempl:self.curImageB withMethod:CV_TM_SQDIFF_NORMED];
+    EMCVBasicImage * img = [EMCVFactory matchTemplateWithImage:self.curImageA andTempl:self.curImageB withMethod:CV_TM_SQDIFF_NORMED];
     EMCVSplitedImage * splitedImg = [img splitImage];
     NSPoint maxPoint;
     [[splitedImg imageAtChannal:0] findMinValue:nil outPoint:&maxPoint];
     NSSize templSize = self.curImageB.imageSize;
     maxPoint = NSMakePoint(maxPoint.x + templSize.width / 2, maxPoint.y + templSize.height / 2);
-    EMCVImage * result = [self.curImageA makeACopy];
+    EMCVBasicImage * result = [self.curImageA makeACopy];
     [result drawARectWithCenter:maxPoint size:templSize rgbColor:kEMCVLibColorRed thickness:2];
     self.curImageC = result;
 }
@@ -123,14 +123,14 @@
     int size = self.sizeField.intValue;
     [self.curImageA calHistWithSize:size range:kEMCVLibRangeDefault];
     [self.curImageB calHistWithSize:size range:kEMCVLibRangeDefault];
-    EMCVImage * img = [EMCVFactory doBackProjectionWithImage:self.curImageA andTempl:self.curImageB withDims:3];
+    EMCVBasicImage * img = [EMCVFactory doBackProjectionWithImage:self.curImageA andTempl:self.curImageB withDims:3];
     self.curImageC = img;
 }
 
 - (IBAction)contours:(id)sender {
     double tresh = self.sizeField.doubleValue;
     EMCVImage * img = [[EMCVImage alloc] init];
-    [self.curImageA cannyOnCVImage:img withThresh1:tresh andThreash2:tresh * 2];
+    [[[EMCVImage alloc] initWithBasicImageWithNoCopy:self.curImageA] cannyOnCVImage:img withThresh1:tresh andThreash2:tresh * 2];
     self.curImageC = img;
 }
 
