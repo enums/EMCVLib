@@ -38,6 +38,10 @@
 		F3372BDA1EA115A900665A8E /* EMCVSingleImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3372BD01EA0FE3D00665A8E /* EMCVSingleImage.mm */; };
 		F337D49F1E9C60EA00505334 /* EMCVFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F337D49D1E9C60EA00505334 /* EMCVFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F337D4A01E9C60EA00505334 /* EMCVFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = F337D49E1E9C60EA00505334 /* EMCVFactory.mm */; };
+		F38324EC1EA4F0E80074D912 /* EMCVBasicImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F38324EA1EA4F0E80074D912 /* EMCVBasicImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F38324ED1EA4F0E80074D912 /* EMCVBasicImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F38324EA1EA4F0E80074D912 /* EMCVBasicImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F38324EE1EA4F0E80074D912 /* EMCVBasicImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F38324EB1EA4F0E80074D912 /* EMCVBasicImage.mm */; };
+		F38324EF1EA4F0E80074D912 /* EMCVBasicImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F38324EB1EA4F0E80074D912 /* EMCVBasicImage.mm */; };
 		F38680AD1E9F8D2C00D974CA /* libopencv_calib3d.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F386807D1E9F8D2B00D974CA /* libopencv_calib3d.3.2.0.dylib */; };
 		F38680AE1E9F8D2C00D974CA /* libopencv_calib3d.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F386807E1E9F8D2B00D974CA /* libopencv_calib3d.3.2.0.dylib */; };
 		F38680AF1E9F8D2C00D974CA /* libopencv_calib3d.3.2.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F386807F1E9F8D2B00D974CA /* libopencv_calib3d.3.2.0.dylib */; };
@@ -119,6 +123,8 @@
 		F3372BD41EA1070E00665A8E /* EMCVSplitedImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVSplitedImage.mm; path = EMCVLib/EMCVSplitedImage.mm; sourceTree = "<group>"; };
 		F337D49D1E9C60EA00505334 /* EMCVFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVFactory.h; path = EMCVLib/EMCVFactory.h; sourceTree = "<group>"; };
 		F337D49E1E9C60EA00505334 /* EMCVFactory.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVFactory.mm; path = EMCVLib/EMCVFactory.mm; sourceTree = "<group>"; };
+		F38324EA1EA4F0E80074D912 /* EMCVBasicImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVBasicImage.h; path = EMCVLib/EMCVBasicImage.h; sourceTree = "<group>"; };
+		F38324EB1EA4F0E80074D912 /* EMCVBasicImage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVBasicImage.mm; path = EMCVLib/EMCVBasicImage.mm; sourceTree = "<group>"; };
 		F386807D1E9F8D2B00D974CA /* libopencv_calib3d.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.2.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.2.0.dylib; sourceTree = "<group>"; };
 		F386807E1E9F8D2B00D974CA /* libopencv_calib3d.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.2.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.2.0.dylib; sourceTree = "<group>"; };
 		F386807F1E9F8D2B00D974CA /* libopencv_calib3d.3.2.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libopencv_calib3d.3.2.0.dylib; path = ../../../../../../usr/local/lib/libopencv_calib3d.3.2.0.dylib; sourceTree = "<group>"; };
@@ -274,6 +280,8 @@
 		F33119D31E9FADC600227D43 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				F38324EA1EA4F0E80074D912 /* EMCVBasicImage.h */,
+				F38324EB1EA4F0E80074D912 /* EMCVBasicImage.mm */,
 				F3F9A5E41E9B23A800CFEEF8 /* EMCVImage.h */,
 				F3F9A5E51E9B23A800CFEEF8 /* EMCVImage.mm */,
 				F3372BD31EA1070E00665A8E /* EMCVSplitedImage.h */,
@@ -441,6 +449,7 @@
 				F3311A421EA05B7E00227D43 /* EMCVFilter.h in Headers */,
 				F3311A571EA06A3F00227D43 /* UIImageView+EMCVLib.h in Headers */,
 				F3372BD71EA10ACC00665A8E /* EMCVSplitedImage.h in Headers */,
+				F38324ED1EA4F0E80074D912 /* EMCVBasicImage.h in Headers */,
 				F3372BD81EA10ACC00665A8E /* EMCVSingleImage.h in Headers */,
 				F3311A541EA064E200227D43 /* platform.h in Headers */,
 			);
@@ -460,6 +469,7 @@
 				F3372BD51EA1070E00665A8E /* EMCVSplitedImage.h in Headers */,
 				F3372BD11EA0FE3D00665A8E /* EMCVSingleImage.h in Headers */,
 				F3F9A6011E9B54A000CFEEF8 /* EMCVVideo.h in Headers */,
+				F38324EC1EA4F0E80074D912 /* EMCVBasicImage.h in Headers */,
 				F3F9A5FA1E9B299200CFEEF8 /* opencv.h in Headers */,
 				F3311A441EA05E4400227D43 /* platform.h in Headers */,
 			);
@@ -600,6 +610,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38324EF1EA4F0E80074D912 /* EMCVBasicImage.mm in Sources */,
 				F3311A581EA06A3F00227D43 /* UIImageView+EMCVLib.mm in Sources */,
 				F3311A361EA05B4900227D43 /* EMCVFactory.mm in Sources */,
 				F3311A371EA05B5200227D43 /* EMCVVideo.mm in Sources */,
@@ -615,6 +626,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38324EE1EA4F0E80074D912 /* EMCVBasicImage.mm in Sources */,
 				F3372BD61EA1070E00665A8E /* EMCVSplitedImage.mm in Sources */,
 				F337D4A01E9C60EA00505334 /* EMCVFactory.mm in Sources */,
 				F33119CB1E9F9E0500227D43 /* EMCVFilterOperation.m in Sources */,

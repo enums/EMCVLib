@@ -176,9 +176,20 @@
     }];
     for (NSValue * value in arr) {
         NSPoint point = value.pointValue;
-        [img drawACircleWithCenter:point andRadius:10 andColor:kEMCVLibColorBlack andThickness:2];
+        [self.curImage drawACircleWithCenter:point andRadius:10 andColor:kEMCVLibColorBlack andThickness:2];
     }
-    [self setCurImage:img];
+    [self setCurImage:self.curImage];
 }
+
+- (IBAction)goodFeature:(id)sender {
+    EMCVSplitedImage * splitedImg = [self.curImage splitImage];
+    NSArray<NSValue *> * points = [[splitedImg imageAtChannal:0] goodFeaturesToTrackWithMaxCorners:23 andQLevel:0.01 andMinDistance:10];
+    for (int i = 0; i < points.count; i++) {
+        NSPoint point = points[i].pointValue;
+        [self.curImage drawARectWithCenter:point size:NSMakeSize(20, 20) rgbColor:kEMCVLibColorRed thickness:2];
+    }
+    [self setCurImage:self.curImage];
+}
+
 
 @end

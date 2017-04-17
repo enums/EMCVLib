@@ -51,6 +51,7 @@ What can this framework does now?
 - Display image and play real-time processing video with customized filter.
 - Color convert. Channals split. Image flip, smooth, blending.
 - Edge Detection. Find extreme values and locations. Calculate and compare histograms.
+- Corener Harris. Shi-Tomasi.
 - Matching algorithm: Template Match, Back Projection.
 
 # Screenshots
@@ -107,6 +108,7 @@ API docs and bugs here.
 - [[Bug]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/bugs.md) Bugs.
 
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFactory.md) `EMCVFactory`: A wrapped functions whitch can do some computer vision calculations.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVBasicImage.md) `EMCVBasicImage`: A wrapped basic image class.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVImage.md) `EMCVImage`: A wrapped image class.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSplitedImage.md) `EMCVSplitedImage`: A wrapped multi channel image class.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSingleImage.md) `EMCVSingleImage`: A wrapped single channel image class.

@@ -18,6 +18,7 @@
 #define NSMakePoint(a, b) CGPointMake((a), (b))
 #define NSRect CGRect
 #define NSMakeRect(a, b, c, d) CGRectMake((a), (b), (c), (d))
+#define valueWithPoint valueWithCGPoint
 
 #elif TARGET_OS_MAC
 

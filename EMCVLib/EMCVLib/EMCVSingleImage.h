@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "EMCVBasicImage.h"
 #import "EMCVImage.h"
 
 #ifdef __cplusplus
@@ -15,46 +16,17 @@ using namespace cv;
 using namespace std;
 #endif
 
-@interface EMCVSingleImage : NSObject
+@interface EMCVSingleImage : EMCVBasicImage
 #ifdef __cplusplus
 {
-@public
-    Mat _mat;
-    MatND _hist;
 }
-- (instancetype)initWithMat:(Mat)mat;
-- (instancetype)initWithNoCopyMat:(Mat)mat;
 #endif
-
-@property (nonatomic, readonly)NSSize imageSize;
-
-- (instancetype)initWithSize:(NSSize)size andType:(int)type andValue:(int)value;
-
-- (void)forEachPixelWithBlock:(void(^)(int, int, unsigned char *))block;
-- (void)forPixelAtX:(int)x andY:(int)y withBlock:(void(^)(int, int, unsigned char *))block;
 
 - (void)threshold:(double)thresh;
 - (void)threshold:(double)thresh maxValue:(double)maxValue type:(int)type;
 
-- (void)flipWithXAxis;
-- (void)flipWithYAxis;
-
-- (void)setBrightness:(double)brightness;
-
-- (void)pyrUpWithRatio:(double)ratio;
-- (void)pyrDownWithRatio:(double)ratio;
-
-- (void)calHistWithSize:(int)size;
-- (void)calHistWithSize:(int)size range:(float *)range;
-
-- (void)normalizeImageWithValue:(double)value;
-- (void)normalizeHistWithValue:(double)value;
-
 - (void)findMaxValue:(double *)value outPoint:(NSPoint *)point;
 - (void)findMinValue:(double *)value outPoint:(NSPoint *)point;
-
-- (EMCVSingleImage *)newCannyWithThresh1:(double)thresh1 andThresh2:(double)thresh2;
-- (void)cannyOnCVImage:(EMCVSingleImage *)img withThresh1:(double)thresh1 andThreash2:(double)thresh2;
 
 - (EMCVSingleImage *)newDrawContoursWithMode:(int)mode andMethod:(int)method;
 - (void)drawContoursOnImage:(EMCVSingleImage *)img withMode:(int)mode andMethod:(int)method andColor:(int)value;
@@ -63,5 +35,8 @@ using namespace std;
 - (void)cornerHarrisOnImage:(EMCVSingleImage *)img withBlockSize:(int)blockSize andKSize:(int)ksize andK:(double)k;
 
 - (void)convertScaleAbs;
+
+// NSPoint / CGPoint -> NSValue
+- (NSArray<NSValue *> *)goodFeaturesToTrackWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance;
 
 @end

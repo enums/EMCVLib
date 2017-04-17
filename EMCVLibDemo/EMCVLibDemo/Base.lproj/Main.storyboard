@@ -736,11 +736,11 @@
             <objects>
                 <viewController title="One Image Sample" id="gid-y5-LfR" customClass="OneViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="Q5A-oj-Ep3">
-                        <rect key="frame" x="0.0" y="0.0" width="1200" height="557"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1499" height="557"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ndv-nn-iBP">
-                                <rect key="frame" x="0.0" y="497" width="1200" height="60"/>
+                                <rect key="frame" x="0.0" y="497" width="1499" height="60"/>
                                 <subviews>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cH9-Zc-IJk">
                                         <rect key="frame" x="14" y="12" width="77" height="32"/>
@@ -763,7 +763,7 @@
                                         </connections>
                                     </button>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-n3-UYA">
-                                        <rect key="frame" x="1145" y="22" width="35" height="17"/>
+                                        <rect key="frame" x="1444" y="22" width="35" height="17"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="0 fps" id="kJn-Kd-sbs">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -840,6 +840,16 @@
                                             <action selector="cornerHarris:" target="gid-y5-LfR" id="R0b-2k-AmH"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="USe-ey-Igy">
+                                        <rect key="frame" x="878" y="12" width="108" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Shi-Tomasi" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="glm-ae-bwG">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="goodFeature:" target="gid-y5-LfR" id="IsJ-0r-zjE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="cH9-Zc-IJk" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="1cr-ct-wzy"/>
@@ -850,6 +860,7 @@
                                     <constraint firstItem="fX4-vk-DSm" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="JkT-wM-IDw"/>
                                     <constraint firstItem="adK-xH-83G" firstAttribute="leading" secondItem="JyL-3s-H4b" secondAttribute="trailing" constant="12" id="Kz1-LF-DYl"/>
                                     <constraint firstItem="tVZ-n3-UYA" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="Nao-jU-7hh"/>
+                                    <constraint firstItem="USe-ey-Igy" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="Ngo-Fu-1p5"/>
                                     <constraint firstItem="adK-xH-83G" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="PEe-bP-Ze1"/>
                                     <constraint firstItem="aef-2j-2fW" firstAttribute="leading" secondItem="adK-xH-83G" secondAttribute="trailing" constant="12" id="Tco-Mz-f7u"/>
                                     <constraint firstItem="Pdn-LJ-NA6" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="bEY-Cu-wWm"/>
@@ -859,6 +870,7 @@
                                     <constraint firstItem="0cT-i3-IJa" firstAttribute="leading" secondItem="jVE-RV-6Yk" secondAttribute="trailing" constant="12" id="ig8-uf-I3r"/>
                                     <constraint firstItem="0cT-i3-IJa" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="kxk-xf-VwH"/>
                                     <constraint firstItem="aef-2j-2fW" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="mG2-jH-rpz"/>
+                                    <constraint firstItem="USe-ey-Igy" firstAttribute="leading" secondItem="aef-2j-2fW" secondAttribute="trailing" constant="12" id="oXw-bz-ND1"/>
                                     <constraint firstItem="Pdn-LJ-NA6" firstAttribute="leading" secondItem="0cT-i3-IJa" secondAttribute="trailing" constant="12" id="ptA-Ed-rrn"/>
                                     <constraint firstItem="fX4-vk-DSm" firstAttribute="leading" secondItem="tvt-Gp-SGf" secondAttribute="trailing" constant="12" id="w8D-EA-PgW"/>
                                     <constraint firstItem="tvt-Gp-SGf" firstAttribute="centerY" secondItem="Ndv-nn-iBP" secondAttribute="centerY" id="xHr-vy-yEG"/>
@@ -866,11 +878,11 @@
                                 </constraints>
                             </customView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z04-sW-XjF">
-                                <rect key="frame" x="0.0" y="0.0" width="1200" height="498"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1499" height="498"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="Jzb-eW-8Gh"/>
                             </imageView>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="myO-JP-m2Z">
-                                <rect key="frame" x="1072" y="0.0" width="128" height="128"/>
+                                <rect key="frame" x="1371" y="0.0" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="7U5-eD-QYh"/>
                                     <constraint firstAttribute="width" constant="128" id="ozw-IN-tNc"/>
@@ -899,7 +911,7 @@
                 </viewController>
                 <customObject id="cOq-US-ed8" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1511" y="1150.5"/>
+            <point key="canvasLocation" x="-1660.5" y="1150.5"/>
         </scene>
         <!--Multi Image Sample-->
         <scene sceneID="11F-oI-vLj">

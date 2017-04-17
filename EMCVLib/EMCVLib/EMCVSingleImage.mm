@@ -11,92 +11,12 @@
 
 @implementation EMCVSingleImage
 
-- (NSSize)imageSize {
-    return NSMakeSize(_mat.cols, _mat.rows);
-}
-
-- (instancetype)initWithSize:(NSSize)size andType:(int)type andValue:(int)value {
-    Mat mat = Mat(size.height, size.width, type, Scalar(value));
-    return [self initWithNoCopyMat:mat];
-}
-
-- (instancetype)initWithMat:(Mat)mat cvtColor:(int)color {
-    Mat newMat;
-    cvtColor(mat, newMat, color);
-    return [self initWithNoCopyMat:newMat];
-}
-
-- (instancetype)initWithMat:(Mat)mat {
-    Mat newMat;
-    mat.copyTo(newMat);
-    return [self initWithNoCopyMat:newMat];
-}
-
-- (instancetype)initWithNoCopyMat:(Mat)mat {
-    self = [super init];
-    if (self) {
-        self->_mat = mat;
-    }
-    return self;
-}
-
-- (void)forEachPixelWithBlock:(void(^)(int, int, unsigned char *))block {
-    for (int y = 0; y < _mat.rows; y++) {
-        for (int x = 0; x < _mat.cols; x++) {
-            [self forPixelAtX:x andY:y withBlock:block];
-        }
-    }
-}
-
-- (void)forPixelAtX:(int)x andY:(int)y withBlock:(void(^)(int, int, unsigned char *))block {
-    unsigned char * ptr = _mat.ptr(y, x);
-    block(x, y, ptr);
-}
-
 - (void)threshold:(double)thresh {
     [self threshold:thresh maxValue:255 type:CV_THRESH_TOZERO];
 }
 
 - (void)threshold:(double)thresh maxValue:(double)maxValue type:(int)type {
     threshold(_mat, _mat, thresh, maxValue, type);
-}
-
-- (void)flipWithXAxis {
-    flip(_mat, _mat, 1);
-}
-
-- (void)flipWithYAxis {
-    flip(_mat, _mat, -1);
-}
-
-- (void)setBrightness:(double)brightness {
-    _mat.convertTo(_mat, -1, 1, brightness);
-}
-
-- (void)pyrUpWithRatio:(double)ratio {
-    NSSize size = self.imageSize;
-    pyrUp(_mat, _mat, cv::Size(size.width * ratio, size.height * ratio));
-}
-
-- (void)pyrDownWithRatio:(double)ratio {
-    NSSize size = self.imageSize;
-    pyrDown(_mat, _mat, cv::Size(size.width * ratio, size.height * ratio));
-}
-
-- (void)calHistWithSize:(int)size {
-    [self calHistWithSize:size range:kEMCVLibRangeDefault];
-}
-
-- (void)calHistWithSize:(int)size range:(float *)range {
-    calcHist(&_mat, 1, 0, Mat(), _hist, 1, &size, (const float **)&range);
-}
-
-
-- (void)normalizeImageWithValue:(double)value {
-    normalize(_mat, _mat, 0, value, NORM_MINMAX, -1, Mat());
-}
-- (void)normalizeHistWithValue:(double)value {
-    normalize(_hist, _hist, 0, value, NORM_MINMAX, -1, Mat());
 }
 
 - (void)findMaxValue:(double *)value outPoint:(NSPoint *)point {
@@ -113,7 +33,7 @@
 
 - (EMCVSingleImage *)newCannyWithThresh1:(double)thresh1 andThresh2:(double)thresh2 {
     NSSize size = self.imageSize;
-    EMCVSingleImage * img = [[EMCVSingleImage alloc] initWithSize:size andType:CV_8UC1 andValue:0];
+    EMCVSingleImage * img = [[EMCVSingleImage alloc] initWithSize:size andType:CV_8UC1 andColor:kEMCVLibColorBlack];
     [self cannyOnCVImage:img withThresh1:thresh1 andThreash2:thresh2];
     return img;
 }
@@ -124,7 +44,7 @@
 
 - (EMCVSingleImage *)newDrawContoursWithMode:(int)mode andMethod:(int)method {
     NSSize size = self.imageSize;
-    EMCVSingleImage * img = [[EMCVSingleImage alloc] initWithSize:size andType:CV_8UC1 andValue:0];
+    EMCVSingleImage * img = [[EMCVSingleImage alloc] initWithSize:size andType:CV_8UC1 andColor:kEMCVLibColorBlack];
     [self drawContoursOnImage:img withMode:mode andMethod:method andColor:255];
     return img;
 }
@@ -141,7 +61,7 @@
 
 - (EMCVSingleImage *)newCornerHarrisWithBlockSize:(int)blockSize andKSize:(int)ksize andK:(double)k {
     NSSize size = self.imageSize;
-    EMCVSingleImage * img = [[EMCVSingleImage alloc] initWithSize:size andType:CV_32FC1 andValue:0];
+    EMCVSingleImage * img = [[EMCVSingleImage alloc] initWithSize:size andType:CV_8UC1 andColor:kEMCVLibColorBlack];
     [self cornerHarrisOnImage:img withBlockSize:blockSize andKSize:ksize andK: k];
     return img;
 }
@@ -152,6 +72,16 @@
 
 - (void)convertScaleAbs {
     convertScaleAbs(_mat, _mat);
+}
+- (NSArray<NSValue *> *)goodFeaturesToTrackWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance {
+    vector<Point2f> corners;
+    NSMutableArray<NSValue *> * arr = [[NSMutableArray alloc] init];
+    goodFeaturesToTrack(_mat, corners, maxCorners, q, minDistance);
+    for (int i = 0; i < corners.size(); i++) {
+        NSValue * value = [NSValue valueWithPoint: NSMakePoint(corners.at(i).x, corners.at(i).y)];
+        [arr addObject:value];
+    }
+    return [arr copy];
 }
 
 

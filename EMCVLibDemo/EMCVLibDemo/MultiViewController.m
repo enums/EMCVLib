@@ -98,8 +98,8 @@
 }
 
 - (IBAction)compareHist:(id)sender {
-    [self.curImageA calHistWithDims:3 size:128 range:kEMCVLibRangeDefault];
-    [self.curImageB calHistWithDims:3 size:128 range:kEMCVLibRangeDefault];
+    [self.curImageA calHistWithSize:128 range:kEMCVLibRangeDefault];
+    [self.curImageB calHistWithSize:128 range:kEMCVLibRangeDefault];
     double currel = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CORREL];
     double chisqr = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CHISQR];
     double intersect = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_INTERSECT];
