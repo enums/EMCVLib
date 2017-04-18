@@ -27,6 +27,10 @@
 @property (nonatomic) BOOL exitFlag;
 @property (nonatomic) int fpsCounter;
 
+@property (nonatomic) EMCVBasicImage * opticalFlowImageA;
+@property (nonatomic) EMCVBasicImage * opticalFlowImageB;
+
+
 @end
 
 @implementation OneViewController
@@ -115,11 +119,15 @@
                         frame = [self.curVideo nextFrame];
                         [frame cvtColor:CV_BGR2RGB];
                         dispatch_sync(dispatch_get_main_queue(), ^{
+                            self.opticalFlowImageB = self.opticalFlowImageA;
+                            self.opticalFlowImageA = self.curImage;
                             self.curImage = frame;
                         });
                         self.fpsCounter++;
                     }
                 }
+                self.opticalFlowImageA = nil;
+                self.opticalFlowImageB = nil;
                 self.curVideo = nil;
                 dispatch_sync(dispatch_get_main_queue(), ^{
                     self.videoBtn.enabled = true;
@@ -183,13 +191,14 @@
 
 - (IBAction)goodFeature:(id)sender {
     EMCVSplitedImage * splitedImg = [self.curImage splitImage];
-    NSArray<NSValue *> * points = [[splitedImg imageAtChannal:0] goodFeaturesToTrackWithMaxCorners:23 andQLevel:0.01 andMinDistance:10];
+    NSArray<NSValue *> * points = [[splitedImg imageAtChannal:0] goodFeaturesToTrackWithMaxCorners:500 andQLevel:0.01 andMinDistance:10];
     for (int i = 0; i < points.count; i++) {
         NSPoint point = points[i].pointValue;
         [self.curImage drawARectWithCenter:point size:NSMakeSize(20, 20) rgbColor:kEMCVLibColorRed thickness:2];
     }
     [self setCurImage:self.curImage];
 }
+
 
 
 @end

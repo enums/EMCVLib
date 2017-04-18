@@ -1216,15 +1216,27 @@
                                             <action selector="showImage:" target="qpy-3N-YDo" id="obW-nP-ihU"/>
                                         </connections>
                                     </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KtJ-kq-mPb">
+                                        <rect key="frame" x="322" y="12" width="115" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Optical Flow" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Fkg-6E-Um1">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="opticalFlow:" target="qpy-3N-YDo" id="uWn-nn-Dqh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="ksH-EC-D33" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="01A-yB-bRg"/>
                                     <constraint firstItem="Y3b-cz-QO9" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="4HG-ft-79Y"/>
                                     <constraint firstItem="Y3b-cz-QO9" firstAttribute="leading" secondItem="rMk-Iq-stU" secondAttribute="trailing" constant="12" id="4fa-8i-ksR"/>
                                     <constraint firstItem="rMk-Iq-stU" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="Deu-rN-6Xm"/>
+                                    <constraint firstItem="KtJ-kq-mPb" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="NDL-GI-siZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Ag7-0L-D0z" secondAttribute="trailing" constant="24" id="Qd4-uq-A9S"/>
                                     <constraint firstAttribute="height" constant="60" id="VHg-dG-ieO"/>
                                     <constraint firstItem="rMk-Iq-stU" firstAttribute="leading" secondItem="fJw-XW-2pM" secondAttribute="leading" constant="20" id="Vct-BY-tEN"/>
+                                    <constraint firstItem="KtJ-kq-mPb" firstAttribute="leading" secondItem="ksH-EC-D33" secondAttribute="trailing" constant="12" id="kPa-83-Aes"/>
                                     <constraint firstItem="ksH-EC-D33" firstAttribute="leading" secondItem="94g-R4-lAm" secondAttribute="trailing" constant="12" id="lMv-tC-x5v"/>
                                     <constraint firstItem="94g-R4-lAm" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="rWR-r6-BZT"/>
                                     <constraint firstItem="Ag7-0L-D0z" firstAttribute="centerY" secondItem="fJw-XW-2pM" secondAttribute="centerY" id="sKv-Z2-R1E"/>

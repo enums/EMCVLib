@@ -28,3 +28,4 @@ empty
 - **[ObjC]**: `doBackProjectionWithImage:andTempl:atChannals:andDims:andRange`: More detailed Back Projection method.
 - **[ObjC]**: `blendingImage:withImage:useAlpha1:andAlpha2:andGamma`: Blending two image with alpha. These two images must have the same size.
 - **[ObjC]**: `copyImage:toImage`: Copy a `EMCVBasicImage` instance's memory to another `EMCVBasicImage` instance.
+- **[ObjC]**: `calOpticalFlowPyrLKWithImage:andImage:useMaxCorners:andQLevel:andMinDistance`: Lucas-Kanade Optical Flow. This method will calculate corners automatically. Return a `NSArray<NSArray<NSValue *> *> *` instance. (`[[NSPoint, NSPoint], [NSPoint, NSPoint]....]`)

@@ -10,6 +10,12 @@
 #import "EMCVImage.h"
 #import "EMCVSplitedImage.h"
 
+#ifdef __cplusplus
+#include "opencv.h"
+using namespace cv;
+using namespace std;
+#endif
+
 @interface EMCVFactory : NSObject
 
 + (double)compareHistWithImage:(EMCVBasicImage *)imgA andImage:(EMCVBasicImage *)imgB withMethod:(int)method;
@@ -23,6 +29,9 @@
 + (EMCVBasicImage *)blendingImage:(EMCVBasicImage *)imgA withImage:(EMCVBasicImage *)imgB useAlpha1:(double)a1 andAlpha2:(double)a2 andGama:(double)gamma;
 
 + (void)copyImage:(EMCVBasicImage *)src toImage:(EMCVBasicImage *)dst;
+
+// NSPoint -> NSValue, [[NSValue, NSValue], [NSValue, NSValue], ...]
++ (NSArray<NSArray<NSValue *> *> *)calOpticalFlowPyrLKWithImage:(EMCVSingleImage *)imgA andImage:(EMCVSingleImage *)imgB useMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance;
 
 
 @end

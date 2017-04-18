@@ -81,10 +81,15 @@
 - (void)convertScaleAbs {
     convertScaleAbs(_mat, _mat);
 }
-- (NSArray<NSValue *> *)goodFeaturesToTrackWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance {
+
+- (vector<Point2f>)goodFeaturesToTrackInCppWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance {
     vector<Point2f> corners;
-    NSMutableArray<NSValue *> * arr = [[NSMutableArray alloc] init];
     goodFeaturesToTrack(_mat, corners, maxCorners, q, minDistance);
+    return corners;
+}
+- (NSArray<NSValue *> *)goodFeaturesToTrackWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance {
+    vector<Point2f> corners = [self goodFeaturesToTrackInCppWithMaxCorners:maxCorners andQLevel:q andMinDistance:minDistance];
+    NSMutableArray<NSValue *> * arr = [[NSMutableArray alloc] init];
     for (int i = 0; i < corners.size(); i++) {
         NSValue * value = [NSValue valueWithPoint: NSMakePoint(corners.at(i).x, corners.at(i).y)];
         [arr addObject:value];

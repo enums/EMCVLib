@@ -33,6 +33,7 @@ empty.
 - **[ObjC]**: `newCornerHarrisWithBlockSize:andKSize:andK`: Create a new `EMCVSingleImage` instance and do Corner Harris on it.
 - **[ObjC]**: `cornerHarrisOnImage:withBlockSize:andKSize:andK`: do Corner Harris on a specified image.
 - **[ObjC]**: `convertScaleAbs`: The same as `convertScaleAbs` of OpenCV.
+- **[ObjC++]**: `goodFeaturesToTrackInCppWithMaxCorners:andQLevel:andMinDistance`: Surf Feature Detector. Return a `vector<Point2f>`.
 - **[ObjC]**: `goodFeaturesToTrackWithMaxCorners:andQLevel:andMinDistance`: Surf Feature Detector. Return a `NSArray` of `NSValue` whitch is wraped `NSPoint`.
 
 # Class Method

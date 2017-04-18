@@ -51,7 +51,7 @@ What can this framework does now?
 - Display image and play real-time processing video with customized filter.
 - Color convert. Channals split. Image flip, smooth, blending.
 - Edge Detection. Find extreme values and locations. Calculate and compare histograms.
-- Corener Harris. Shi-Tomasi.
+- Corener Harris. Shi-Tomasi. Optical Flow.
 - Matching algorithm: Template Match, Back Projection.
 
 # Screenshots
@@ -82,9 +82,9 @@ Some screenshots of the demo.
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/corner_harris.png)
 
-### History Compare
+### Optical Flow
 
-![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/histogram_compare.png)
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/OpticalFlowPyrLK.gif)
 
 ### Template Match
 
@@ -95,6 +95,10 @@ Some screenshots of the demo.
 ### Back Projection
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/back_projection.png)
+
+### History Compare
+
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/histogram_compare.png)
 
 
 # Tips

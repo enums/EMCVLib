@@ -7,12 +7,11 @@
 //
 
 #import "EMCVFactory.h"
-#import "opencv.h"
 #import "Static.h"
 
 @implementation EMCVFactory
 
-+ (double)compareHistWithCVImage:(EMCVBasicImage *)imgA andImage:(EMCVBasicImage *)imgB withMethod:(int)method {
++ (double)compareHistWithImage:(EMCVBasicImage *)imgA andImage:(EMCVBasicImage *)imgB withMethod:(int)method {
     return compareHist(imgA->_hist, imgB->_hist, method);
 }
 
@@ -54,6 +53,26 @@
     Mat newMat;
     src->_mat.copyTo(newMat);
     dst->_mat = newMat;
+}
+
+// NSPoint -> NSValue, [[NSValue, NSValue], [NSValue, NSValue], ...]
++ (NSArray<NSArray<NSValue *> *> *)calOpticalFlowPyrLKWithImage:(EMCVSingleImage *)imgA andImage:(EMCVSingleImage *)imgB useMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance {
+    vector<Point2f> cornersA = [imgA goodFeaturesToTrackInCppWithMaxCorners:maxCorners andQLevel:q andMinDistance:minDistance];
+    vector<Point2f> cornersB = [imgB goodFeaturesToTrackInCppWithMaxCorners:maxCorners andQLevel:q andMinDistance:minDistance];
+    vector<uchar> status;
+    vector<float> err;
+    calcOpticalFlowPyrLK(imgA->_mat, imgB->_mat, cornersA, cornersB, status, err);
+    NSMutableArray * result = [[NSMutableArray alloc] init];
+    for (int i = 0; i < status.size(); i++) {
+        if (status.at(i) != 0 && err.at(i) <= 550) {
+            NSPoint p1 = NSMakePoint(cornersA.at(i).x, cornersA.at(i).y);
+            NSPoint p2 = NSMakePoint(cornersB.at(i).x, cornersB.at(i).y);
+            NSValue * value1 = [NSValue valueWithPoint:p1];
+            NSValue * value2 = [NSValue valueWithPoint:p2];
+            [result addObject:@[value1, value2]];
+        }
+    }
+    return result;
 }
 
 @end

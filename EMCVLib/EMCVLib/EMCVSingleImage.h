@@ -21,6 +21,7 @@ using namespace std;
 #ifdef __cplusplus
 {
 }
+- (vector<Point2f>)goodFeaturesToTrackInCppWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance;
 #endif
 - (instancetype)initWithBasicImage:(EMCVBasicImage *)basicImage;
 - (instancetype)initWithBasicImageWithNoCopy:(EMCVBasicImage *)basicImage;
