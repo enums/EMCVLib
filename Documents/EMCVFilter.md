@@ -26,7 +26,7 @@ empty.
 - **[ObjC]**: `pushOperationBlock`: Push a block instead a `EMCVFilterOperation` instance.
 - **[ObjC]**: `pushOperationBlock:andTag`: Push a block instead a `EMCVFilterOperation` instance and set a tag for it.
 - **[ObjC]**: `popOperation`: Pop a operation.
-- **[ObjC]**: `runFilterWithCVImage`: Run filter with a specified `EMCVImage` instance.
+- **[ObjC]**: `runFilterWithImage`: Run filter with a specified `EMCVBasicImage` instance.
 - **[ObjC]**: `popAll`: Pop all operation.
 
 # Class Method

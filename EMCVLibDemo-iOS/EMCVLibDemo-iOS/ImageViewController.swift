@@ -14,7 +14,7 @@ class ImageViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
-    var curImage: EMCVImage! {
+    var curImage: EMCVBasicImage! {
         didSet {
             redrawImage()
         }
@@ -36,7 +36,7 @@ class ImageViewController: UIViewController, UITableViewDataSource, UITableViewD
             img?.gaussianBlur(with: CGSize.init(width: 7, height: 7))
         })),
         ("Edge Detection", EMCVFilterOperation.init(block: { img in
-            let ret = img?.newCanny(withThresh1: 80, andThresh2: 160)
+            let ret = (img as! EMCVImage).newCanny(withThresh1: 80, andThresh2: 160)
             EMCVFactory.copy(ret, to: img)
         })),
         ("Threshold", EMCVFilterOperation.init(block: { img in
@@ -94,8 +94,7 @@ class ImageViewController: UIViewController, UITableViewDataSource, UITableViewD
             splitedImg.image(atChannal: 2).findMaxValue(nil, outPoint: &bPoint)
             displayImg.drawARect(withCenter: bPoint, size: CGSize.init(width: 20, height: 20), rgbColor: &kEMCVLibColorBlue.0, thickness: 2)
         }
-
-        imageView.draw(displayImg)
+        imageView.drawCVImage(displayImg)
     }
     
 

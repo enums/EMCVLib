@@ -100,10 +100,10 @@
 - (IBAction)compareHist:(id)sender {
     [self.curImageA calHistWithSize:128 range:kEMCVLibRangeDefault];
     [self.curImageB calHistWithSize:128 range:kEMCVLibRangeDefault];
-    double currel = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CORREL];
-    double chisqr = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CHISQR];
-    double intersect = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_INTERSECT];
-    double bhattachayya = [EMCVFactory compareHistWithCVImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_BHATTACHARYYA];
+    double currel = [EMCVFactory compareHistWithImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CORREL];
+    double chisqr = [EMCVFactory compareHistWithImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_CHISQR];
+    double intersect = [EMCVFactory compareHistWithImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_INTERSECT];
+    double bhattachayya = [EMCVFactory compareHistWithImage:self.curImageA andImage:self.curImageB withMethod:CV_COMP_BHATTACHARYYA];
     printf("currel(1~-1): %f\nchisqu(0~∞): %f\nintersect(↑): %f\nbhattachayya(0~1): %f\n\n", currel, chisqr, intersect, bhattachayya);
 }
 

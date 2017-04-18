@@ -12,7 +12,7 @@
 
 @interface EMCVFactory : NSObject
 
-+ (double)compareHistWithCVImage:(EMCVBasicImage *)imgA andImage:(EMCVBasicImage *)imgB withMethod:(int)method;
++ (double)compareHistWithImage:(EMCVBasicImage *)imgA andImage:(EMCVBasicImage *)imgB withMethod:(int)method;
 
 + (EMCVBasicImage *)matchTemplateWithImage:(EMCVBasicImage *)img andTempl:(EMCVBasicImage *)templ withMethod:(int)method;
 
@@ -22,7 +22,7 @@
 
 + (EMCVBasicImage *)blendingImage:(EMCVBasicImage *)imgA withImage:(EMCVBasicImage *)imgB useAlpha1:(double)a1 andAlpha2:(double)a2 andGama:(double)gamma;
 
-+ (void)copyCVImage:(EMCVBasicImage *)src toCVImage:(EMCVBasicImage *)dst;
++ (void)copyImage:(EMCVBasicImage *)src toImage:(EMCVBasicImage *)dst;
 
 
 @end

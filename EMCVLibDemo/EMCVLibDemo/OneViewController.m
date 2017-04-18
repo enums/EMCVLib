@@ -35,7 +35,7 @@
     _curImage = curImage;
     if (curImage != nil) {
         EMCVImage * displayImg = [curImage makeACopy];
-        [self.curFilter runFilterWithCVImage:displayImg];
+        [self.curFilter runFilterWithImage:displayImg];
         EMCVSplitedImage * splitedImage = [displayImg splitImage];
         NSPoint rPoint, gPoint, bPoint;
         [[splitedImage imageAtChannal:0] findMaxValue:nil outPoint:&rPoint];
@@ -134,28 +134,28 @@
 }
 
 - (IBAction)smooth:(id)sender {
-    [self.curFilter pushOperationBlock:^void(EMCVImage * img) {
+    [self.curFilter pushOperationBlock:^void(EMCVBasicImage * img) {
         [img gaussianBlurWithSize:NSMakeSize(7, 7)];
     }];
     [self setCurImage:self.curImage];
 }
 
 - (IBAction)lightness:(id)sender {
-    [self.curFilter pushOperationBlock:^void(EMCVImage * img) {
+    [self.curFilter pushOperationBlock:^void(EMCVBasicImage * img) {
         [img setBrightness:10];
     }];
     [self setCurImage:self.curImage];
 }
 
 - (IBAction)flipX:(id)sender {
-    [self.curFilter pushOperationBlock:^void(EMCVImage * img) {
+    [self.curFilter pushOperationBlock:^void(EMCVBasicImage * img) {
         [img flipWithXAxis];
     }];
     [self setCurImage:self.curImage];
 }
 
 - (IBAction)flipY:(id)sender {
-    [self.curFilter pushOperationBlock:^void(EMCVImage * img) {
+    [self.curFilter pushOperationBlock:^void(EMCVBasicImage * img) {
         [img flipWithYAxis];
     }];
     [self setCurImage:self.curImage];

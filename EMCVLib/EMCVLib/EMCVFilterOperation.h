@@ -7,17 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "EMCVImage.h"
+#import "EMCVBasicImage.h"
 
 @interface EMCVFilterOperation : NSObject
 
 @property (nonatomic, assign) int tag;
-@property (nonatomic, copy) void(^op)(EMCVImage *);
+@property (nonatomic, copy) void(^op)(EMCVBasicImage *);
 
 - (instancetype)init;
-- (instancetype)initWithBlock:(void(^)(EMCVImage *))block;
-- (instancetype)initWithBlock:(void(^)(EMCVImage *))block andTag:(int)tag;
-- (void)setOperation:(void(^)(EMCVImage *))block;
-- (void)doOperationWithCVImage:(EMCVImage *)img;
+- (instancetype)initWithBlock:(void(^)(EMCVBasicImage *))block;
+- (instancetype)initWithBlock:(void(^)(EMCVBasicImage *))block andTag:(int)tag;
+- (void)setOperation:(void(^)(EMCVBasicImage *))block;
+- (void)doOperationWithImage:(EMCVBasicImage *)img;
 
 @end

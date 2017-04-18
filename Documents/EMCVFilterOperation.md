@@ -10,7 +10,7 @@ See: [[EMCVFilter]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCV
 # Property
 
 - **[ObjC]**: `tag`: A integer property.
-- **[ObjC]**: `op`: A `void(^op)(EMCVImage *)` block to do real work.
+- **[ObjC]**: `op`: A `void(^op)(EMCVBasicImage *)` block to do real work.
 
 # Instance Method
 
@@ -23,7 +23,7 @@ See: [[EMCVFilter]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCV
 ## Others
 
 - **[ObjC]**: `setOperation`: Set operation.
-- **[ObjC]**: `doOperationWithCVImage`: Do real work with a specified image.
+- **[ObjC]**: `doOperationWithImage`: Do real work with a specified image.
 
 
 # Class Method

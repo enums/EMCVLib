@@ -14,11 +14,11 @@
     return [self initWithBlock:nil];
 }
 
-- (instancetype)initWithBlock:(void(^)(EMCVImage *))block {
+- (instancetype)initWithBlock:(void(^)(EMCVBasicImage *))block {
     return [self initWithBlock:block andTag:-1];
 }
 
-- (instancetype)initWithBlock:(void(^)(EMCVImage *))block andTag:(int)tag {
+- (instancetype)initWithBlock:(void(^)(EMCVBasicImage *))block andTag:(int)tag {
     self = [super init];
     if (self) {
         _op = block;
@@ -27,12 +27,12 @@
     return self;
 }
 
-- (void)setOperation:(void(^)(EMCVImage *))block {
+- (void)setOperation:(void(^)(EMCVBasicImage *))block {
     self.op = block;
 }
 
 
-- (void)doOperationWithCVImage:(EMCVImage *)img {
+- (void)doOperationWithImage:(EMCVBasicImage *)img {
     self.op(img);
 }
 

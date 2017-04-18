@@ -50,7 +50,7 @@
     return img;
 }
 
-+ (void)copyCVImage:(EMCVBasicImage *)src toCVImage:(EMCVBasicImage *)dst {
++ (void)copyImage:(EMCVBasicImage *)src toImage:(EMCVBasicImage *)dst {
     Mat newMat;
     src->_mat.copyTo(newMat);
     dst->_mat = newMat;

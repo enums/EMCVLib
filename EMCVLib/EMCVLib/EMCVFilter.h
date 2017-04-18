@@ -15,11 +15,11 @@
 
 - (instancetype)init;
 - (instancetype)initWithArray:(NSMutableArray<EMCVFilterOperation *> *)array;
-- (void)pushOperationBlock:(void(^)(EMCVImage *))block;
-- (void)pushOperationBlock:(void(^)(EMCVImage *))block andTag:(int)tag;
+- (void)pushOperationBlock:(void(^)(EMCVBasicImage *))block;
+- (void)pushOperationBlock:(void(^)(EMCVBasicImage *))block andTag:(int)tag;
 - (void)pushOperation:(EMCVFilterOperation *)op;
 - (EMCVFilterOperation *)popOperation;
-- (void)runFilterWithCVImage:(EMCVImage *)img;
+- (void)runFilterWithImage:(EMCVBasicImage *)img;
 - (void)popAll;
 
 @end

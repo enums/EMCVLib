@@ -22,11 +22,11 @@
     return self;
 }
 
-- (void)pushOperationBlock:(void(^)(EMCVImage *))block {
+- (void)pushOperationBlock:(void(^)(EMCVBasicImage *))block {
     [self pushOperationBlock:block andTag:-1];
 }
 
-- (void)pushOperationBlock:(void(^)(EMCVImage *))block andTag:(int)tag {
+- (void)pushOperationBlock:(void(^)(EMCVBasicImage *))block andTag:(int)tag {
     EMCVFilterOperation * fop = [[EMCVFilterOperation alloc] initWithBlock:block andTag:tag];
     [self pushOperation:fop];
 }
@@ -41,9 +41,9 @@
     return last;
 }
 
-- (void)runFilterWithCVImage:(EMCVImage *)img {
+- (void)runFilterWithImage:(EMCVBasicImage *)img {
     for (EMCVFilterOperation * op in self.operations) {
-        [op doOperationWithCVImage:img];
+        [op doOperationWithImage:img];
     }
 }
 
