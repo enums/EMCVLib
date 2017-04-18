@@ -27,9 +27,6 @@
 @property (nonatomic) BOOL exitFlag;
 @property (nonatomic) int fpsCounter;
 
-@property (nonatomic) EMCVBasicImage * opticalFlowImageA;
-@property (nonatomic) EMCVBasicImage * opticalFlowImageB;
-
 
 @end
 
@@ -119,15 +116,11 @@
                         frame = [self.curVideo nextFrame];
                         [frame cvtColor:CV_BGR2RGB];
                         dispatch_sync(dispatch_get_main_queue(), ^{
-                            self.opticalFlowImageB = self.opticalFlowImageA;
-                            self.opticalFlowImageA = self.curImage;
                             self.curImage = frame;
                         });
                         self.fpsCounter++;
                     }
                 }
-                self.opticalFlowImageA = nil;
-                self.opticalFlowImageB = nil;
                 self.curVideo = nil;
                 dispatch_sync(dispatch_get_main_queue(), ^{
                     self.videoBtn.enabled = true;
@@ -170,32 +163,35 @@
 }
 
 - (IBAction)cornerHarris:(id)sender {
-    EMCVSplitedImage * splitedImg = [self.curImage splitImage];
-    EMCVSingleImage * singleImg = [[splitedImg imageAtChannal:0] newCornerHarrisWithBlockSize:2 andKSize:3 andK:0.04];
-    [singleImg normalizeImageWithValue:255];
-    [singleImg convertScaleAbs];
-    EMCVImage * img = [[EMCVImage alloc] initWithCVSingleImage:singleImg];
-    NSMutableArray<NSValue *> * arr = [[NSMutableArray alloc] init];
-    [img forEachPixelWithBlock:^void(int x, int y, unsigned char * ptr) {
-        if (*ptr > 150) {
-            NSValue * value = [NSValue valueWithPoint:NSMakePoint(x, y)];
-            [arr addObject:value];
+    [self.curFilter pushOperationBlock:^void(EMCVBasicImage * img) {
+        EMCVSplitedImage * splitedImg = [img splitImage];
+        EMCVSingleImage * singleImg = [[splitedImg imageAtChannal:0] newCornerHarrisWithBlockSize:2 andKSize:3 andK:0.04];
+        [singleImg normalizeImageWithValue:255];
+        [singleImg convertScaleAbs];
+        NSMutableArray<NSValue *> * arr = [[NSMutableArray alloc] init];
+        [singleImg forEachPixelWithBlock:^void(int x, int y, unsigned char * ptr) {
+            if (*ptr > 150) {
+                NSValue * value = [NSValue valueWithPoint:NSMakePoint(x, y)];
+                [arr addObject:value];
+            }
+        }];
+        for (NSValue * value in arr) {
+            NSPoint point = value.pointValue;
+            [img drawACircleWithCenter:point andRadius:10 andColor:kEMCVLibColorBlack andThickness:2];
         }
     }];
-    for (NSValue * value in arr) {
-        NSPoint point = value.pointValue;
-        [self.curImage drawACircleWithCenter:point andRadius:10 andColor:kEMCVLibColorBlack andThickness:2];
-    }
     [self setCurImage:self.curImage];
 }
 
 - (IBAction)goodFeature:(id)sender {
-    EMCVSplitedImage * splitedImg = [self.curImage splitImage];
-    NSArray<NSValue *> * points = [[splitedImg imageAtChannal:0] goodFeaturesToTrackWithMaxCorners:500 andQLevel:0.01 andMinDistance:10];
-    for (int i = 0; i < points.count; i++) {
-        NSPoint point = points[i].pointValue;
-        [self.curImage drawARectWithCenter:point size:NSMakeSize(20, 20) rgbColor:kEMCVLibColorRed thickness:2];
-    }
+    [self.curFilter pushOperationBlock:^void(EMCVBasicImage * img) {
+        EMCVSplitedImage * splitedImg = [img splitImage];
+        NSArray<NSValue *> * points = [[splitedImg imageAtChannal:0] goodFeaturesToTrackWithMaxCorners:500 andQLevel:0.01 andMinDistance:10];
+        for (int i = 0; i < points.count; i++) {
+            NSPoint point = points[i].pointValue;
+            [img drawARectWithCenter:point size:NSMakeSize(20, 20) rgbColor:kEMCVLibColorRed thickness:2];
+        }
+    }];
     [self setCurImage:self.curImage];
 }
 

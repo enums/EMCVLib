@@ -177,7 +177,7 @@
         }
         EMCVSingleImage * imgA = [[self.opticalFlowImageA splitImage] imageAtChannal:0];
         EMCVSingleImage * imgB = [[self.opticalFlowImageB splitImage] imageAtChannal:0];
-        NSArray<NSArray<NSValue *> *> * ret = [EMCVFactory calOpticalFlowPyrLKWithImage:imgA andImage:imgB useMaxCorners:100 andQLevel:0.01 andMinDistance:10];
+        NSArray<NSArray<NSValue *> *> * ret = [EMCVFactory calOpticalFlowPyrLKWithImage:imgA andImage:imgB useMaxCorners:500 andQLevel:0.01 andMinDistance:10];
         for (NSArray<NSValue *> * pointList in ret) {
             NSPoint p1 = pointList[0].pointValue;
             NSPoint p2 = pointList[1].pointValue;
