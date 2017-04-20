@@ -97,5 +97,36 @@
     return [arr copy];
 }
 
+- (vector<KeyPoint>)calSURFKeyPoints {
+    Ptr<SURF> surf = SURF::create();
+    vector<KeyPoint> keypoints;
+    surf->detect(_mat, keypoints);
+    return keypoints;
+}
+
+- (Mat)calSURFDescriptorsWithKeypoints:(vector<KeyPoint>)keypoints {
+    Ptr<SURF> surf = SURF::create();
+    Mat descriptors;
+    surf->compute(_mat, keypoints, descriptors);
+    return descriptors;
+}
+
+- (NSArray<NSValue *> *)doSURFMathchWithImage:(EMCVSingleImage *)img {
+    vector<KeyPoint> keypointsB = [self calSURFKeyPoints];
+    vector<KeyPoint> keypointsA = [img calSURFKeyPoints];
+    Mat descriptorB = [self calSURFDescriptorsWithKeypoints:keypointsB];
+    Mat descriptorA = [img calSURFDescriptorsWithKeypoints:keypointsA];
+    BFMatcher matcher;
+    vector<DMatch> matches;
+    matcher.match(descriptorA, descriptorB, matches);
+    NSMutableArray<NSValue *> * result = [[NSMutableArray alloc] init];
+    for (int i = 0; i < matches.size(); i++) {
+        Point2f p = keypointsB[matches[i].trainIdx].pt;
+        NSPoint point = NSMakePoint(p.x, p.y);
+        NSValue * value = [NSValue valueWithPoint:point];
+        [result addObject:value];
+    }
+    return [result copy];
+}
 
 @end

@@ -140,6 +140,19 @@
     EMCVSingleImage * singleImg = [img imageAtChannal:0];
     [singleImg threshold:threshold];
     self.curImageC = [[EMCVImage alloc] initWithCVSingleImage:[img imageAtChannal:0]];
+    
+}
+
+- (IBAction)surf:(id)sender {
+    EMCVSingleImage * imgA = [[self.curImageA splitImage] imageAtChannal:0];
+    EMCVSingleImage * imgB = [[self.curImageB splitImage] imageAtChannal:0];
+    NSArray<NSValue *> * ret = [imgA doSURFMathchWithImage:imgB];
+    for (NSValue * pointValue in ret) {
+        NSPoint p = pointValue.pointValue;
+        [self.curImageA drawACircleWithCenter:p andRadius:5 andColor:kEMCVLibColorRed andThickness:2];
+    }
+    self.curImageC = self.curImageA;
+    
 }
 
 @end

@@ -12,9 +12,12 @@
 
 
 #ifdef __cplusplus
-#include "opencv.h"
+#import "opencv.h"
+#import "opencv2/xfeatures2d.hpp"
+#import "opencv2/xfeatures2d/nonfree.hpp"
 using namespace cv;
 using namespace std;
+using namespace xfeatures2d;
 #endif
 
 @interface EMCVSingleImage : EMCVBasicImage
@@ -22,6 +25,9 @@ using namespace std;
 {
 }
 - (vector<Point2f>)goodFeaturesToTrackInCppWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance;
+- (vector<KeyPoint>)calSURFKeyPoints;
+- (Mat)calSURFDescriptorsWithKeypoints:(vector<KeyPoint>)keypoints;
+
 #endif
 - (instancetype)initWithBasicImage:(EMCVBasicImage *)basicImage;
 - (instancetype)initWithBasicImageWithNoCopy:(EMCVBasicImage *)basicImage;
@@ -42,5 +48,6 @@ using namespace std;
 
 // NSPoint / CGPoint -> NSValue
 - (NSArray<NSValue *> *)goodFeaturesToTrackWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance;
+- (NSArray<NSValue *> *)doSURFMathchWithImage:(EMCVSingleImage *)img;
 
 @end

@@ -35,6 +35,9 @@ empty.
 - **[ObjC]**: `convertScaleAbs`: The same as `convertScaleAbs` of OpenCV.
 - **[ObjC++]**: `goodFeaturesToTrackInCppWithMaxCorners:andQLevel:andMinDistance`: Surf Feature Detector. Return a `vector<Point2f>`.
 - **[ObjC]**: `goodFeaturesToTrackWithMaxCorners:andQLevel:andMinDistance`: Surf Feature Detector. Return a `NSArray` of `NSValue` whitch is wraped `NSPoint`.
+- **[ObjC++]**: `calSURFKeyPoints`: Calculate SURF keypoints.
+- **[ObjC++]**: `calSURFDescriptorsWithKeypoints`: Calculate SURF descriptors.
+- **[ObjC]**: `doSURFMathchWithImage`: SURF Match. Return a matched point list.
 
 # Class Method
 

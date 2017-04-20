@@ -27,8 +27,10 @@ It'll crash when releasing camera in Cocoa application.
 
 So we need to compile it by ourselves.
 
-- Download this repo: [[trmbhs/opencv]](https://github.com/trmbhs/opencv)
-- Compile and install using CMake.
+- Download OpenCV: [[trmbhs/opencv]](https://github.com/trmbhs/opencv)
+- Download extra modules: [[trmbhs/opencv_contrib]](https://github.com/trmbhs/opencv_contrib)
+- Config with cmake-gui. See [here](https://github.com/trmbhs/opencv_contrib/blob/master/README.md).
+- Make and install.
 
 Headers should be here: 
 
@@ -52,7 +54,7 @@ What can this framework does now?
 - Color convert. Channals split. Image flip, smooth, blending.
 - Edge Detection. Find extreme values and locations. Calculate and compare histograms.
 - Corener Harris. Shi-Tomasi. Optical Flow.
-- Matching algorithm: Template Match, Back Projection.
+- Matching algorithm: Template Match. Back Projection. SURF Match.
 
 # Screenshots
 
@@ -91,6 +93,11 @@ Some screenshots of the demo.
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/template_match.png)
 
 ![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/template_match_2.png)
+
+### SURF Match
+
+![](https://github.com/trmbhs/EMCVLib/raw/master/Screenshots/surf.png)
+
 
 ### Back Projection
 
