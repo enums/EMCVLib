@@ -97,6 +97,11 @@
     return [arr copy];
 }
 
+
+#if TARGET_OS_IPHONE
+
+#elif TARGET_OS_MAC
+
 - (vector<KeyPoint>)calSURFKeyPoints {
     Ptr<SURF> surf = SURF::create();
     vector<KeyPoint> keypoints;
@@ -128,5 +133,6 @@
     }
     return [result copy];
 }
+#endif
 
 @end

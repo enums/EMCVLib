@@ -3,6 +3,6 @@ workspace '../EMCVLibDemo.xcworkspace'
 platform :ios, '8.0'
 
 target ‘EMCVLibiOS’ do
-  pod 'OpenCV' 
+  # pod 'OpenCV' 
 
 end

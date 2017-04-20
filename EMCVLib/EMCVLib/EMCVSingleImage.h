@@ -13,11 +13,16 @@
 
 #ifdef __cplusplus
 #import "opencv.h"
-#import "opencv2/xfeatures2d.hpp"
-#import "opencv2/xfeatures2d/nonfree.hpp"
 using namespace cv;
 using namespace std;
+#if TARGET_OS_IPHONE
+
+#elif TARGET_OS_MAC
+#import "opencv2/xfeatures2d.hpp"
+#import "opencv2/xfeatures2d/nonfree.hpp"
 using namespace xfeatures2d;
+#endif
+
 #endif
 
 @interface EMCVSingleImage : EMCVBasicImage
@@ -25,9 +30,12 @@ using namespace xfeatures2d;
 {
 }
 - (vector<Point2f>)goodFeaturesToTrackInCppWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance;
+#if TARGET_OS_IPHONE
+
+#elif TARGET_OS_MAC
 - (vector<KeyPoint>)calSURFKeyPoints;
 - (Mat)calSURFDescriptorsWithKeypoints:(vector<KeyPoint>)keypoints;
-
+#endif
 #endif
 - (instancetype)initWithBasicImage:(EMCVBasicImage *)basicImage;
 - (instancetype)initWithBasicImageWithNoCopy:(EMCVBasicImage *)basicImage;
@@ -48,6 +56,11 @@ using namespace xfeatures2d;
 
 // NSPoint / CGPoint -> NSValue
 - (NSArray<NSValue *> *)goodFeaturesToTrackWithMaxCorners:(int)maxCorners andQLevel:(double)q andMinDistance:(double)minDistance;
+
+#if TARGET_OS_IPHONE
+
+#elif TARGET_OS_MAC
 - (NSArray<NSValue *> *)doSURFMathchWithImage:(EMCVSingleImage *)img;
+#endif
 
 @end
