@@ -1,5 +1,5 @@
 //
-//  EMCVVideo.h
+//  EMCVVideoCapture.h
 //  EMCVLib
 //
 //  Created by 郑宇琦 on 2017/4/10.
@@ -15,7 +15,7 @@
 using namespace cv;
 #endif
 
-@interface EMCVVideo : NSObject
+@interface EMCVVideoCapture : NSObject
 
 #ifdef __cplusplus
 {
@@ -23,6 +23,10 @@ using namespace cv;
     VideoCapture _capture;
 }
 #endif
+
+@property (nonatomic, assign) NSSize size;
+@property (nonatomic, assign) int frameRate;
+@property (nonatomic, assign) long frameCount;
 
 - (instancetype)initWithPath:(NSString *)path;
 - (instancetype)initWithDevice:(int)device;

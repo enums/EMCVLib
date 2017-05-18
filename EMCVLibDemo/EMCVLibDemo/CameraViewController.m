@@ -30,7 +30,7 @@
 @property (nonatomic) EMCVBasicImage * opticalFlowImageA;
 @property (nonatomic) EMCVBasicImage * opticalFlowImageB;
 
-@property (nonatomic) EMCVVideo * curVideo;
+@property (nonatomic) EMCVVideoCapture * curVideo;
 @property (nonatomic) EMCVFilter * curFilter;
 
 @property (nonatomic) dispatch_queue_t videoQueue;
@@ -100,7 +100,7 @@
             NSURL * url = panel.URLs[0];
             NSString * path = [url.absoluteString substringFromIndex:7];
             self.stopFlag = false;
-            self.curVideo = [[EMCVVideo alloc] initWithPath:path];
+            self.curVideo = [[EMCVVideoCapture alloc] initWithPath:path];
             dispatch_async(_videoQueue, ^{
                 EMCVImage * frame;
                 while (!self.stopFlag && !self.exitFlag) {
@@ -127,7 +127,7 @@
     self.stopFlag = false;
     self.videoBtn.enabled = false;
     self.cameraBtn.enabled = false;
-    self.curVideo = [[EMCVVideo alloc] initWithDevice:0];
+    self.curVideo = [[EMCVVideoCapture alloc] initWithDevice:0];
     dispatch_async(_videoQueue, ^{
         EMCVImage * frame;
         while (!self.stopFlag && !self.exitFlag) {

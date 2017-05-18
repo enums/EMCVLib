@@ -18,3 +18,6 @@ static float kEMCVLibRangeDefault[] = {0, 255};
 static float * kEMCVLibRangesDefault[] = {kEMCVLibRangeDefault, kEMCVLibRangeDefault, kEMCVLibRangeDefault, kEMCVLibRangeDefault};
 
 static int kEMCVLibChannalDefault[] = {0, 1, 2, 3};
+
+static int kEMCVLibVideoWriterFormatMJPG = 1;
+static int kEMCVLibVideoWriterFormatFLV1 = 2;

@@ -1,6 +1,6 @@
-# EMCVVideo
+# EMCVVideoCapture
 
-A wrapped video class.
+A wrapped video player class.
 
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++.
@@ -8,6 +8,9 @@ A wrapped video class.
 # Property
 
 - **[ObjC++]**: `_capture`: A `cv::VideoCapture` object.
+- **[ObjC]**: `size`: Size of the video.
+- **[ObjC]**: `frameRate`: FPS of the video.
+- **[ObjC]**: `frameCount`: Frame count of the video.
 
 # Instance Method
 

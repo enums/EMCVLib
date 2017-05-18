@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		7C947FC5AD4E63BAF0A76547 /* libPods-EMCVLibiOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B023D923A0EE543D327A441F /* libPods-EMCVLibiOS.a */; };
+		F304767C1ECD8DCD006BBD5F /* EMCVVideoWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = F304767A1ECD8DCD006BBD5F /* EMCVVideoWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F304767D1ECD8DCD006BBD5F /* EMCVVideoWriter.mm in Sources */ = {isa = PBXBuildFile; fileRef = F304767B1ECD8DCD006BBD5F /* EMCVVideoWriter.mm */; };
 		F33119C61E9F9DAE00227D43 /* EMCVFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = F33119C41E9F9DAE00227D43 /* EMCVFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F33119C71E9F9DAE00227D43 /* EMCVFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F33119C51E9F9DAE00227D43 /* EMCVFilter.m */; };
 		F33119CA1E9F9E0500227D43 /* EMCVFilterOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F33119C81E9F9E0500227D43 /* EMCVFilterOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F33119CB1E9F9E0500227D43 /* EMCVFilterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F33119C91E9F9E0500227D43 /* EMCVFilterOperation.m */; };
 		F3311A0D1EA05AB100227D43 /* EMCVLibiOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F3311A0B1EA05AB100227D43 /* EMCVLibiOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3311A361EA05B4900227D43 /* EMCVFactory.mm in Sources */ = {isa = PBXBuildFile; fileRef = F337D49E1E9C60EA00505334 /* EMCVFactory.mm */; };
-		F3311A371EA05B5200227D43 /* EMCVVideo.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */; };
+		F3311A371EA05B5200227D43 /* EMCVVideoCapture.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A6001E9B54A000CFEEF8 /* EMCVVideoCapture.mm */; };
 		F3311A381EA05B5700227D43 /* EMCVImage.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5E51E9B23A800CFEEF8 /* EMCVImage.mm */; };
 		F3311A3A1EA05B5D00227D43 /* EMCVFilterOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = F33119C91E9F9E0500227D43 /* EMCVFilterOperation.m */; };
 		F3311A3B1EA05B5F00227D43 /* EMCVFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = F33119C51E9F9DAE00227D43 /* EMCVFilter.m */; };
 		F3311A3C1EA05B6900227D43 /* Static.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A60A1E9B99F200CFEEF8 /* Static.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3311A3D1EA05B6B00227D43 /* EMCVFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = F337D49D1E9C60EA00505334 /* EMCVFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3311A3E1EA05B7000227D43 /* EMCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3311A3E1EA05B7000227D43 /* EMCVVideoCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideoCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3311A3F1EA05B7500227D43 /* EMCVImage.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5E41E9B23A800CFEEF8 /* EMCVImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3311A411EA05B7C00227D43 /* EMCVFilterOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = F33119C81E9F9E0500227D43 /* EMCVFilterOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3311A421EA05B7E00227D43 /* EMCVFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = F33119C41E9F9DAE00227D43 /* EMCVFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -173,8 +175,8 @@
 		F3F9A5F41E9B26F000CFEEF8 /* NSImageView+EMCVLib.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5F21E9B26F000CFEEF8 /* NSImageView+EMCVLib.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F3F9A5F51E9B26F000CFEEF8 /* NSImageView+EMCVLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A5F31E9B26F000CFEEF8 /* NSImageView+EMCVLib.mm */; };
 		F3F9A5FA1E9B299200CFEEF8 /* opencv.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5E11E9B211500CFEEF8 /* opencv.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3F9A6011E9B54A000CFEEF8 /* EMCVVideo.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F3F9A6021E9B54A000CFEEF8 /* EMCVVideo.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */; };
+		F3F9A6011E9B54A000CFEEF8 /* EMCVVideoCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideoCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3F9A6021E9B54A000CFEEF8 /* EMCVVideoCapture.mm in Sources */ = {isa = PBXBuildFile; fileRef = F3F9A6001E9B54A000CFEEF8 /* EMCVVideoCapture.mm */; };
 		F3F9A60C1E9B99F200CFEEF8 /* Static.h in Headers */ = {isa = PBXBuildFile; fileRef = F3F9A60A1E9B99F200CFEEF8 /* Static.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -182,6 +184,8 @@
 		898508E1366968EAE28A599E /* Pods-EMCVLibiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMCVLibiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-EMCVLibiOS/Pods-EMCVLibiOS.release.xcconfig"; sourceTree = "<group>"; };
 		90EDB9430F0801A106982243 /* Pods-EMCVLibiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EMCVLibiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EMCVLibiOS/Pods-EMCVLibiOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B023D923A0EE543D327A441F /* libPods-EMCVLibiOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EMCVLibiOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F304767A1ECD8DCD006BBD5F /* EMCVVideoWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVVideoWriter.h; path = EMCVLib/EMCVVideoWriter.h; sourceTree = "<group>"; };
+		F304767B1ECD8DCD006BBD5F /* EMCVVideoWriter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVVideoWriter.mm; path = EMCVLib/EMCVVideoWriter.mm; sourceTree = "<group>"; };
 		F33119C41E9F9DAE00227D43 /* EMCVFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVFilter.h; path = EMCVLib/EMCVFilter.h; sourceTree = "<group>"; };
 		F33119C51E9F9DAE00227D43 /* EMCVFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EMCVFilter.m; path = EMCVLib/EMCVFilter.m; sourceTree = "<group>"; };
 		F33119C81E9F9E0500227D43 /* EMCVFilterOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVFilterOperation.h; path = EMCVLib/EMCVFilterOperation.h; sourceTree = "<group>"; };
@@ -333,8 +337,8 @@
 		F3F9A5EC1E9B24CD00CFEEF8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		F3F9A5F21E9B26F000CFEEF8 /* NSImageView+EMCVLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSImageView+EMCVLib.h"; path = "EMCVLib/NSImageView+EMCVLib.h"; sourceTree = "<group>"; };
 		F3F9A5F31E9B26F000CFEEF8 /* NSImageView+EMCVLib.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = "NSImageView+EMCVLib.mm"; path = "EMCVLib/NSImageView+EMCVLib.mm"; sourceTree = "<group>"; };
-		F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVVideo.h; path = EMCVLib/EMCVVideo.h; sourceTree = "<group>"; };
-		F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVVideo.mm; path = EMCVLib/EMCVVideo.mm; sourceTree = "<group>"; };
+		F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EMCVVideoCapture.h; path = EMCVLib/EMCVVideoCapture.h; sourceTree = "<group>"; };
+		F3F9A6001E9B54A000CFEEF8 /* EMCVVideoCapture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = EMCVVideoCapture.mm; path = EMCVLib/EMCVVideoCapture.mm; sourceTree = "<group>"; };
 		F3F9A60A1E9B99F200CFEEF8 /* Static.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Static.h; path = EMCVLib/Static.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -520,8 +524,10 @@
 		F33119D41E9FADCE00227D43 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideo.h */,
-				F3F9A6001E9B54A000CFEEF8 /* EMCVVideo.mm */,
+				F3F9A5FF1E9B54A000CFEEF8 /* EMCVVideoCapture.h */,
+				F3F9A6001E9B54A000CFEEF8 /* EMCVVideoCapture.mm */,
+				F304767A1ECD8DCD006BBD5F /* EMCVVideoWriter.h */,
+				F304767B1ECD8DCD006BBD5F /* EMCVVideoWriter.mm */,
 			);
 			name = Video;
 			sourceTree = "<group>";
@@ -741,9 +747,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3311A3C1EA05B6900227D43 /* Static.h in Headers */,
-				F3311A0D1EA05AB100227D43 /* EMCVLibiOS.h in Headers */,
 				F3311A3D1EA05B6B00227D43 /* EMCVFactory.h in Headers */,
-				F3311A3E1EA05B7000227D43 /* EMCVVideo.h in Headers */,
+				F3311A3E1EA05B7000227D43 /* EMCVVideoCapture.h in Headers */,
 				F3311A3F1EA05B7500227D43 /* EMCVImage.h in Headers */,
 				F3311A411EA05B7C00227D43 /* EMCVFilterOperation.h in Headers */,
 				F3311A421EA05B7E00227D43 /* EMCVFilter.h in Headers */,
@@ -751,6 +756,7 @@
 				F3372BD71EA10ACC00665A8E /* EMCVSplitedImage.h in Headers */,
 				F38324ED1EA4F0E80074D912 /* EMCVBasicImage.h in Headers */,
 				F3372BD81EA10ACC00665A8E /* EMCVSingleImage.h in Headers */,
+				F3311A0D1EA05AB100227D43 /* EMCVLibiOS.h in Headers */,
 				F3311A541EA064E200227D43 /* platform.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,8 +774,9 @@
 				F3F9A5F41E9B26F000CFEEF8 /* NSImageView+EMCVLib.h in Headers */,
 				F3372BD51EA1070E00665A8E /* EMCVSplitedImage.h in Headers */,
 				F3372BD11EA0FE3D00665A8E /* EMCVSingleImage.h in Headers */,
-				F3F9A6011E9B54A000CFEEF8 /* EMCVVideo.h in Headers */,
+				F3F9A6011E9B54A000CFEEF8 /* EMCVVideoCapture.h in Headers */,
 				F38324EC1EA4F0E80074D912 /* EMCVBasicImage.h in Headers */,
+				F304767C1ECD8DCD006BBD5F /* EMCVVideoWriter.h in Headers */,
 				F3F9A5FA1E9B299200CFEEF8 /* opencv.h in Headers */,
 				F3311A441EA05E4400227D43 /* platform.h in Headers */,
 			);
@@ -913,7 +920,7 @@
 				F38324EF1EA4F0E80074D912 /* EMCVBasicImage.mm in Sources */,
 				F3311A581EA06A3F00227D43 /* UIImageView+EMCVLib.mm in Sources */,
 				F3311A361EA05B4900227D43 /* EMCVFactory.mm in Sources */,
-				F3311A371EA05B5200227D43 /* EMCVVideo.mm in Sources */,
+				F3311A371EA05B5200227D43 /* EMCVVideoCapture.mm in Sources */,
 				F3311A381EA05B5700227D43 /* EMCVImage.mm in Sources */,
 				F3311A3A1EA05B5D00227D43 /* EMCVFilterOperation.m in Sources */,
 				F3311A3B1EA05B5F00227D43 /* EMCVFilter.m in Sources */,
@@ -933,8 +940,9 @@
 				F33119C71E9F9DAE00227D43 /* EMCVFilter.m in Sources */,
 				F3372BD21EA0FE3D00665A8E /* EMCVSingleImage.mm in Sources */,
 				F3F9A5F51E9B26F000CFEEF8 /* NSImageView+EMCVLib.mm in Sources */,
-				F3F9A6021E9B54A000CFEEF8 /* EMCVVideo.mm in Sources */,
+				F3F9A6021E9B54A000CFEEF8 /* EMCVVideoCapture.mm in Sources */,
 				F3F9A5E71E9B23A800CFEEF8 /* EMCVImage.mm in Sources */,
+				F304767D1ECD8DCD006BBD5F /* EMCVVideoWriter.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

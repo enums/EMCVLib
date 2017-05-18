@@ -18,7 +18,7 @@
 @property (weak) IBOutlet NSButton *videoBtn;
 
 @property (nonatomic) EMCVImage * curImage;
-@property (nonatomic) EMCVVideo * curVideo;
+@property (nonatomic) EMCVVideoCapture * curVideo;
 
 @property (nonatomic) EMCVFilter * curFilter;
 
@@ -108,7 +108,7 @@
             NSURL * url = panel.URLs[0];
             NSString * path = [url.absoluteString substringFromIndex:7];
             self.stopFlag = false;
-            self.curVideo = [[EMCVVideo alloc] initWithPath:path];
+            self.curVideo = [[EMCVVideoCapture alloc] initWithPath:path];
             dispatch_async(_videoQueue, ^{
                 EMCVImage * frame;
                 while (!self.stopFlag && !self.exitFlag) {

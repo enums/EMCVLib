@@ -15,7 +15,8 @@
 #import "EMCVSingleImage.h"
 #import "EMCVFilterOperation.h"
 #import "EMCVFilter.h"
-#import "EMCVVideo.h"
+#import "EMCVVideoCapture.h"
+#import "EMCVVideoWriter.h"
 #import "UIImageView+EMCVLib.h"
 
 //! Project version number for EMCVLibiOS.

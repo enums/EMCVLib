@@ -125,7 +125,8 @@ API docs and bugs here.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSingleImage.md) `EMCVSingleImage`: A wrapped single channel image class.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFilter.md) `EMCVFilter`: A wrapped image filter.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFilterOperation.md) `EMCVFilterOperation`: A wrapped image operation by using block.
-- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVVideo.md) `EMCVVideo`: A wrapped video class.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVVideoCapture.md) `EMCVVideoCapture`: A wrapped video player class.
+- [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVVideoWriter.md) `EMCVVideoWriter`: A wrapped video writer class.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/NSImageView+EMCVLib.md) `NSImageView + EMCVLib`: A category of NSImageView.
 - [[API]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/UIImageView+EMCVLib.md) `UIImageView + EMCVLib`: A category of UIImageView.
 
