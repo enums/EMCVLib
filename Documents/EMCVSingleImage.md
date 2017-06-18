@@ -5,9 +5,9 @@ A wrapped single channel image class.
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++.
 
-Super: [[EMCVBasicImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVBasicImage.md) 
+Super: [[EMCVBasicImage]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVBasicImage.md) 
 
-See: [[EMCVImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVImage.md) [[EMCVSplitedImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSplitedImage.md)
+See: [[EMCVImage]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVImage.md) [[EMCVSplitedImage]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVSplitedImage.md)
 
 # Property
 

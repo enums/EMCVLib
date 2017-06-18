@@ -4,7 +4,7 @@ A wrapped image filter.
 
 It can do continuous image processing.
 
-See: [[EMCVFilterOperation]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFilterOperation.md)
+See: [[EMCVFilterOperation]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVFilterOperation.md)
 
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++.

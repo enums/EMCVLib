@@ -7,9 +7,9 @@ A wrapped image class. The default color format should be BGR when image opened 
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++.
 
-Super: [[EMCVBasicImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVBasicImage.md) 
+Super: [[EMCVBasicImage]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVBasicImage.md) 
 
-See: [[EMCVSplitedImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSplitedImage.md) [[EMCVSingleImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSingleImage.md) 
+See: [[EMCVSplitedImage]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVSplitedImage.md) [[EMCVSingleImage]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVSingleImage.md) 
 
 # Property
 

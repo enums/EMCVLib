@@ -8,7 +8,7 @@ A wrapped basic image class.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++.
 
 
-See: [[EMCVImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVImage.md) [[EMCVSingleImage]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVSingleImage.md) 
+See: [[EMCVImage]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVImage.md) [[EMCVSingleImage]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVSingleImage.md) 
 
 # Property
 

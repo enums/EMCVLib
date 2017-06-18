@@ -2,7 +2,7 @@
 
 A wrapped image operation by using block.
 
-See: [[EMCVFilter]](https://github.com/trmbhs/EMCVLib/blob/master/Documents/EMCVFilter.md)
+See: [[EMCVFilter]](https://github.com/enums/EMCVLib/blob/master/Documents/EMCVFilter.md)
 
 - **[ObjC]**: Means this property or method can be used on Objective-C.
 - **[ObjC++]**: Means this property or method can only be used on Objective-C++.
